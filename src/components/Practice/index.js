@@ -65,8 +65,8 @@ const Practice = (props) => {
           </div>
           <div
             className="list-answer"
-            data-aos="fade-up"
-            data-aos-anchor-placement="bottom-bottom"
+            // data-aos="fade-up"
+            // data-aos-anchor-placement="bottom-bottom"
           >
             <img src={sing} alt={sing} className="answer1" />
             <img src={talk} alt={talk} className="answer2" />

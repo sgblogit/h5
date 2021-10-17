@@ -16,7 +16,7 @@
       justify-content: space-evenly;
       position: absolute;
       width: 100%;
-      height: 50%;
+      height: 55%;
       bottom: 40px;
       @media screen and (max-width: 900px) {
         transform: translateY(30px);
@@ -51,13 +51,17 @@
             width: 350px;
           }
           @media screen and (max-width: 900px) {
-            width: 300px;
+            width: 250px;
+          }
+          @media screen and (max-width: 500px) {
+            width: 120px;
+            height: 70px;
           }
           img {
             cursor: pointer;
             max-width: 100%;
             @media screen and (max-width: 900px) {
-              max-width: 70%;
+              max-width: 100%;
             }
           }
         }
@@ -69,12 +73,16 @@
             width: 400px;
           }
           @media screen and (max-width: 900px) {
-            width: 300px;
+            width: 250px;
+          }
+          @media screen and (max-width: 500px) {
+            width: 150px;
+            height: auto;
           }
           img {
             max-width: 100%;
             @media screen and (max-width: 900px) {
-              width: 80%;
+              max-width: 80%;
             }
           }
         }
