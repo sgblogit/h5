@@ -8,7 +8,7 @@ import {
 
 import { useSelector } from "react-redux";
 
-import audioPlayer from 'helper/audioPlayer'
+import audioPlayer from "helper/audioPlayer";
 import audios from "assets/audios/index";
 
 const ButtonClickMusic = (props) => {
@@ -17,37 +17,40 @@ const ButtonClickMusic = (props) => {
 	const [imagesv, setImages] = useState("");
 	const [imageicon, setImageIcons] = useState("");
 
-	const {playAudio,pauseAudio} = audioPlayer
+	const { playAudio, pauseAudio } = audioPlayer;
 
-	const {
-		currentPage,
-		currentStep,
-        currentRecord,
-        prevRecord,
-    } = useSelector((state) => state.app);
+	const { currentPage, currentStep, currentRecord, prevRecord } = useSelector(
+		(state) => state.app
+	);
 
-	const imgClickEventName = 'balaba'
+	const imgClickEventName = "balaba";
 
-	const imgClickHandler = (e,op)=>{
-		onPushAction(e,op.actionType,op)
-	}
+	console.log(currentRecord, "===", prevRecord);
 
-	useEffect(()=>{
-		if(currentRecord.length > 0){
-			let recordEventData = currentRecord[currentRecord.length-1];
-			if(recordEventData.eventPage === currentPage && 
+	const imgClickHandler = (e, op) => {
+		onPushAction(e, op.actionType, op);
+	};
+
+	useEffect(() => {
+		if (currentRecord.length > 0) {
+			let recordEventData = currentRecord[currentRecord.length - 1];
+			if (
+				recordEventData.eventPage === currentPage &&
 				recordEventData.eventPageStep === currentStep &&
-				recordEventData.eventName === imgClickEventName){
-				console.log(`runRecordEvent`,recordEventData)
+				recordEventData.eventName === imgClickEventName
+			) {
+				console.log(`runRecordEvent`, recordEventData);
 				setImages(recordEventData.eventData.images);
 				setImageIcons(recordEventData.eventData.imageIcons);
 
 				//playAudio
-				let audioUrl = audios.find((item) => item.id === recordEventData.eventData.playAudio)?.audio
-				playAudio(audioUrl)
+				let audioUrl = audios.find(
+					(item) => item.id === recordEventData.eventData.playAudio
+				)?.audio;
+				playAudio(audioUrl);
 			}
 		}
-	},[currentRecord])
+	}, [currentRecord]);
 
 	useEffect(() => {
 		// setIntervalControlClass("wrapper-request", "zoom", 0);
@@ -72,15 +75,15 @@ const ButtonClickMusic = (props) => {
 					src={icon.button1}
 					alt={icon.button1}
 					onClick={(e) => {
-						imgClickHandler(e,{
-							actionType: 'fireEvent',
+						imgClickHandler(e, {
+							actionType: "fireEvent",
 							eventName: imgClickEventName,
 							eventData: {
 								images: icon.pagePage,
-								imageIcons:icon.iHavePage,
-								playAudio:"iHaveAPaper"
-							}
-						})
+								imageIcons: icon.iHavePage,
+								playAudio: "iHaveAPaper",
+							},
+						});
 						// setImages(icon.pagePage);
 						// setImageIcons(icon.iHavePage);
 						// onPushAction(e, "play_audio", "iHaveAPaper");
@@ -91,15 +94,15 @@ const ButtonClickMusic = (props) => {
 					src={icon.button2}
 					alt={icon.button2}
 					onClick={(e) => {
-						imgClickHandler(e,{
-							actionType: 'fireEvent',
+						imgClickHandler(e, {
+							actionType: "fireEvent",
 							eventName: imgClickEventName,
 							eventData: {
 								images: icon.gluePage,
-								imageIcons:icon.iHaveGlue,
-								playAudio:"iHaveAGlue"
-							}
-						})
+								imageIcons: icon.iHaveGlue,
+								playAudio: "iHaveAGlue",
+							},
+						});
 						// setImages(icon.gluePage);
 						// setImageIcons(icon.iHaveGlue);
 						// onPushAction(e, "play_audio", "iHaveAGlue");
@@ -110,15 +113,15 @@ const ButtonClickMusic = (props) => {
 					src={icon.button3}
 					alt={icon.button3}
 					onClick={(e) => {
-						imgClickHandler(e,{
-							actionType: 'fireEvent',
+						imgClickHandler(e, {
+							actionType: "fireEvent",
 							eventName: imgClickEventName,
 							eventData: {
 								images: icon.scrissorPage,
-								imageIcons:icon.iHaveScrissor,
-								playAudio:"iHaveAScrissor"
-							}
-						})
+								imageIcons: icon.iHaveScrissor,
+								playAudio: "iHaveAScrissor",
+							},
+						});
 
 						// setImages(icon.scrissorPage);
 						// setImageIcons(icon.iHaveScrissor);
@@ -130,15 +133,15 @@ const ButtonClickMusic = (props) => {
 					src={icon.button4}
 					alt={icon.button4}
 					onClick={(e) => {
-						imgClickHandler(e,{
-							actionType: 'fireEvent',
+						imgClickHandler(e, {
+							actionType: "fireEvent",
 							eventName: imgClickEventName,
 							eventData: {
 								images: icon.paintPage,
-								imageIcons:icon.iHavePaint,
-								playAudio:"iHaveAPaint"
-							}
-						})
+								imageIcons: icon.iHavePaint,
+								playAudio: "iHaveAPaint",
+							},
+						});
 
 						// setImages(icon.paintPage);
 						// setImageIcons(icon.iHavePaint);
