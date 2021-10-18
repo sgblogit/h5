@@ -1,4 +1,4 @@
-const pageCount = 31;
+const pageCount = 29;
 
 const getPageData = () => {
 	const data = Array(pageCount).fill([""]);

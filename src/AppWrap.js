@@ -51,7 +51,7 @@ const AppWrap = () => {
 		//S just for test
 		console.log(`onPageChange-page:`, currentPage + 1);
 		console.log(`onPageChange-step:`, 0);
-		if (isDeBug) {
+		if (isDeBug && currentPage < PAGE_DATA.length - 1) {
 			audioPlayer.cleanAllAudio();
 			dispatch(
 				setCurrentData({

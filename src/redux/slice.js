@@ -5,9 +5,9 @@ const initialState = {
 	isLoading: false,
 	isShowAnswer: false,
 	isPlayRecord: false,
-	currentPage: 0,
+	currentPage: 10,
 	currentStep: 0,
-	urlBackground: images.background[0],
+	urlBackground: images.background[10],
 	isAudioEndOrPause: false,
 	isShowNextIcon: false,
 	page10: {
@@ -58,17 +58,17 @@ export const slice = createSlice({
 			state.page10.locationY = locationY;
 		},
 
-		setCurrentData:(state,action) => {
-            const { payload } = action;
-            for(let pKey in payload){
-                let pItem = payload[pKey];
-                if(Array.isArray(pItem)){
-                    state[pKey] = [...pItem];
-                }else {
-                    state[pKey] = pItem;
-                }
-            }
-        }
+		setCurrentData: (state, action) => {
+			const { payload } = action;
+			for (let pKey in payload) {
+				let pItem = payload[pKey];
+				if (Array.isArray(pItem)) {
+					state[pKey] = [...pItem];
+				} else {
+					state[pKey] = pItem;
+				}
+			}
+		},
 	},
 });
 
@@ -82,7 +82,7 @@ export const {
 	setIsAudioEndOrPause,
 	setIsShowNextIcon,
 	configPage10,
-	setCurrentData
+	setCurrentData,
 } = slice.actions;
 
 export default slice.reducer;

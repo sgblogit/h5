@@ -87,59 +87,50 @@ const Pages = (props) => {
 			Page = <Page9 currentPage={currentPage} onPushAction={onPushAction} />;
 			break;
 		case 10:
-			Page = <Page10 currentPage={currentPage} onPushAction={onPushAction} />;
-			valueCustomForNextChangePage = 15;
+			Page = <Page11 currentPage={currentPage} onPushAction={onPushAction} />;
 			break;
 		case 11:
-			Page = <Page11 currentPage={currentPage} onPushAction={onPushAction} />;
-			isDisableNextIcon = true;
-			break;
-		case 12:
-			isDisableNextIcon = true;
-			valueCustomForPrevChangePage = 10;
 			Page = <Page12 currentPage={currentPage} onPushAction={onPushAction} />;
 			break;
-		case 13:
-			isDisableNextIcon = true;
-			valueCustomForPrevChangePage = 10;
+		case 12:
 			Page = <Page13 currentPage={currentPage} onPushAction={onPushAction} />;
 			break;
-		case 14:
-			isDisableNextIcon = true;
-			valueCustomForPrevChangePage = 10;
+		case 13:
 			Page = <Page14 currentPage={currentPage} onPushAction={onPushAction} />;
 			break;
-		case 15:
+		case 14:
 			Page = <Page15 currentPage={currentPage} onPushAction={onPushAction} />;
-			valueCustomForPrevChangePage = 10;
 			break;
-		case 16:
+		case 15:
 			Page = <Page16 currentPage={currentPage} onPushAction={onPushAction} />;
 			break;
-		case 17:
+		case 16:
 			Page = <Page17 currentPage={currentPage} onPushAction={onPushAction} />;
 			break;
-		case 18:
+		case 17:
 			Page = <Page18 currentPage={currentPage} onPushAction={onPushAction} />;
 			break;
-		case 19:
+		case 18:
 			Page = <Page19 currentPage={currentPage} onPushAction={onPushAction} />;
 			break;
-		case 20:
+		case 19:
 			Page = <Page20 currentPage={currentPage} onPushAction={onPushAction} />;
 			break;
-		case 21:
+		case 20:
 			Page = <Page21 currentPage={currentPage} onPushAction={onPushAction} />;
 			break;
-		case 22:
+		case 21:
 			Page = <Page22 currentPage={currentPage} onPushAction={onPushAction} />;
 			break;
-		case 23:
+		case 22:
 			Page = <Page23 currentPage={currentPage} onPushAction={onPushAction} />;
+			break;
+		case 23:
+			Page = <Page24 currentPage={currentPage} onPushAction={onPushAction} />;
 			break;
 		case 24:
 			Page = (
-				<Page24
+				<Page25
 					currentPage={currentPage}
 					onPushAction={onPushAction}
 					audioPlaying={audioPlaying}
@@ -148,7 +139,7 @@ const Pages = (props) => {
 			break;
 		case 25:
 			Page = (
-				<Page25
+				<Page27
 					currentPage={currentPage}
 					onPushAction={onPushAction}
 					audioPlaying={audioPlaying}
@@ -158,7 +149,7 @@ const Pages = (props) => {
 		case 26:
 			isDisableNextIcon = true;
 			Page = (
-				<Page26
+				<Page28
 					currentPage={currentPage}
 					onPushAction={onPushAction}
 					audioPlaying={audioPlaying}
@@ -168,28 +159,6 @@ const Pages = (props) => {
 		case 27:
 			isDisableNextIcon = true;
 			Page = (
-				<Page27
-					currentPage={currentPage}
-					onPushAction={onPushAction}
-					audioPlaying={audioPlaying}
-				/>
-			);
-			break;
-		case 28:
-			isDisableNextIcon = true;
-			valueCustomForPrevChangePage = 26;
-			Page = (
-				<Page28
-					currentPage={currentPage}
-					onPushAction={onPushAction}
-					audioPlaying={audioPlaying}
-				/>
-			);
-			break;
-		case 29:
-			isDisableNextIcon = true;
-			valueCustomForPrevChangePage = 26;
-			Page = (
 				<Page29
 					currentPage={currentPage}
 					onPushAction={onPushAction}
@@ -197,9 +166,7 @@ const Pages = (props) => {
 				/>
 			);
 			break;
-		case 30:
-			isDisableNextIcon = true;
-			valueCustomForPrevChangePage = 26;
+		case 28:
 			Page = (
 				<Page30
 					currentPage={currentPage}
@@ -208,6 +175,24 @@ const Pages = (props) => {
 				/>
 			);
 			break;
+		// case 29:
+		// 	Page = (
+		// 		<Page30
+		// 			currentPage={currentPage}
+		// 			onPushAction={onPushAction}
+		// 			audioPlaying={audioPlaying}
+		// 		/>
+		// 	);
+		// 	break;
+		// case 30:
+		// 	Page = (
+		// 		<Page31
+		// 			currentPage={currentPage}
+		// 			onPushAction={onPushAction}
+		// 			audioPlaying={audioPlaying}
+		// 		/>
+		// 	);
+		// 	break;
 
 		default:
 			break;
