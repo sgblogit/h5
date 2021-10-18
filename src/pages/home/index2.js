@@ -44,7 +44,7 @@ const Home = (props) => {
 					className="image-start-unit"
 				/>
 			</CursorContainer>
-			<BackAndNextPage
+			{/* <BackAndNextPage
 				isDisablePrevIcon
 				currentPage={currentPage}
 				onClickChangePage={(e) => {
@@ -57,7 +57,7 @@ const Home = (props) => {
 						},
 					});
 				}}
-			/>
+			/> */}
 			<ButtonBackgroundMusic
 				audioName={"audioBg"}
 				onPushAction={onPushAction}

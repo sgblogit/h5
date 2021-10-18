@@ -201,13 +201,13 @@ const Pages = (props) => {
 	return (
 		<>
 			{Page}
-			<BackAndNextPage
+			{/* <BackAndNextPage
 				currentPage={currentPage}
 				onClickChangePage={onPushAction}
 				valueCustomForPrevPage={valueCustomForPrevChangePage}
 				isDisableNextIcon={isDisableNextIcon}
 				valueCustomForNextPage={valueCustomForNextChangePage}
-			/>
+			/> */}
 		</>
 	);
 };
