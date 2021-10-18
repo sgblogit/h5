@@ -70,7 +70,6 @@ const PracticePlay = (props) => {
 			return (
 				<img
 					className="item"
-					// data-aos="fade-right"
 					alt={item.image}
 					src={item.image}
 					onClick={(e) => {
