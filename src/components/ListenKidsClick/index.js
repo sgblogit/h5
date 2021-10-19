@@ -82,7 +82,6 @@ const ListenKidsClick = (props) => {
 						</div>
 						<div className="people-kids">
 							<img
-								data-aos="zoom-in"
 								src={imageKids}
 								alt={imageKids}
 								onClick={(e) => {

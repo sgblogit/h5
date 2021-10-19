@@ -40,7 +40,9 @@ const PracticePlay = (props) => {
 				console.log(`runRecordEvent`,recordEventData)
 				
 				if(recordEventData.eventData.active){
-					setClassImage("active");
+					setTimeout(() => {
+						setClassImage("active")
+					}, 100);
 					//playAudio
 					setTimeout(() => {
 						let audioUrl2 = audios.find((item) => item.id === recordEventData.eventData.playAudios[0])?.audio

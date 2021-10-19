@@ -257,7 +257,7 @@ const images = {
 		// page 9
 		bgPage9,
 		// page 10
-		bgPage10,
+		// bgPage10,
 		// page 11
 		bgPage11,
 		// page 12
@@ -289,7 +289,7 @@ const images = {
 		// page 25
 		bgPage21,
 		// page 26
-		bgPage26,
+		// bgPage26,
 		// page 27
 		bgPage27,
 		// page 28

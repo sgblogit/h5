@@ -9,7 +9,7 @@
     width: 100%;
     height: 100%;
     &--topic .topic {
-      @media screen and (min-width: 425px) and (max-width: 768px) {
+      @media screen  and (max-width: 768px) {
         width: 200px;
       }
       width: 400px;
@@ -21,6 +21,9 @@
       }
     }
   }
+}
+.boder {
+  margin-top: 20px;
 }
 
 .star {
@@ -43,15 +46,21 @@
       @media screen and (max-width: 600px) {
         animation: move600 2s forwards;
       }
-      @media screen and (min-width: 601px) and (max-width: 799px) {
+      @media screen and (min-width: 601px) and (max-width: 750px) {
         animation: move700 2s forwards;
       }
 
-      @media screen and (min-width: 800px) and (max-width: 1024px) {
+      @media screen and (min-width: 751px) and (max-width: 1000px) {
         animation: move800 2s forwards;
       }
-      @media screen and (min-width: 1025px) and (max-width: 1500px) {
+      @media screen and (min-width: 1001px) and (max-width: 1199px) {
+        animation: move1000 2s forwards;
+      }
+      @media screen and (min-width: 1200px) and (max-width: 1400px) {
         animation: move1100 2s forwards;
+      }
+      @media screen and (min-width: 1401px) and (max-width: 1780px) {
+        animation: move1400 2s forwards;
       }
     }
     &:nth-child(2n) {
@@ -108,7 +117,7 @@
   100% {
     position: relative;
     top: 125%;
-    left:70%;
+    left: 70%;
   }
 }
 
@@ -124,6 +133,18 @@
     left: 70%;
   }
 }
+@keyframes move1000 {
+  0% {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+  100% {
+    position: relative;
+    top: 120%;
+    left: 70%;
+  }
+}
 @keyframes move1100 {
   0% {
     position: relative;
@@ -132,8 +153,20 @@
   }
   100% {
     position: relative;
-    top: 140%;
+    top: 130%;
     left: 65%;
+  }
+}
+@keyframes move1400 {
+  0% {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+  100% {
+    position: relative;
+    top: 130%;
+    left: 70%;
   }
 }
 .mid-item {
@@ -143,7 +176,7 @@
   left: 60%;
   top: 20px;
   transform: translateX(-50%);
-@media screen and (min-width: 425px) and (max-width: 768px) {
+  @media screen and (min-width: 425px) and (max-width: 768px) {
     transform: translateX(-43%);
   }
   display: flex;
@@ -176,13 +209,15 @@
         width: 91%;
         left: -112%;
         top: 47%;
-        @media screen and (min-width: 1500px) {
+        @media screen and (min-width: 1400px) {
           left: -143%;
         }
-
       }
       .ans {
-        @media screen and (max-width: 668px) {
+        @media screen and (max-width: 550px) {
+          transform: translate(28%, 325%);
+        }
+        @media screen and (min-width: 551px) and (max-width: 668px) {
           transform: translate(10%, 325%);
         }
         @media screen and (min-width: 669px) and (max-width: 750px) {
@@ -197,7 +232,7 @@
         @media screen and (min-width: 1300px) and (max-width: 1499px) {
           transform: translate(20%, 280%);
         }
-        @media screen and (min-width: 1500px) {
+        @media screen and (min-width: 1400px) {
           transform: translate(-3%, 345%);
         }
         transform: translate(10%, 350%);
@@ -214,8 +249,10 @@
 
       .item {
         &.active {
-
           animation: move2 2s forwards;
+          @media screen and (min-width: 1401px) and (max-width: 1780px) {
+            animation: move21400 2s forwards;
+          }
         }
         &:nth-child(2n) {
           margin-left: 80px;
@@ -237,6 +274,18 @@
     100% {
       position: relative;
       top: 145%;
+      left: -53%;
+    }
+  }
+  @keyframes move21400 {
+    0% {
+      position: relative;
+      top: 0px;
+      left: 0px;
+    }
+    100% {
+      position: relative;
+      top: 155%;
       left: -53%;
     }
   }
@@ -268,17 +317,23 @@
           @media screen and (max-width: 600px) {
             animation: move3600 2s forwards;
           }
-          @media screen  and (min-width: 601px) and (max-width: 750px) {
+          @media screen and (min-width: 601px) and (max-width: 750px) {
             animation: move3700 2s forwards;
           }
-            @media screen  and (min-width: 751px) and (max-width: 1023px) {
+          @media screen and (min-width: 751px) and (max-width: 1000px) {
             animation: move3800 2s forwards;
           }
-          @media screen and (min-width: 1024px) and (max-width: 1300px) {
+          @media screen and (min-width: 1001px) and (max-width: 1199px) {
+            animation: move3900 2s forwards;
+          }
+          @media screen and (min-width: 1200px) and (max-width: 1300px) {
             animation: move31000 2s forwards;
           }
-          @media screen and (min-width: 1301px) and (max-width: 1500px) {
+          @media screen and (min-width: 1301px) and (max-width: 1400px) {
             animation: move31300 2s forwards;
+          }
+          @media screen and (min-width: 1401px) and (max-width: 1780px) {
+            animation: move31400 2s forwards;
           }
         }
       }
@@ -332,6 +387,18 @@
       left: 77%;
     }
   }
+  @keyframes move3900 {
+    0% {
+      position: relative;
+      top: 0px;
+      left: 0px;
+    }
+    100% {
+      position: relative;
+      top: 16%;
+      left: 77%;
+    }
+  }
   @keyframes move31000 {
     0% {
       position: relative;
@@ -356,9 +423,26 @@
       left: 70%;
     }
   }
+  @keyframes move31400 {
+    0% {
+      position: relative;
+      top: 0px;
+      left: 0px;
+    }
+    100% {
+      position: relative;
+      top: 40%;
+      left: 70%;
+    }
+  }
 }
 .page9-wrapper {
   .page6-wrapper__content {
+    .page6-wrapper__content--answer {
+      @media screen and (max-width: 800px) {
+        top: 30%;
+      }
+    }
     .star {
       .item {
         &.active {
@@ -366,17 +450,23 @@
           @media screen and (max-width: 600px) {
             animation: move4600 2s forwards;
           }
-          @media screen  and (min-width: 601px) and (max-width: 750px) {
+          @media screen and (min-width: 601px) and (max-width: 750px) {
             animation: move4700 2s forwards;
           }
-            @media screen  and (min-width: 751px) and (max-width: 1023px) {
+          @media screen and (min-width: 751px) and (max-width: 1000px) {
             animation: move4800 2s forwards;
           }
-          @media screen and (min-width: 1024px) and (max-width: 1300px) {
+          @media screen and (min-width: 1001px) and (max-width: 1199px) {
+            animation: move4900 2s forwards;
+          }
+          @media screen and (min-width: 1200px) and (max-width: 1300px) {
             animation: move41000 2s forwards;
           }
-          @media screen and (min-width: 1301px) and (max-width: 1500px) {
+          @media screen and (min-width: 1301px) and (max-width: 1400px) {
             animation: move41300 2s forwards;
+          }
+          @media screen and (min-width: 1401px) and (max-width: 1780px) {
+            animation: move41400 2s forwards;
           }
         }
       }
@@ -430,6 +520,18 @@
       left: -70%;
     }
   }
+  @keyframes move4900 {
+    0% {
+      position: relative;
+      top: 0px;
+      left: 0px;
+    }
+    100% {
+      position: relative;
+      top: 15%;
+      left: -65%;
+    }
+  }
   @keyframes move41000 {
     0% {
       position: relative;
@@ -454,19 +556,50 @@
       left: -60%;
     }
   }
+  @keyframes move41400 {
+    0% {
+      position: relative;
+      top: 0px;
+      left: 0px;
+    }
+    100% {
+      position: relative;
+      top: 28%;
+      left: -50%;
+    }
+  }
 }
-.page6-wrapper__content{
+.page6-wrapper__content {
   margin-top: 30px;
 }
-.page6-wrapper__content--answer{
+.page6-wrapper__content--answer {
   position: absolute;
   width: 100%;
   height: 80%;
   bottom: 0;
-  @media screen and (max-width: 1199px){
+  // @media screen and (min-height: 600px) and (max-height: 798px) {
+  //   top: 40%;
+  // }
+  // @media screen and (min-height: 800px) and (max-height: 1079px) {
+  //   top: 40%;
+  // }
+  @media screen and (min-width: 1781px) {
+    top: 37%;
+  }
+  @media screen and (max-width: 1199px) {
     height: 90%;
-  } 
-  @media screen and (max-width: 770px){
+  }
+  @media screen and (max-width: 770px) {
     height: 80%;
+  }
+}
+@media (max-aspect-ratio: 14/9) {
+  .page6-wrapper__content--answer {
+    top: 40% !important;
+  }
+}
+@media (max-aspect-ratio: 2/1) {
+  .page6-wrapper__content--answer {
+    top: 30%; 
   }
 }
