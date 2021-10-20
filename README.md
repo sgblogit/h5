@@ -1,4 +1,4 @@
-# bjy_h5_react_framwork
+# bjy_h5_react_framework
 
 ### `项目目录结构`
 
