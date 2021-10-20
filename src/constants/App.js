@@ -1,10 +1,24 @@
-const pageCount = 29;
+const pageData = [
+	//page0
+	[""],
+	//page1
+	[""],
+	//page2
+	[
+		{
+			stepName:'stepName0'
+		},
+		{
+			stepName:'stepName1'
+		},
+		{
+			stepName:'stepName2'
+		},
+	]
+]
 
 const getPageData = () => {
-	const data = Array(pageCount).fill([""]);
-	// This operation will cause the page to click 4 times to turn the page successfully.
-	// data[1] = [].concat(...Array(4).fill(""));
-	return data;
+	return pageData;
 };
 
 export const PAGE_DATA = getPageData();

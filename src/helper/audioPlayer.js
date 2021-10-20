@@ -1,29 +1,38 @@
-import React from "react"
-
 let audios = {};
 let currentAudio = null;
-
-const pauseAudio = (audioId)=>{
-    if(audios[audioId]){
+/**
+ * pause Audio
+ * @param {*} audioId [audioId | audioUrl]
+ */
+const pauseAudio = (audioId) => {
+    if (audios[audioId]) {
         audios[audioId].pause();
-    }else {
-        if(audios[window.btoa(audioId)]){
+    } else {
+        if (audios[window.btoa(audioId)]) {
             audios[window.btoa(audioId)].pause()
         }
     }
 }
 
-const pauseAllAudio = ()=>{
-    for(let aKey in audios){
+/**
+ * pause all audios
+ */
+const pauseAllAudio = () => {
+    for (let aKey in audios) {
         audios[aKey].pause();
     }
 }
 
-const playAudio = (audioUrl)=>{
+/**
+ * play audio and set current audio
+ * @param {*} audioUrl 
+ * @returns 
+ */
+const playAudio = (audioUrl) => {
     let audioId = window.btoa(audioUrl);
-    if(audios[audioId]){
+    if (audios[audioId]) {
         audios[audioId].play();
-    }else {
+    } else {
         const audio = new Audio(audioUrl);
         currentAudio = audio;
         audios[audioId] = audio;
@@ -32,19 +41,28 @@ const playAudio = (audioUrl)=>{
     return audioId;
 }
 
-const cleanAllAudio = ()=>{
+/**
+ * clean all audios
+ */
+const cleanAllAudio = () => {
     pauseAudio();
     audios = {}
 }
 
-const getCurrentPlayingAudio = ()=>{
+/**
+ * get the last playing audio id
+ * @returns currentAudioId
+ */
+const getCurrentPlayingAudio = () => {
     return currentAudio
 }
 
-export default {
+const audioPlayer = {
     playAudio,
     pauseAudio,
     pauseAllAudio,
     cleanAllAudio,
     getCurrentPlayingAudio
-};
+}
+
+export default audioPlayer;

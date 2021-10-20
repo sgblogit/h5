@@ -1,37 +1,66 @@
-# Getting Started with Create React App
+# bjy_h5_react_framwork
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `项目目录结构`
 
-## Available Scripts
+```
+|--src
+    |--assets
+        |--audios //存放音效文件，分为通用、各页面音效
+            |--common
+            |--home
+            |--page_1
+            |--page_...
+        |--images //存放图片文件，分为通用、各页面图片
+            |-common
+            |--home
+            |--page_1
+            |--page_...
+    |--components //通用组件
+        |--DebugPanel //debug 面板
+        |--...
+    |--constants
+    |--helper //常用公用方法
+        |--audioPlayer //音效播放管理
+    |--pages //课件页面
+        |--home
+        |--page_1
+        |--page_...
+        |--index.js //页面集合 会根据currentPage返回指定页面
+    |--redux //redux数据
+    |--styles //通用样式
+    App.js
+    index.js //入口文件
 
-In the project directory, you can run:
 
-### `yarn dev`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
+### `课件开发步骤`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1，分析课件页面，构建课件结构；
+2，在pages下添加新的页面，在pages/index.js添加新的页面信息，在constants/app.js中添加页面数据
+3，将页面素材（图片、音效）放入assets对应目录中
+4，开发页面
 
-### `yarn build`
+### `DEBUG 面板`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+debugPanel 位于右上角，用于模拟百家云交互，开发环境中可用，生产环境中不可用。
 
 
 ### `页面开发须知`
 开发前必读
 百家云H5课件 开发文档
 https://dev.baijiayun.com/wiki/detail/87
+
+
+### `概念`
+
+“page” 指课件某一个页面
+“step” 指课件某一个页面中的步骤，例如一个课件页面中设计了3个步骤，那么这个课件的step=3
+“record” 指在课件某一页面的操作事件记录列表
+“prevRecord” 指在课件某一页面的上一次操作记录列表
+当page翻页后，record会清空
 
 ### `课件打包须知`
 百家云H5课件zip要求压缩包内跟目录为一个英文名的文件夹，此文件夹中需要有index.html文件作为课件入口。
@@ -75,17 +104,21 @@ page，step，record，prevRecord 等数据均会自动存在redux中
     onPushAction(e,{
         actionType: 'fireEvent'
         eventName: 'eg: from XXXX page',
+        eventPage: currentPage,
+        eventPageStep: currentStep,
         eventData: {
             playAudio:"iHaveAPaper"
             ...someData
         }
     })
 
-    操作事件在提交之前，在外层会自动加入当前页面和步骤两个数据
+    操作事件在提交之前，在外层会自动加入当前页面、步骤和时间戳数据
     {
         eventPage: currentPage,
         eventPageStep: currentStep,
+        eventTime:(new Date()).getTime()
     }
+
 ```
 
 ####  `事件响应方式`

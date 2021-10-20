@@ -1,98 +1,99 @@
 import React, { useEffect, useState } from "react";
-import images from "assets/images/index";
 import "./styles.scss";
 
 import { useSelector } from "react-redux";
 import audios from "assets/audios/index";
 
 const ButtonBackgroundMusic = (props) => {
-	const { onPushAction, autoPlay,audioName } = props;
+	const { onPushAction, autoPlay, audioName } = props;
 
 	const {
 		currentPage,
 		currentStep,
-        currentRecord,
-        prevRecord,
-    } = useSelector((state) => state.app);
+		currentRecord
+	} = useSelector((state) => state.app);
 
-	const [isShowPlayButton,setIsShowPlayButton] = useState(autoPlay);
-	const [player,setPlayer] = useState(null)
-	
+	const [isShowPlayButton, setIsShowPlayButton] = useState(autoPlay);
+	const [player, setPlayer] = useState(null)
+
 	const imgClickEventName = 'ButtonBackgroundMusic'
 
 	useEffect(() => {
-		let audioUrl = audios.find((item) => item.id === audioName)?.audio
+		console.log(audios)
+		let audioUrl = audios[audioName]
 		let eAudioPlayer = new Audio(audioUrl)
 		setPlayer(eAudioPlayer);
-		if(autoPlay){
+		if (autoPlay) {
 			eAudioPlayer.play();
 		}
-		return ()=>{
+		return () => {
 			eAudioPlayer.pause();
 		}
-	},[])
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [])
 
-	const playAudio = (flag)=>{
-		if(flag){
+	const playAudio = (flag) => {
+		if (flag) {
 			player?.play();
-		}else {
+		} else {
 			player?.pause();
 		}
 	}
 
 	useEffect(() => {
-		if(currentRecord.length > 0){
-			let recordEventData = currentRecord[currentRecord.length-1];
-			if(recordEventData.eventPage === currentPage && 
+		if (currentRecord.length > 0) {
+			let recordEventData = currentRecord[currentRecord.length - 1];
+			if (recordEventData.eventPage === currentPage &&
 				recordEventData.eventPageStep === currentStep &&
-				recordEventData.eventName === imgClickEventName){
-				console.log(`runRecordEvent`,recordEventData)
-				if(recordEventData.eventData.playing){
+				recordEventData.eventName === imgClickEventName) {
+				console.log(`runRecordEvent`, recordEventData)
+				if (recordEventData.eventData.playing) {
 					playAudio(true)
 					setIsShowPlayButton(true)
-				}else {
+				} else {
 					playAudio(false)
 					setIsShowPlayButton(false)
 				}
 			}
 		}
-	},[currentRecord])
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [currentRecord])
 
 
-	const handleClickButton = (e,op)=>{
-		onPushAction(e,op.actionType,op)
+	const handleClickButton = (e, op) => {
+		onPushAction(e, op.actionType, op)
 	}
 
 	return (
 		<div className="button-background">
 			{isShowPlayButton ? (
-				<img
-					src={images.icons.icPauseMusic}
-					onClick={(e)=>{
-						handleClickButton(e,{
+				<button
+					onClick={(e) => {
+						handleClickButton(e, {
 							actionType: 'fireEvent',
 							eventName: imgClickEventName,
 							eventData: {
-								playing:false
+								playing: false
 							}
 						})
 					}}
-					alt={images.icons.icPauseMusic}
-				/>
+				>
+					pause backgound audio
+				</button>
 			) : (
-				<img
-					src={images.icons.icPlayMusic}
-					onClick={(e)=>{
-						handleClickButton(e,{
+				<button
+					onClick={(e) => {
+						handleClickButton(e, {
 							actionType: 'fireEvent',
 							eventName: imgClickEventName,
 							eventData: {
-								playing:true
+								playing: true
 							}
 						})
 					}}
-					alt={images.icons.icPlayMusic}
-				/>
+				>
+					play backgound audio
+				</button>
 			)}
 		</div>
 	);
