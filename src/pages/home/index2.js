@@ -61,7 +61,7 @@ const Home = (props) => {
 			<ButtonBackgroundMusic
 				audioName={"audioBg"}
 				onPushAction={onPushAction}
-				autoPlay={true}
+				autoPlay={false}
 				// audioPlaying={
 				// 	window.currentAudio ||
 				// 	window.bridge?._prevRecordStack?.[
