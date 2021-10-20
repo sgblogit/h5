@@ -52,6 +52,7 @@ const AppWrap = () => {
 		console.log(`onPageChange-page:`, currentPage + 1);
 		console.log(`onPageChange-step:`, 0);
 		if (isDeBug && currentPage < PAGE_DATA.length - 1) {
+			audioPlayer.pauseAllAudio();
 			audioPlayer.cleanAllAudio();
 			dispatch(
 				setCurrentData({

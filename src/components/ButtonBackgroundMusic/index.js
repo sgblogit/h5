@@ -14,25 +14,22 @@ const ButtonBackgroundMusic = (props) => {
 	);
 
 	const [isShowPlayButton, setIsShowPlayButton] = useState(autoPlay);
-	const [player, setPlayer] = useState(null);
+	const [audioUrl, setAudioUrl] = useState(null);
 
 	const imgClickEventName = "ButtonBackgroundMusic";
 
 	useEffect(() => {
-		let audioUrl = audios.find((item) => item.id === audioName)?.audio;
-		let eAudioPlayer = new Audio(audioUrl);
-		setPlayer(eAudioPlayer);
-		if (autoPlay) {
-			eAudioPlayer.play();
+		setAudioUrl(audios.find((item) => item.id === audioName)?.audio);
+		if (autoPlay && audioUrl) {
+			audioPlayer.playAudio(audioUrl);
 		}
 		return () => {
-			eAudioPlayer.pause();
+			audioPlayer.pauseAudio(audioUrl);
 		};
-	}, []);
+	}, [audioName, audioUrl, autoPlay]);
 
 	const playAudio = (flag) => {
-		let audioUrl = audios.find((item) => item.id === audioName)?.audio;
-		if (flag) {
+		if (flag && audioUrl) {
 			audioPlayer.playAudio(audioUrl);
 		} else {
 			audioPlayer.pauseAudio(audioUrl);
