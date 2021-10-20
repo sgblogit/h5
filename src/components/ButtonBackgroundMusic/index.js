@@ -1,95 +1,95 @@
 import React, { useEffect, useState } from "react";
 import images from "assets/images/index";
 import "./styles.scss";
+import audioPlayer from "helper/audioPlayer";
 
 import { useSelector } from "react-redux";
 import audios from "assets/audios/index";
 
 const ButtonBackgroundMusic = (props) => {
-	const { onPushAction, autoPlay,audioName } = props;
+	const { onPushAction, autoPlay, audioName } = props;
 
-	const {
-		currentPage,
-		currentStep,
-        currentRecord,
-        prevRecord,
-    } = useSelector((state) => state.app);
+	const { currentPage, currentStep, currentRecord, prevRecord } = useSelector(
+		(state) => state.app
+	);
 
-	const [isShowPlayButton,setIsShowPlayButton] = useState(autoPlay);
-	const [player,setPlayer] = useState(null)
-	
-	const imgClickEventName = 'ButtonBackgroundMusic'
+	const [isShowPlayButton, setIsShowPlayButton] = useState(autoPlay);
+	const [player, setPlayer] = useState(null);
+
+	const imgClickEventName = "ButtonBackgroundMusic";
 
 	useEffect(() => {
-		let audioUrl = audios.find((item) => item.id === audioName)?.audio
-		let eAudioPlayer = new Audio(audioUrl)
+		let audioUrl = audios.find((item) => item.id === audioName)?.audio;
+		let eAudioPlayer = new Audio(audioUrl);
 		setPlayer(eAudioPlayer);
-		if(autoPlay){
+		if (autoPlay) {
 			eAudioPlayer.play();
 		}
-		return ()=>{
+		return () => {
 			eAudioPlayer.pause();
-		}
-	},[])
+		};
+	}, []);
 
-	const playAudio = (flag)=>{
-		if(flag){
-			player?.play();
-		}else {
-			player?.pause();
+	const playAudio = (flag) => {
+		let audioUrl = audios.find((item) => item.id === audioName)?.audio;
+		if (flag) {
+			audioPlayer.playAudio(audioUrl);
+		} else {
+			audioPlayer.pauseAudio(audioUrl);
 		}
-	}
+	};
 
 	useEffect(() => {
-		if(currentRecord.length > 0){
-			let recordEventData = currentRecord[currentRecord.length-1];
-			if(recordEventData.eventPage === currentPage && 
+		if (currentRecord.length > 0) {
+			let recordEventData = currentRecord[currentRecord.length - 1];
+			if (
+				recordEventData.eventPage === currentPage &&
 				recordEventData.eventPageStep === currentStep &&
-				recordEventData.eventName === imgClickEventName){
-				console.log(`runRecordEvent`,recordEventData)
-				if(recordEventData.eventData.playing){
-					playAudio(true)
-					setIsShowPlayButton(true)
-				}else {
-					playAudio(false)
-					setIsShowPlayButton(false)
+				recordEventData.eventName === imgClickEventName
+			) {
+				console.log(`runRecordEvent`, recordEventData);
+				if (recordEventData.eventData.playing) {
+					playAudio(true);
+					setIsShowPlayButton(true);
+				} else {
+					playAudio(false);
+					setIsShowPlayButton(false);
 				}
 			}
 		}
-	},[currentRecord])
+	}, [currentRecord]);
 
-
-	const handleClickButton = (e,op)=>{
-		onPushAction(e,op.actionType,op)
-	}
+	const handleClickButton = (e, op) => {
+		onPushAction(e, op.actionType, op);
+	};
 
 	return (
 		<div className="button-background">
 			{isShowPlayButton ? (
 				<img
 					src={images.icons.icPauseMusic}
-					onClick={(e)=>{
-						handleClickButton(e,{
-							actionType: 'fireEvent',
+					onClick={(e) => {
+						handleClickButton(e, {
+							actionType: "fireEvent",
 							eventName: imgClickEventName,
 							eventData: {
-								playing:false
-							}
-						})
+								playing: false,
+							},
+						});
 					}}
 					alt={images.icons.icPauseMusic}
 				/>
 			) : (
 				<img
 					src={images.icons.icPlayMusic}
-					onClick={(e)=>{
-						handleClickButton(e,{
-							actionType: 'fireEvent',
+					onClick={(e) => {
+						handleClickButton(e, {
+							actionType: "fireEvent",
 							eventName: imgClickEventName,
 							eventData: {
-								playing:true
-							}
-						})
+								playing: true,
+							},
+						});
 					}}
 					alt={images.icons.icPlayMusic}
 				/>
