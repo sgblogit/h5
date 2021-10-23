@@ -1,16 +1,16 @@
 import { useSelector } from "react-redux";
-
+import Container from "components/Container/index";
 import React from "react";
 import Page0 from "./Page0";
 import Page1 from "./Page1";
 import Page2 from "./Page2";
+import images from "assets/images/index";
+import "./styles.scss";
 
 const Pages = (props) => {
 	const { onPushAction } = props;
 
-	const {
-        currentPage,
-    } = useSelector((state) => state.app);
+	const { currentPage } = useSelector((state) => state.app);
 
 	let Page;
 
@@ -29,9 +29,12 @@ const Pages = (props) => {
 	}
 
 	return (
-		<>
-			{Page}
-		</>
+		<div
+			className={`page-content page${currentPage}`}
+			style={{ backgroundImage: `url(${images.background[currentPage]})` }}
+		>
+			<Container>{Page}</Container>
+		</div>
 	);
 };
 

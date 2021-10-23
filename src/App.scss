@@ -3,7 +3,8 @@
 	padding: 0px;
 	box-sizing: border-box;
 }
-.App,.pageWrap {
+.App,
+.pageWrap {
 	max-width: 2000px;
 	width: 100vw;
 	margin: 0 auto;
@@ -11,7 +12,6 @@
 	overflow: hidden;
 	position: relative;
 }
-
 ul,
 li,
 p {
@@ -21,41 +21,12 @@ p {
 a {
 	text-decoration: none;
 }
-.scaleImage {
-	animation: scaleImage 1s forwards;
-}
 .pointer {
 	cursor: pointer;
 }
-
 .none {
 	display: none !important;
 }
 .absolute {
 	position: absolute;
-}
-.feel-icon {
-	position: absolute;
-	animation: feelIcon 1s forwards;
-}
-@keyframes feelIcon {
-	0% {
-		transform: scale(2);
-		display: block;
-	}
-	100% {
-		transform: scale(1);
-		display: none;
-	}
-}
-@keyframes scaleImage {
-	0% {
-		transform: scale(1);
-	}
-	50% {
-		transform: scale(1.1);
-	}
-	100% {
-		transform: scale(1);
-	}
 }
