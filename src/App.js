@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { setCurrentData } from "redux/currentData";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import store from "redux/store";
 import Aos from "aos";
 import Pages from "pages";
@@ -17,6 +17,8 @@ import "./App.scss";
 const App = () => {
 	const dispatch = useDispatch();
 
+	const currentPage = useSelector((state) => state.app.currentPage);
+
 	const handleClick = (e, actionType, value, callback) => {
 		console.log("click-fireEvent");
 
@@ -32,7 +34,6 @@ const App = () => {
 			case "fireEvent":
 				const state = store.getState();
 				const { currentPage, currentStep } = state.app;
-
 				//just for debug
 				debugPushRecord(value);
 
@@ -108,11 +109,30 @@ const App = () => {
 		});
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
+
+	const alignItemsContainer = useMemo(() => {
+		let alignItems = null;
+		switch (currentPage) {
+			case 21:
+				if (window.innerWidth < window.innerHeight) {
+					alignItems = "center";
+				} else {
+					alignItems = "flex-end";
+				}
+
+				break;
+			default:
+				alignItems = "center";
+				break;
+		}
+		return alignItems;
+	}, [currentPage]);
+
 	return (
 		<div className="App">
 			<DebugPanel />
 			<div className="pageWrap">
-				<Pages onPushAction={handleClick} />
+				<Pages onPushAction={handleClick} alignItems={alignItemsContainer} />
 			</div>
 		</div>
 	);

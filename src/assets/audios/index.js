@@ -3,15 +3,14 @@ import gitAudio from "./common/git.mp3";
 import falseAudio from "./common/false.mp3";
 import trueAudio from "./common/true.mp3";
 ///
-import it17 from "./page_17/it.mp3"
-import thatRight from "./page_17/that_right.mp3"
-import itadoll from "./page_18/itadoll.mp3"
-import what from "./page_18/what.mp3"
-import apple from "./page_14/apple.mp3"
-import verygood from "./page_14/verygood.mp3"
-import cat from "./page_19/cat.mp3"
-import whatpet from "./page_19/whatpet.mp3"
-
+import it17 from "./page_17/it.mp3";
+import thatRight from "./page_17/that_right.mp3";
+import itadoll from "./page_18/itadoll.mp3";
+import what from "./page_18/what.mp3";
+import apple from "./page_14/apple.mp3";
+import verygood from "./page_14/verygood.mp3";
+import cat from "./page_19/cat.mp3";
+import whatpet from "./page_19/whatpet.mp3";
 
 //
 import voiceStart from "./page_0/voice.mp3";
@@ -31,7 +30,6 @@ import teacherAudio5 from "./page_5/teacher.mp3";
 import kidAudio6 from "./page_6/kid.mp3";
 import teacherAudio6 from "./page_6/teacher.mp3";
 
-
 import teacherAudio7 from "./page_7/teacher.mp3";
 
 import kidAudio8 from "./page_8/kid.mp3";
@@ -50,6 +48,8 @@ import cover3 from "./page_13/cover3.mp3";
 import yes15 from "./page_15/yes.mp3";
 import correct15 from "./page_15/correct.mp3";
 
+// page 21
+import voiceTextPage21 from "./page_21/voiceTextPage21.mp3";
 
 const audios = {
 	backgroundAudio,
@@ -66,7 +66,6 @@ const audios = {
 	verygood,
 	cat,
 	whatpet,
-
 
 	//
 
@@ -94,6 +93,7 @@ const audios = {
 	yes15,
 	correct15,
 
+	voiceTextPage21,
 };
 
 export default audios;

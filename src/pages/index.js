@@ -18,24 +18,24 @@ import Page13 from "./Page13/index";
 import Page14 from "./Page14";
 import Page15 from "./Page15/index";
 
-
-
 import Page17 from "./Page17";
 import Page18 from "./Page18";
 import Page19 from "./Page19";
+
+import Page21 from "./Page21";
 
 import images from "assets/images/index";
 import "./styles.scss";
 
 const Pages = (props) => {
-  const { onPushAction } = props;
+	const { onPushAction } = props;
 
-  const { currentPage } = useSelector((state) => state.app);
+	const { currentPage } = useSelector((state) => state.app);
 
-  let Page;
+	let Page;
 
-  switch (currentPage) {
-  	case 0:
+	switch (currentPage) {
+		case 0:
 			Page = <Page0 onPushAction={onPushAction} />;
 			break;
 		case 1:
@@ -62,50 +62,53 @@ const Pages = (props) => {
 		case 8:
 			Page = <Page8 onPushAction={onPushAction} />;
 			break;
-      case 9:
-        Page = <Page9 onPushAction={onPushAction} />;
-        break;
+		case 9:
+			Page = <Page9 onPushAction={onPushAction} />;
+			break;
 		case 10:
 			Page = <Page10 onPushAction={onPushAction} />;
 			break;
-      case 11:
-        Page = <Page11 onPushAction={onPushAction} />;
-        break;
-      case 12:
-        Page = <Page12 onPushAction={onPushAction} />;
-        break;
-      case 13:
-        Page = <Page13 onPushAction={onPushAction} />;
-        break;
-      case 14:
-      Page = <Page14 onPushAction={onPushAction} />;
-      break;
+		case 11:
+			Page = <Page11 onPushAction={onPushAction} />;
+			break;
+		case 12:
+			Page = <Page12 onPushAction={onPushAction} />;
+			break;
+		case 13:
+			Page = <Page13 onPushAction={onPushAction} />;
+			break;
+		case 14:
+			Page = <Page14 onPushAction={onPushAction} />;
+			break;
 		case 15:
 			Page = <Page15 onPushAction={onPushAction} />;
-				break;
-  
-    case 17:
-      Page = <Page17 onPushAction={onPushAction} />;
-      break;
-    case 18:
-      Page = <Page18 onPushAction={onPushAction} />;
-      break;
-      case 19:
-        Page = <Page19 onPushAction={onPushAction} />;
-        break;
+			break;
 
-    default:
-      break;
-  }
+		case 17:
+			Page = <Page17 onPushAction={onPushAction} />;
+			break;
+		case 18:
+			Page = <Page18 onPushAction={onPushAction} />;
+			break;
+		case 19:
+			Page = <Page19 onPushAction={onPushAction} />;
+			break;
 
-  return (
-    <div
-      className={`page-content page${currentPage}`}
-      style={{ backgroundImage: `url(${images.background[currentPage]})` }}
-    >
-      <Container>{Page}</Container>
-    </div>
-  );
+		case 21:
+			Page = <Page21 onPushAction={onPushAction} />;
+			break;
+		default:
+			break;
+	}
+
+	return (
+		<div
+			className={`page-content page${currentPage}`}
+			style={{ backgroundImage: `url(${images.background[currentPage]})` }}
+		>
+			<Container>{Page}</Container>
+		</div>
+	);
 };
 
 export default Pages;

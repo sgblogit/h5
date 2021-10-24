@@ -31,14 +31,20 @@ const pageData = [
 	[""],
 	[""],
 	[""],
+	[
+		{
+			stepName: "click teacher image",
+		},
+		{
+			stepName: "click child image",
+		},
+	],
 	[""],
 	[""],
 	[""],
 	[""],
 	[""],
-	[""],
-	
-]
+];
 
 const getPageData = () => {
 	return pageData;
