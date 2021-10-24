@@ -28,6 +28,9 @@ import kidAudio8 from "./page_8/kid.mp3";
 import kidAudio10 from "./page_10/kid.mp3";
 import teacherAudio10 from "./page_10/teacher.mp3";
 
+// page 21
+import voiceTextPage21 from "./page_21/voiceTextPage21.mp3";
+
 const audios = {
 	backgroundAudio,
 	gitAudio,
@@ -50,6 +53,9 @@ const audios = {
 
 	kidAudio10,
 	teacherAudio10,
+
+	//page 21
+	voiceTextPage21,
 };
 
 export default audios;

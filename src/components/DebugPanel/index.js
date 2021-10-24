@@ -41,12 +41,9 @@ const DebugPanel = (props) => {
 		if (!isDeBug) {
 			return false;
 		}
-		console.log("click-nextPage");
 		if (currentPage === PAGE_DATA.length - 1) {
 			return false;
 		}
-		console.log(`onPageChange-page:`, currentPage + 1);
-		console.log(`onPageChange-step:`, 0);
 		audioPlayer.cleanAllAudio();
 		dispatch(
 			setCurrentData({
@@ -98,7 +95,6 @@ const DebugPanel = (props) => {
 				currentStep: currentStep + 1,
 			})
 		);
-
 		//window.bridge.requestChangePage(currentPage, currentStep + 1);
 	};
 

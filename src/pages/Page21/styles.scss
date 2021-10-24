@@ -19,6 +19,7 @@
 		& .control-flex0 {
 			width: 20%;
 			display: flex;
+			align-items: flex-end;
 			& img {
 				object-fit: contain;
 				cursor: pointer;
@@ -27,8 +28,13 @@
 		}
 		&--result {
 			width: 80%;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			justify-content: flex-end;
 			& .control-flex1 {
 				width: 100%;
+				animation: controlFlex1 2s forwards;
 				& img {
 					object-fit: contain;
 					width: 100%;
@@ -150,5 +156,16 @@
 		& .control-flex3 {
 			width: 250px;
 		}
+	}
+}
+
+@keyframes controlFlex1 {
+	0% {
+		display: none;
+		transform: scale(0);
+	}
+	100% {
+		display: flex;
+		transform: scale(1);
 	}
 }

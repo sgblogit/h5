@@ -51,6 +51,7 @@ const pageData = [
 			stepName: "click child image",
 		},
 	],
+	[""],
 ];
 
 const getPageData = () => {
