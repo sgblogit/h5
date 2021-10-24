@@ -6,6 +6,9 @@ import audios from "assets/audios/index";
 import { setTimeOutAddClass } from "helper/setTimeOutControlClass";
 
 import "./styles.scss";
+import TitleMeeting from "components/TitleMeetting/index";
+import images from "assets/images/index";
+import ConversationTK from "components/ConversationTK/index";
 
 const Page1 = (props) => {
 	const { onPushAction } = props;
@@ -96,8 +99,23 @@ const Page1 = (props) => {
 				}}
 			>play audio and animation</button>
 
-			<div ref={redBlockRef} className={`red-block ${active}`}>red block</div>
-
+			{/* <div ref={redBlockRef} className={`red-block ${active}`}>red block</div> */}
+			
+			<div className ="page-wrraper">
+				<TitleMeeting bgTitle={images.page1.titleMeeting} />
+				<ConversationTK 
+					page= "page1" 
+					object1= {images.page1.teacher}
+					object2= {images.page1.kid}
+					objectG1= {images.page1.gKid}
+					objectG2= {images.page1.gTeacher}
+					text1= {images.page1.textKid}
+					text2= {images.page1.textTeacher}
+					audio1= "kidAudio" 
+					audio2= "teacherAudio"
+					clickHandler= {clickHandler}
+				/>
+			</div>
 		</div>
 	);
 };
