@@ -1,0 +1,23 @@
+.title-meetting{
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ height: 15%;
+ padding: 20px;
+display: flex;
+justify-content: center;
+    img{
+        position: absolute;
+        height: 100%;
+        animation: move 2s infinite;
+    }
+}
+@keyframes move {
+	0% {
+		transform: scale(.8);
+	}
+	100% {
+        transform: scale(1);
+	}
+}

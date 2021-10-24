@@ -4,17 +4,40 @@ const pageData = [
 	//page1
 	[""],
 	//page2
-	[
-		{
-			stepName:'stepName0'
-		},
-		{
-			stepName:'stepName1'
-		},
-		{
-			stepName:'stepName2'
-		},
-	]
+	[""],
+	//page3
+	[""],
+	//page4
+	[""],
+	//page5
+	[""],
+	//page6
+	[""],
+	//page7
+	[""],
+	//page8
+	[""],
+	//page9
+	[""],
+	//page10
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	
 ]
 
 const getPageData = () => {
