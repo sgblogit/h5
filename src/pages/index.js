@@ -14,27 +14,28 @@ import Page10 from "./Page10";
 
 import Page17 from "./Page17";
 
+import Page21 from "./Page21";
 import images from "assets/images/index";
 import "./styles.scss";
 
 const Pages = (props) => {
-  const { onPushAction } = props;
+	const { onPushAction, alignItems } = props;
 
-  const { currentPage } = useSelector((state) => state.app);
+	const { currentPage } = useSelector((state) => state.app);
 
-  let Page;
+	let Page;
 
-  switch (currentPage) {
-    case 0:
-      Page = <Page0 onPushAction={onPushAction} />;
-      break;
-    case 1:
-      Page = <Page1 onPushAction={onPushAction} />;
-      break;
-    case 2:
-      Page = <Page2 onPushAction={onPushAction} />;
-      break;
-    case 3:
+	switch (currentPage) {
+		case 0:
+			Page = <Page0 onPushAction={onPushAction} />;
+			break;
+		case 1:
+			Page = <Page1 onPushAction={onPushAction} />;
+			break;
+		case 2:
+			Page = <Page2 onPushAction={onPushAction} />;
+			break;
+		case 3:
 			Page = <Page3 onPushAction={onPushAction} />;
 			break;
 		case 4:
@@ -56,22 +57,29 @@ const Pages = (props) => {
 			Page = <Page10 onPushAction={onPushAction} />;
 			break;
 
-    case 17:
-      Page = <Page17 onPushAction={onPushAction} />;
-      break;
+		case 17:
+			Page = <Page17 onPushAction={onPushAction} />;
+			break;
 
-    default:
-      break;
-  }
+		case 21:
+			Page = <Page21 onPushAction={onPushAction} />;
+			break;
 
-  return (
-    <div
-      className={`page-content page${currentPage}`}
-      style={{ backgroundImage: `url(${images.background[currentPage]})` }}
-    >
-      <Container>{Page}</Container>
-    </div>
-  );
+		default:
+			break;
+	}
+
+	return (
+		<div
+			className={`page-content`}
+			style={{
+				backgroundImage: `url(${images.background[currentPage]})`,
+				alignItems: alignItems ? alignItems : "center",
+			}}
+		>
+			<Container>{Page}</Container>
+		</div>
+	);
 };
 
 export default Pages;

@@ -22,16 +22,36 @@ const pageData = [
 	//page10
 	[
 		{
-			stepName:'stepName0'
+			stepName: "stepName0",
 		},
 		{
-			stepName:'stepName1'
+			stepName: "stepName1",
 		},
 		{
-			stepName:'stepName2'
+			stepName: "stepName2",
 		},
-	]
-]
+	],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+	[""],
+
+	// page 21
+	[
+		{
+			stepName: "click teacher image",
+		},
+		{
+			stepName: "click child image",
+		},
+	],
+];
 
 const getPageData = () => {
 	return pageData;

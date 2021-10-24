@@ -1,7 +1,7 @@
 // import background
 import bgPage0 from "./page_0/page0-bg.png";
 
-//phuong 
+//phuong
 import bgPage1 from "./page_1/page1-bg.png";
 import bgPage2 from "./page_2/page2-bg.png";
 import bgPage3 from "./page_3/page3-bg.png";
@@ -11,6 +11,7 @@ import bgPage6 from "./page_6/page6-bg.png";
 import bgPage7 from "./page_7/page7-bg.png";
 import bgPage8 from "./page_8/page8-bg.png";
 import bgPage10 from "./page_10/page10-bg.png";
+
 import titleMeeting from "./page_1/titleMeeting.png";
 import teacher from "./page_1/teacher.png";
 import kid from "./page_1/kid.png";
@@ -54,13 +55,15 @@ import teacher17 from "./page_17/teacher_18.png";
 import teacherGif17 from "./page_17/teacher_18.gif";
 import girlGif17 from "./page_17/girl_18.gif";
 
-
-
-
-
-
-
-
+// page 21
+import bgPage21 from "./page_21/page21_bg.png";
+import titleMeetingPage21 from "./page_21/meeting.png";
+import teacherPage21 from "./page_21/teacher.png";
+import childPage21 from "./page_21/child.png";
+import numbersPage21 from "./page_21/numbers.png";
+import textPage21 from "./page_21/text.png";
+import teacherPage21Gif from "./page_21/teacherPage21Gif.gif";
+import childPage21Gif from "./page_21/childPage21Gif.gif";
 
 const images = {
 	background: [
@@ -89,21 +92,29 @@ const images = {
 		bgPage2,
 		bgPage2,
 		bgPage2,
-		//page 17	
+		//page 17
 		bgPage17,
-		
+
+		//fix me
+		bgPage21,
+		bgPage21,
+		bgPage21,
+		bgPage21,
+
+		// page 21
+		bgPage21,
 	],
 	page0: {},
-	page1:{
+	page1: {
 		titleMeeting,
 		teacher,
 		kid,
 		gTeacher,
 		gKid,
 		textTeacher,
-		textKid
+		textKid,
 	},
-	page2:{
+	page2: {
 		teacher2,
 		kid2,
 		gTeacher2,
@@ -111,29 +122,29 @@ const images = {
 		textTeacher2,
 		textKid2,
 	},
-	page3:{
-		textTeacher3
+	page3: {
+		textTeacher3,
 	},
-	page4:{
+	page4: {
 		textKid4,
 	},
-	page5:{
+	page5: {
 		textTeacher5,
-		textKid5
+		textKid5,
 	},
-	page6:{
+	page6: {
 		textTeacher6,
-		textKid6
+		textKid6,
 	},
-	page7:{
-		textTeacher7
+	page7: {
+		textTeacher7,
 	},
-	page8:{
-		textKid8
+	page8: {
+		textKid8,
 	},
-	page10:{
+	page10: {
 		textTeacher10,
-		textKid10
+		textKid10,
 	},
 	page17: {
 		answer17,
@@ -144,8 +155,16 @@ const images = {
 		meet17,
 		teacherGif17,
 		teacher17,
+	},
 
-		
+	page21: {
+		titleMeetingPage21,
+		teacherPage21,
+		childPage21,
+		numbersPage21,
+		textPage21,
+		teacherPage21Gif,
+		childPage21Gif,
 	},
 };
 
