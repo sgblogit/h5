@@ -110,7 +110,7 @@ const Page9 = (props) => {
 				brotherImg={images.page9.brotherPage9}
 				meGif={images.page9.meGifPage9}
 				meImg={images.page9.mePage9}
-				people={images.page9.peoplePage9}
+				people={images.common.rightKid}
 				audioDad="dadPage9"
 				audioMom="momPage9"
 				audioBrother="brotherPage9"

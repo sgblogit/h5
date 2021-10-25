@@ -14,8 +14,8 @@ const Page25 = (props) => {
     const [show1, setShow1] = useState('');
     const [show2, setShow2] = useState('');
 
-    const [kid, setKid] = useState(images.page2.kid2);
-    const [teacher, setTeacher] = useState(images.page2.teacher2);
+    const [kid, setKid] = useState(images.common.leftKid);
+    const [teacher, setTeacher] = useState(images.common.rightTeacher);
 
 	const {
 		currentPage,
@@ -69,7 +69,7 @@ const Page25 = (props) => {
 				}}
 			>go to page 1</button>
 			<div className ="page25-wrapper" >
-                <TitleMeeting bgTitle={images.page15.titleMetting15} />
+                <TitleMeeting bgTitle={images.common.redMeeting} />
 				
                 <div className="session-main25">
                     <div className= {`session-title hidden ${show1 ? show1 : ""}  `}>
@@ -107,7 +107,7 @@ const Page25 = (props) => {
                         <div className=" list-item25 list-img"> 
                             <img src={kid} alt=""
                                 onClick={(e) => {
-                                    setKid(images.page2.gKid2)
+                                    setKid(images.common.leftKidGif)
                                     
                                 }}
                             ></img>
@@ -121,7 +121,7 @@ const Page25 = (props) => {
                         <div className=" list-item25 list-imgTeacher">
                             <img src={teacher} alt=""
                                onClick={(e) => {
-                                setTeacher(images.page2.gTeacher2)
+                                setTeacher(images.common.rightTeacherGif)
                                 setTimeout(() => {
                                     setShow1("active")
                                 }, 1500);

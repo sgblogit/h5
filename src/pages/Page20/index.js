@@ -64,11 +64,11 @@ const Page20 = (props) => {
 		pic2={images.page20.dog20}
 		pic3={images.page20.cat20}
 		pic4={images.page20.duck20}
-		object1={images.page20.teacher20}
-		object2={images.page20.girl20}
+		object1={images.common.leftTeacher}
+		object2={images.common.rightKid}
 		ball={images.page16.ball17}
-		objectG1={images.page20.teacherGif20}
-		objectG2={images.page20.girlGif20}
+		objectG1={images.common.leftTeacherGif}
+		objectG2={images.common.rightKidGif}
 		text1={images.page20.here20}
 		text2={images.page20.which20}
 		audio1 = 'which20'

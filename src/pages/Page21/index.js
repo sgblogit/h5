@@ -14,8 +14,8 @@ const eventName = "clickPage21";
 const Page21 = (props) => {
 	const dispatch = useDispatch();
 	const { onPushAction } = props;
-	const [teacherImage, setTeacherImage] = useState(images.page21.teacherPage21);
-	const [childImage, setChildImage] = useState(images.page21.childPage21);
+	const [teacherImage, setTeacherImage] = useState(images.common.rightTeacher);
+	const [childImage, setChildImage] = useState(images.common.leftKid);
 	const [isShowResult, setIsShowResult] = useState(false);
 	const { currentRecord, currentPage, currentStep } = useSelector(
 		(state) => state.app
@@ -62,7 +62,7 @@ const Page21 = (props) => {
 			) {
 				if (recordEventData.eventData.isShowResult) {
 					if (recordEventData.eventData.imageGifTeacher) {
-						setTeacherImage(images.page21.teacherPage21Gif);
+						setTeacherImage(images.common.rightTeacherGif);
 					}
 					setIsShowResult(true);
 				}
@@ -79,7 +79,7 @@ const Page21 = (props) => {
 
 	return (
 		<Fragment>
-			<TitleMeeting bgTitle={images.page21.titleMeetingPage21} />
+			<TitleMeeting bgTitle={images.common.redMeeting} />
 			<div
 				className="content"
 				style={{
@@ -101,7 +101,7 @@ const Page21 = (props) => {
 										eventName: eventName,
 										eventData: {
 											// playAudio: "voiceTextPage21",
-											imageGifChild: images.page21.childPage21Gif,
+											imageGifChild: images.common.leftKidGif,
 										},
 									});
 								}}
@@ -131,7 +131,7 @@ const Page21 = (props) => {
 									eventData: {
 										isShowResult: true,
 										playAudio: "voiceTextPage21",
-										imageGifTeacher: images.page21.teacherPage21Gif,
+										imageGifTeacher: images.common.rightTeacherGif,
 									},
 								});
 							}
