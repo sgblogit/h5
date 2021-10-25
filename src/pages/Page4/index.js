@@ -1,9 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import audioPlayer from "helper/audioPlayer";
 import audios from "assets/audios/index";
-
-import { setTimeOutAddClass } from "helper/setTimeOutControlClass";
 
 import "./styles.scss";
 import TitleMeeting from "components/TitleMeetting/index";
@@ -13,21 +11,22 @@ import ConversationTK from "components/ConversationTK/index";
 const Page4 = (props) => {
 	const { onPushAction } = props;
 
-	const [active, setActive] = useState("");
-
-	const redBlockRef = useRef();
-
-	const { currentPage, currentStep, currentRecord, prevRecord } = useSelector(
+	const { currentPage, currentStep, currentRecord } = useSelector(
 		(state) => state.app
 	);
 
-	const { playAudio, pauseAudio } = audioPlayer;
+	const { playAudio } = audioPlayer;
 
 	const clickEventName = "page4";
 
 	const clickHandler = (e, op) => {
 		onPushAction(e, op.actionType, op);
 	};
+
+	const [image1, setImage1] = useState(images.common.leftKid);
+	const [image2, setImage2] = useState(images.common.rightTeacher);
+
+	const [textT1, setTextT1] = useState(null);
 
 	useEffect(() => {
 		if (currentRecord.length > 0) {
@@ -37,24 +36,24 @@ const Page4 = (props) => {
 				recordEventData.eventPageStep === currentStep &&
 				recordEventData.eventName === clickEventName
 			) {
-				console.log(`runRecordEvent`, recordEventData);
-				if (recordEventData.eventData.active) {
-					setActive("active");
-					//setTimeOutAddClass('red-block','active',2000)
-				} else {
-					setActive("");
-				}
 				if (recordEventData.eventData.playAudio) {
-					//playAudio
 					let audioUrl = audios[recordEventData.eventData.playAudio];
 					playAudio(audioUrl);
+				}
+				if (recordEventData.eventData.imageG1) {
+					setImage1(recordEventData.eventData.imageG1);
+				}
+				if (recordEventData.eventData.imageG2) {
+					setImage2(recordEventData.eventData.imageG2);
+				}
+				if (recordEventData.eventData.textT1) {
+					setTextT1(recordEventData.eventData.textT1);
 				}
 			}
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentRecord]);
 
-	console.log("render page4");
 	return (
 		<div className="page4">
 			<h1>this is page {currentPage}</h1>
@@ -102,19 +101,16 @@ const Page4 = (props) => {
 			>
 				play audio and animation
 			</button>
-
-			{/* <div ref={redBlockRef} className={`red-block ${active}`}>red block</div> */}
-
 			<div className="page-wrraper">
 				<TitleMeeting bgTitle={images.page1.titleMeeting} />
 				<ConversationTK
 					page="page4"
-					object2={images.common.rightTeacher}
-					object1={images.common.leftKid}
+					image2={image2}
+					image1={image1}
 					// text2= {images.page4.textKid2}
-					text1={images.page4.textKid4}
-					objectG1={images.common.leftKidGif}
-					objectG2={images.common.rightTeacher}
+					text1={textT1}
+					imageG1={images.common.leftKidGif}
+					imageG2={images.common.rightTeacher}
 					audio1="kidAudio4"
 					audio2=""
 					clickHandler={clickHandler}
