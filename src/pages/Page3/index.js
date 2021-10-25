@@ -1,27 +1,25 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import audioPlayer from "helper/audioPlayer";
 import audios from "assets/audios/index";
-
-import { setTimeOutAddClass } from "helper/setTimeOutControlClass";
-
 import "./styles.scss";
 import TitleMeeting from "components/TitleMeetting/index";
 import images from "assets/images/index";
 import ConversationTK from "components/ConversationTK/index";
 
 const Page3 = (props) => {
+	const { playAudio } = audioPlayer;
+
 	const { onPushAction } = props;
 
-	const [active, setActive] = useState("");
-
-	const redBlockRef = useRef();
-
-	const { currentPage, currentStep, currentRecord, prevRecord } = useSelector(
+	const { currentPage, currentStep, currentRecord } = useSelector(
 		(state) => state.app
 	);
 
-	const { playAudio, pauseAudio } = audioPlayer;
+	const [image1, setImage1] = useState(images.common.leftKid);
+	const [image2, setImage2] = useState(images.common.rightTeacher);
+
+	const [textT2, setTextT2] = useState(null);
 
 	const clickEventName = "page3";
 
@@ -37,24 +35,24 @@ const Page3 = (props) => {
 				recordEventData.eventPageStep === currentStep &&
 				recordEventData.eventName === clickEventName
 			) {
-				console.log(`runRecordEvent`, recordEventData);
-				if (recordEventData.eventData.active) {
-					setActive("active");
-					//setTimeOutAddClass('red-block','active',2000)
-				} else {
-					setActive("");
-				}
 				if (recordEventData.eventData.playAudio) {
-					//playAudio
 					let audioUrl = audios[recordEventData.eventData.playAudio];
 					playAudio(audioUrl);
+				}
+				if (recordEventData.eventData.imageG1) {
+					setImage1(recordEventData.eventData.imageG1);
+				}
+				if (recordEventData.eventData.imageG2) {
+					setImage2(recordEventData.eventData.imageG2);
+				}
+				if (recordEventData.eventData.textT2) {
+					setTextT2(recordEventData.eventData.textT2);
 				}
 			}
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentRecord]);
 
-	console.log("render page3");
 	return (
 		<div className="page3">
 			<h1>this is page {currentPage}</h1>
@@ -103,18 +101,16 @@ const Page3 = (props) => {
 				play audio and animation
 			</button>
 
-			{/* <div ref={redBlockRef} className={`red-block ${active}`}>red block</div> */}
-
 			<div className="page-wrraper">
 				<TitleMeeting bgTitle={images.page1.titleMeeting} />
 				<ConversationTK
 					page="page3"
-					object2={images.common.rightTeacher}
-					object1={images.common.leftKid}
+					image2={image2}
+					image1={image1}
 					// text2= {images.page3.textKid2}
-					text2={images.page3.textTeacher3}
-					objectG1={images.common.leftKidGif}
-					objectG2={images.common.rightTeacherGif}
+					text2={textT2}
+					imageG1={images.common.leftKidGif}
+					imageG2={images.common.rightTeacherGif}
 					audio1=""
 					audio2="teacherAudio3"
 					reverseObj="reverse"

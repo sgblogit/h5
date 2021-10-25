@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import images from "assets/images/index";
 import "./styles.scss";
