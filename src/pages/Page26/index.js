@@ -68,6 +68,7 @@ const Page26 = (props) => {
 				if (recordEventData.eventData.textT2) {
 					setTextT2("activehide");
 					timeOut2 = setTimeout(() => {
+						setTextT2("");
 						onPushAction(
 							{},
 							{
@@ -85,6 +86,7 @@ const Page26 = (props) => {
 				if (recordEventData.eventData.textT3) {
 					setTextT3("activehide");
 					timeOut3 = setTimeout(() => {
+						setTextT3("");
 						onPushAction(
 							{},
 							{
@@ -103,6 +105,7 @@ const Page26 = (props) => {
 				if (recordEventData.eventData.textT4) {
 					setTextT4("activehide");
 					timeOut4 = setTimeout(() => {
+						setTextT4("");
 						onPushAction(
 							{},
 							{
@@ -120,6 +123,7 @@ const Page26 = (props) => {
 				if (recordEventData.eventData.textT5) {
 					setTextT5("activehide");
 					timeOut5 = setTimeout(() => {
+						setTextT5("");
 						onPushAction(
 							{},
 							{
@@ -137,6 +141,7 @@ const Page26 = (props) => {
 				if (recordEventData.eventData.textT6) {
 					setTextT6("activehide");
 					timeOut6 = setTimeout(() => {
+						setTextT6("");
 						onPushAction(
 							{},
 							{

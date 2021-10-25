@@ -14,7 +14,7 @@ import bgPage11 from "./page_11/bg-11.png";
 import bgPage12 from "./page_12/page12-bg.png";
 import bgPage13 from "./page_13/page13-bg.png";
 import bgPage15 from "./page_15/page15-bg.png";
-import bgPage22 from "./page_22/page22-bg.png";
+import bgPage22 from "./page_22/page22-bg.jpg";
 import bgPage25 from "./page_25/page25-bg.png";
 // Common
 import leftKid from "./Common/leftKid.png";

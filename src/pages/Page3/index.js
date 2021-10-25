@@ -55,7 +55,7 @@ const Page3 = (props) => {
 
 	return (
 		<div className="page3">
-			<h1>this is page {currentPage}</h1>
+			{/* <h1>this is page {currentPage}</h1>
 			<button
 				onClick={(e) => {
 					clickHandler(e, {
@@ -99,7 +99,7 @@ const Page3 = (props) => {
 				}}
 			>
 				play audio and animation
-			</button>
+			</button> */}
 
 			<div className="page-wrraper">
 				<TitleMeeting bgTitle={images.page1.titleMeeting} />

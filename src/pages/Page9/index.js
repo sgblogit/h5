@@ -64,7 +64,7 @@ const Page9 = (props) => {
 	}, [currentRecord]);
 	return (
 		<div className="page9">
-			<button
+			{/* <button
 				onClick={(e) => {
 					clickHandler(e, {
 						actionType: "changePage",
@@ -107,7 +107,7 @@ const Page9 = (props) => {
 				}}
 			>
 				play audio and animation
-			</button>
+			</button> */}
 			<TitleMeeting bgTitle={images.page1.titleMeeting} />
 			<Family
 				page="page9"

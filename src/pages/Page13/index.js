@@ -62,7 +62,7 @@ const Page13 = (props) => {
 
 	return (
 		<div className="page13">
-			<h1>this is page {currentPage}</h1>
+			{/* <h1>this is page {currentPage}</h1>
 			<button
 				onClick={(e) => {
 					clickHandler(e, {
@@ -76,7 +76,7 @@ const Page13 = (props) => {
 				}}
 			>
 				go to page 1
-			</button>
+			</button> */}
 			<div className="page13-wrapper">
 				<TitleMeeting bgTitle={images.page1.titleMeeting} />
 				<div className="session-main12">

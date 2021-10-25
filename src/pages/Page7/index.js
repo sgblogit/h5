@@ -56,7 +56,7 @@ const Page7 = (props) => {
 	console.log("render page7");
 	return (
 		<div className="page7">
-			<h1>this is page {currentPage}</h1>
+			{/* <h1>this is page {currentPage}</h1>
 			<button
 				onClick={(e) => {
 					clickHandler(e, {
@@ -100,7 +100,7 @@ const Page7 = (props) => {
 				}}
 			>
 				play audio and animation
-			</button>
+			</button> */}
 			<div className="page-wrraper">
 				<TitleMeeting bgTitle={images.page1.titleMeeting} />
 				<ConversationTK

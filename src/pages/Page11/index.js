@@ -59,8 +59,8 @@ const Page11 = (props) => {
 
 	return (
 		<div className="page11">
-			<h1>this is page {currentPage}</h1>
-			<button
+			{/* <h1>this is page {currentPage}</h1> */}
+			{/* <button
 				onClick={(e) => {
 					clickHandler(e, {
 						actionType: "changePage",
@@ -103,7 +103,7 @@ const Page11 = (props) => {
 				}}
 			>
 				play audio and animation
-			</button>
+			</button> */}
 			<div className="page-wrapper">
 				<TitleMeeting bgTitle={images.page1.titleMeeting} />
 				<Favorites
