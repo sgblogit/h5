@@ -106,7 +106,7 @@ const Page10 = (props) => {
 			{/* <div ref={redBlockRef} className={`red-block ${active}`}>red block</div> */}
 
 			<div className="page-wrraper">
-				<TitleMeeting bgTitle={images.page10.titleMeeting} />
+				<TitleMeeting bgTitle={images.page1.titleMeeting} />
 				<ConversationTK
 					page="page10"
 					object1={images.page1.teacher}

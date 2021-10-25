@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import images from "assets/images/index";
-
+import "./styles.scss";
 function Favorites(props) {
   const {
     cake,
@@ -18,25 +18,22 @@ function Favorites(props) {
     teacher,
     kid,
   } = props;
-  const [img1, setImageCake] = useState(cake);
-  const [img2, setImageEgg] = useState(egg);
-  const [img3, setImagePasta] = useState(pasta);
-  const [img4, setImageCandy] = useState(candy);
   const [teacherImg, setImageTeacher] = useState(teacher);
   const [kidImg, setImageKid] = useState(kid);
   const [textT1, setTextT1] = useState("");
+  const [active2, setActive2] = useState("");
 
   return (
-    <div className="session-main">
-      <div className="session-main-list">
+    <div className="session-main-page11">
+      <div className="session-main-page11-list">
         <div className="teacher-wrapper">
           <div className="teacher">
             <img
+              className="imgTeacher"
               src={teacherImg}
-              alt={teacherImg}
               onClick={(e) => {
-                setImageTeacher(teacher)
-                setTextT1(text);
+                setImageTeacher(teacherGif);
+                setTextT1("active");
                 clickHandler(e, {
                   actionType: "fireEvent",
                   eventName: page,
@@ -46,48 +43,51 @@ function Favorites(props) {
                   },
                 });
               }}
-            />
-          </div>
-          <div>
-            <img
-              src={textT1}
-              alt={textT1}
-              className={`"text "${textT1 === "" ? "d-none" : " "}${
-                className ? className : ""
-              } `}
-            />
-          </div>
-        </div>
-        <div className="list-item">
-          <div className="cake">
-            <img src={img1} alt={img1} />
-          </div>
-          <div className="egg">
-            <img src={img2} alt={img2} />
-          </div>
-          <div className="pasta">
-            <img src={img3} alt={img3} />
-          </div>
-          <div className="candy">
-            <img src={img4} alt={img4} />
+              alt=""
+            ></img>
+
+            {text && (
+              <div
+                className={`text-teacher ${className ? className : ""}  ${
+                  textT1 ? textT1 : ""
+                }  `}
+              >
+                <img src={text} alt=""></img>
+              </div>
+            )}
           </div>
         </div>
-        <div className="kid-wrapper" >
-            <img
-                 src={kidImg}
-              alt={kidImg}
-              onClick={(e) => {
-                setImageKid(kidGif);
-                clickHandler(e, {
-                  actionType: "fireEvent",
-                  eventName: page,
-                  eventData: {
-                    playAudio: audioKid,
-                    active: true,
-                  },
-                });
-              }}
-            />
+        <div className= {`list-item hidden  ${active2 ? active2 : ""}  `}>
+          <div className="item cake">
+            <img src={cake} alt={cake} />
+          </div>
+          <div className="item egg">
+            <img src={egg} alt={egg} />
+          </div>
+          <div className="item pasta">
+            <img src={pasta} alt={pasta} />
+          </div>
+          <div className="item candy">
+            <img src={candy} alt={candy} />
+          </div>
+        </div>
+        <div className="kid-wrapper">
+          <img
+            src={kidImg}
+            alt={kidImg}
+            onClick={(e) => {
+              setImageKid(kidGif);
+              setActive2("active2")
+              clickHandler(e, {
+                actionType: "fireEvent",
+                eventName: page,
+                eventData: {
+                  playAudio: audioKid,
+                  active: true,
+                },
+              });
+            }}
+          />
         </div>
       </div>
     </div>

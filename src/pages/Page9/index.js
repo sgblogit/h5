@@ -101,7 +101,7 @@ const Page9 = (props) => {
 			</button>
 			<TitleMeeting bgTitle={images.page1.titleMeeting} />
 			<Family
-				page="page 9"
+				page="page9"
 				dadGif={images.page9.dadGifPage9}
 				dadImg={images.page9.dadPage9}
 				momGif={images.page9.momGifPage9}

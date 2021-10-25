@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import audioPlayer from "helper/audioPlayer";
 import audios from "assets/audios/index";
 import images from "assets/images/index";
-import "./styles.scss";
 import PracticeFind from "components/PracticeFind/index";
 
 const Page14 = (props) => {

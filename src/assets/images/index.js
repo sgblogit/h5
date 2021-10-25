@@ -16,6 +16,8 @@ import bgPage11 from "./page_11/bg-11.png";
 import bgPage12 from "./page_12/page12-bg.png";
 import bgPage13 from "./page_13/page13-bg.png";
 import bgPage15 from "./page_15/page15-bg.png";
+import bgPage22 from "./page_22/page22-bg.png";
+import bgPage25 from "./page_25/page25-bg.png";
 
 import introStart from "./page_0/intro.gif";
 import kidStart from "./page_0/kidStart.gif";
@@ -113,6 +115,33 @@ import teacher14 from "./page_14/teacher_14.png";
 import teacherGif14 from "./page_14/teacher_14.gif";
 import girlGif14 from "./page_14/girl_14.gif";
 
+import bgPage16 from "./page_16/background-16.png";
+import banana16 from "./page_16/banana_16.png";
+import avocado16 from "./page_16/avocado_16.png";
+import apple16 from "./page_16/apple_16.png";
+import girl16 from "./page_16/girl_16.png";
+import here16 from "./page_16/here_16.png";
+import meeting16 from "./page_16/meeting_16.png";
+import orange16 from "./page_16/orange_16.png";
+import teacher16 from "./page_16/teacher_16.png";
+import which16 from "./page_16/which_16.png";
+import girlGif16 from "./page_16/gif/girl_16.gif";
+import teacherGif16 from "./page_16/gif/teacher_16.gif";
+
+import bgPage20 from "./page_20/background-20.png";
+import cat20 from "./page_20/cat_20.png";
+import dog20 from "./page_20/dog_20.png";
+import duck20 from "./page_20/ducks_20.png";
+import fish20 from "./page_20/fish_20.png";
+import girl20 from "./page_20/girl_20.png";
+import here20 from "./page_20/here_20.png";
+import meeting20 from "./page_20/meeting_20.png";
+import teacher20 from "./page_20/teacher_20.png";
+import which20 from "./page_20/which_20.png";
+import girlGif20 from "./page_20/gif/girl_20.gif";
+import teacherGif20 from "./page_20/gif/teacher_20.gif";
+
+
 import bgPage19 from "./page_19/bg_20.png";
 import answer19 from "./page_19/answer_20.png";
 import question19 from "./page_19/question_20.png";
@@ -131,6 +160,51 @@ import numbersPage21 from "./page_21/numbers.png";
 import textPage21 from "./page_21/text.png";
 import teacherPage21Gif from "./page_21/teacherPage21Gif.gif";
 import childPage21Gif from "./page_21/childPage21Gif.gif";
+// page 23
+import bgPage23 from "./page_23/bg_23.png";
+import answer23 from "./page_23/answer_23.png";
+import question23 from "./page_23/question_23.png";
+import ball23 from "./page_23/ball_23.png";
+import girl23 from "./page_23/girl_23.png";
+import meet23 from "./page_23/meet_23.png";
+import teacher23 from "./page_23/teacher_23.png";
+import teacherGif23 from "./page_23/teacher_23.gif";
+import girlGif23 from "./page_23/girl_23.gif";
+
+import bgPage24 from "./page_24/bg_24.png";
+import answer24 from "./page_24/answer_24.png";
+import question24 from "./page_24/question_24.png";
+import ball24 from "./page_24/ball_24.png";
+import girl24 from "./page_24/girl_24.png";
+import meet24 from "./page_24/meet_24.png";
+import teacher24 from "./page_24/teacher_24.png";
+import teacherGif24 from "./page_24/teacher_24.gif";
+import girlGif24 from "./page_24/girl_24.gif";
+import picture1 from "./page_25/3.png";
+import picture2 from "./page_25/5.png";
+import picture3 from "./page_25/6.png";
+import picture4 from "./page_25/7.png";
+import picture5 from "./page_25/8.png";
+import picture6 from "./page_25/9.png";
+import picture7 from "./page_25/10.png";
+import picture8 from "./page_25/11.png";
+import picture9 from "./page_25/12.png";
+import picture10 from "./page_25/13.png";
+
+import one from "./page_22/3.png";
+import two from "./page_22/4.png";
+import three from "./page_22/5.png";
+import four from "./page_22/6.png";
+import five from "./page_22/7.png";
+import six from "./page_22/8.png";
+import seven from "./page_22/9.png";
+import eight from "./page_22/10.png";
+import night from "./page_22/11.png";
+import ten from "./page_22/12.png";
+import canyou from "./page_22/13.png";
+
+
+
 const images = {
 	background: [
 		// page 0
@@ -163,14 +237,30 @@ const images = {
 		bgPage13,
 		//page14
 		bgPage14,
+		// page15
 		bgPage15,
-		bgPage2,
+		// page16
+		bgPage16,
 		//page 17
 		bgPage17,
 		// page 18
 		bgPage18,
+		// page19
 		bgPage19,
+		// page20
+		bgPage20,
+		// page21
 		bgPage21,
+		// page22
+		bgPage22,
+		// page23
+		bgPage23,
+		// page24
+		bgPage24,
+		// page25
+		bgPage25,
+
+
 	],
 	page0: {
 		introStart,
@@ -266,6 +356,20 @@ const images = {
 		teacherGif14,
 		teacher14,
 	},
+
+	page16: {
+		apple16,
+		avocado16,
+		banana16,
+		girl16,
+		here16,
+		meeting16,
+		orange16,
+		teacher16,
+		which16,
+		girlGif16,
+		teacherGif16
+	  },
 	page17: {
 		answer17,
 		question17,
@@ -295,6 +399,19 @@ const images = {
 		teacherGif19,
 		teacher19,
 	},
+	page20: {
+		cat20,
+		dog20,
+		duck20,
+		fish20,
+		girl20,
+		here20,
+		meeting20,
+		teacher20,
+		which20,
+		girlGif20,
+		teacherGif20
+	  },
 	page21: {
 		titleMeetingPage21,
 		teacherPage21,
@@ -304,6 +421,51 @@ const images = {
 		teacherPage21Gif,
 		childPage21Gif,
 	},
+	page22:{
+		one,
+		two,
+		three,
+		four,
+		five,
+		six,
+		seven,
+		eight,
+		night,
+		ten,
+		canyou,
+	},
+	page23: {
+		answer23,
+		question23,
+		ball23,
+		girlGif23,
+		girl23,
+		meet23,
+		teacherGif23,
+		teacher23,
+	  },
+	  page24: {
+		answer24,
+		question24,
+		ball24,
+		girlGif24,
+		girl24,
+		meet24,
+		teacherGif24,
+		teacher24,
+	  },
+	  page25:{
+		picture1,
+		picture2,
+		picture3,
+		picture4,
+		picture5,
+		picture6,
+		picture7,
+		picture8,
+		picture9,
+		picture10
+	}
 };
 
 export default images;

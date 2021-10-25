@@ -108,12 +108,16 @@ const Page11 = (props) => {
 					clickHandler={clickHandler}
 					page="page11"
 					teacher={images.page11.teacherPage11}
-					audioTeacher="teacherAudio"
-					textT1={images.page11.textPage11}
+					audioTeacher="whatPage11"
+					text={images.page11.textPage11}
 					kidGif={images.page11.kidGifPage11}
 					kid={images.page11.kidPage11}
 					teacherGif={images.page11.teacherGifPage11}
-					audioKid="kidAudio"
+					audioKid="likePage11"
+					cake={images.page11.cakePage11}
+					egg={images.page11.eggPage11}
+					pasta={images.page11.pastaPage11}
+					candy={images.page11.candyPage11}
 				/>
 			</div>
 		</div>

@@ -1,36 +1,34 @@
-.page3 {
+.page16 {
     width: 100%;
     height: 100%;
-    background-image: url('../../assets/images/page_3/bg-01.png');
+    background-image: url('../../assets/images/page_16/background-16.png');
     background-repeat: no-repeat;
     background-size: cover;
-
-  
 }
-.title-page3{
-    img{
-        width: 30vw;
-        padding: 15px;
-    }
-}
-.main-content-page3{
-        margin-left: 5%;
-        position: relative;
-        .item-page3{
-        img{
-            width: 50vw;
-        }
-    }
-    .text-page3{
-        img{
-            width: 25vw;
-            position: absolute;
-            left: 15%;
-        }
-    }
-}
-.people-wrap-page3{
-    float: right;
-    position: absolute;
-    top: 30%;
-}
+// .title-page3{
+//     img{
+//         width: 30vw;
+//         padding: 15px;
+//     }
+// }
+// .main-content-page3{
+//         margin-left: 5%;
+//         position: relative;
+//         .item-page3{
+//         img{
+//             width: 50vw;
+//         }
+//     }
+//     .text-page3{
+//         img{
+//             width: 25vw;
+//             position: absolute;
+//             left: 15%;
+//         }
+//     }
+// }
+// .people-wrap-page3{
+//     float: right;
+//     position: absolute;
+//     top: 30%;
+// }

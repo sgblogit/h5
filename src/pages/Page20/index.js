@@ -2,12 +2,13 @@ import React, { useState, useEffect,useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import audioPlayer from 'helper/audioPlayer';
 import audios from "assets/audios/index";
-
+import images from "assets/images/index";
 import { setTimeOutAddClass } from "helper/setTimeOutControlClass";
 
 import "./styles.scss";
+import HereCat from "components/HereCat/index";
 
-const Page1 = (props) => {
+const Page20 = (props) => {
 	const { onPushAction } = props;
 
 	const [active,setActive] = useState('');
@@ -23,7 +24,7 @@ const Page1 = (props) => {
 
 	const { playAudio, pauseAudio } = audioPlayer;
 
-	const clickEventName = 'page1';
+	const clickEventName = 'page20';
 
 	const clickHandler = (e, op) => {
 		onPushAction(e, op.actionType, op)
@@ -53,53 +54,32 @@ const Page1 = (props) => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentRecord])
 
-	console.log('render page1')
+	console.log('render page20')
 	return (
-		<div className="page1">
-			<h1>this is page {currentPage}</h1>
-			<button
-				onClick={(e) => {
-					clickHandler(e, {
-						actionType: 'changePage',
-						eventName: 'page1',
-						eventData: {
-							page: 2,
-							step: 0
-						}
-					})
-				}}
-			>go to page 2</button>
+		<HereCat
+		page ='page20'
+		image1={images.page20.teacher20}
+		image2={images.page20.girl20}
+		pic1={images.page20.fish20}
+		pic2={images.page20.dog20}
+		pic3={images.page20.cat20}
+		pic4={images.page20.duck20}
+		object1={images.page20.teacher20}
+		object2={images.page20.girl20}
+		ball={images.page16.ball17}
+		objectG1={images.page20.teacherGif20}
+		objectG2={images.page20.girlGif20}
+		text1={images.page20.here20}
+		text2={images.page20.which20}
+		audio1 = 'which20'
+		audio2 = 'here20'
+		clickHandler= {clickHandler}
 
-			<button
-				onClick={(e) => {
-					clickHandler(e, {
-						actionType: 'fireEvent',
-						eventName: 'page1',
-						eventData: {
-							playAudio: 'gitAudio',
-							active:false
-						}
-					})
-				}}
-			>play audio</button>
 
-			<button
-				onClick={(e) => {
-					clickHandler(e, {
-						actionType: 'fireEvent',
-						eventName: 'page1',
-						eventData: {
-							playAudio: 'gitAudio',
-							active:true
-						}
-					})
-				}}
-			>play audio and animation</button>
-
-			<div ref={redBlockRef} className={`red-block ${active}`}>red block</div>
-
-		</div>
+		currentPage={currentPage}
+		onPushAction={onPushAction}
+		/>
 	);
 };
 
-export default React.memo(Page1);
+export default React.memo(Page20);
