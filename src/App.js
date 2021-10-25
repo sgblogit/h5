@@ -10,18 +10,19 @@ import DebugPanel, {
 	debugRequestChangePage,
 	debugPushRecord,
 } from "components/DebugPanel/index";
+import Loading from "components/Loading/index";
 
 import "aos/dist/aos.css";
 import "./App.scss";
+import audios from "assets/audios/index";
 
 const App = () => {
 	const dispatch = useDispatch();
 
 	const currentPage = useSelector((state) => state.app.currentPage);
+	const { isLoading } = useSelector((state) => state.app);
 
 	const handleClick = (e, actionType, value, callback) => {
-		console.log("click-fireEvent");
-
 		switch (actionType) {
 			case "changePage":
 				let { page, step } = value.eventData;
@@ -73,10 +74,16 @@ const App = () => {
 						setCurrentData({
 							currentPage: page,
 							currentStep: step,
+							isLoading: true,
 						})
 					);
-					// resolve số bước của trang cần chuyển đến
+					audioPlayer.playAudio(audios.audioChangePage);
+					setTimeout(() => {
+						dispatch(setCurrentData({ isLoading: false }));
+						audioPlayer.pause(audios.audioChangePage);
+					}, 1500);
 					resolve(PAGE_DATA[page].length);
+					// resolve số bước của trang cần chuyển đến
 				});
 			},
 			onRecordChange: (record, prevRecord) => {
@@ -110,6 +117,18 @@ const App = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
+	useEffect(() => {
+		let timOut;
+		if (isLoading) {
+			timOut = setTimeout(() => {
+				dispatch(setCurrentData({ isLoading: false }));
+			}, 1500);
+		}
+		return () => {
+			clearTimeout(timOut);
+		};
+	}, [dispatch, isLoading]);
+
 	const alignItemsContainer = useMemo(() => {
 		let alignItems = null;
 		switch (currentPage) {
@@ -119,7 +138,6 @@ const App = () => {
 				} else {
 					alignItems = "flex-end";
 				}
-
 				break;
 			default:
 				alignItems = "center";
@@ -128,11 +146,17 @@ const App = () => {
 		return alignItems;
 	}, [currentPage]);
 
+	console.log(isLoading, "isLoadingisLoading");
+
 	return (
 		<div className="App">
 			<DebugPanel />
 			<div className="pageWrap">
-				<Pages onPushAction={handleClick} alignItems={alignItemsContainer} />
+				{!isLoading ? (
+					<Pages onPushAction={handleClick} alignItems={alignItemsContainer} />
+				) : (
+					<Loading />
+				)}
 			</div>
 		</div>
 	);

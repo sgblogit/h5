@@ -1,7 +1,6 @@
 //phuong
 import bgPage0 from "./page_0/page0-bg.png";
 
-
 import bgPage1 from "./page_1/page1-bg.png";
 import bgPage2 from "./page_2/page2-bg.png";
 import bgPage3 from "./page_3/page3-bg.png";
@@ -141,7 +140,6 @@ import which20 from "./page_20/which_20.png";
 import girlGif20 from "./page_20/gif/girl_20.gif";
 import teacherGif20 from "./page_20/gif/teacher_20.gif";
 
-
 import bgPage19 from "./page_19/bg_20.png";
 import answer19 from "./page_19/answer_20.png";
 import question19 from "./page_19/question_20.png";
@@ -203,9 +201,12 @@ import night from "./page_22/11.png";
 import ten from "./page_22/12.png";
 import canyou from "./page_22/13.png";
 
-
+import buttonPlayAudio from "./page_0/button-play.jpg";
+import buttonPauseAudio from "./page_0/button-pause.jpg";
+import loadingImages from "./page_0/loading-image.gif";
 
 const images = {
+	loading: [loadingImages],
 	background: [
 		// page 0
 		bgPage0,
@@ -259,12 +260,12 @@ const images = {
 		bgPage24,
 		// page25
 		bgPage25,
-
-
 	],
 	page0: {
 		introStart,
 		kidStart,
+		buttonPlayAudio,
+		buttonPauseAudio,
 	},
 	page1: {
 		titleMeeting,
@@ -368,8 +369,8 @@ const images = {
 		teacher16,
 		which16,
 		girlGif16,
-		teacherGif16
-	  },
+		teacherGif16,
+	},
 	page17: {
 		answer17,
 		question17,
@@ -410,8 +411,8 @@ const images = {
 		teacher20,
 		which20,
 		girlGif20,
-		teacherGif20
-	  },
+		teacherGif20,
+	},
 	page21: {
 		titleMeetingPage21,
 		teacherPage21,
@@ -421,7 +422,7 @@ const images = {
 		teacherPage21Gif,
 		childPage21Gif,
 	},
-	page22:{
+	page22: {
 		one,
 		two,
 		three,
@@ -443,8 +444,8 @@ const images = {
 		meet23,
 		teacherGif23,
 		teacher23,
-	  },
-	  page24: {
+	},
+	page24: {
 		answer24,
 		question24,
 		ball24,
@@ -453,8 +454,8 @@ const images = {
 		meet24,
 		teacherGif24,
 		teacher24,
-	  },
-	  page25:{
+	},
+	page25: {
 		picture1,
 		picture2,
 		picture3,
@@ -464,8 +465,8 @@ const images = {
 		picture7,
 		picture8,
 		picture9,
-		picture10
-	}
+		picture10,
+	},
 };
 
 export default images;

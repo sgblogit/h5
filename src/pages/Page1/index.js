@@ -13,15 +13,17 @@ import ConversationTK from "components/ConversationTK/index";
 const Page1 = (props) => {
 	const { onPushAction } = props;
 
-	const [active, setActive] = useState("");
-
-	const redBlockRef = useRef();
-
-	const { currentPage, currentStep, currentRecord, prevRecord } = useSelector(
+	const { currentPage, currentStep, currentRecord } = useSelector(
 		(state) => state.app
 	);
 
-	const { playAudio, pauseAudio } = audioPlayer;
+	const [image1, setImage1] = useState(images.page1.teacher);
+	const [image2, setImage2] = useState(images.page1.kid);
+
+	const [textT1, setTextT1] = useState(null);
+	const [textT2, setTextT2] = useState(null);
+
+	const { playAudio } = audioPlayer;
 
 	const clickEventName = "page1";
 
@@ -37,27 +39,43 @@ const Page1 = (props) => {
 				recordEventData.eventPageStep === currentStep &&
 				recordEventData.eventName === clickEventName
 			) {
-				console.log(`runRecordEvent`, recordEventData);
-				if (recordEventData.eventData.active) {
-					setActive("active");
-					//setTimeOutAddClass('red-block','active',2000)
-				} else {
-					setActive("");
-				}
 				if (recordEventData.eventData.playAudio) {
-					//playAudio
 					let audioUrl = audios[recordEventData.eventData.playAudio];
 					playAudio(audioUrl);
+				}
+				if (recordEventData.eventData.imageG1) {
+					setImage1(recordEventData.eventData.imageG1);
+				}
+				if (recordEventData.eventData.imageG2) {
+					setImage2(recordEventData.eventData.imageG2);
+				}
+				if (recordEventData.eventData.textT1) {
+					setTextT1(recordEventData.eventData.textT1);
+				}
+				if (recordEventData.eventData.textT2) {
+					setTextT2(recordEventData.eventData.textT2);
 				}
 			}
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentRecord]);
 
-	console.log("render page1");
 	return (
 		<div className="page1">
-			<h1>this is page {currentPage}</h1>
+			<div className="page-wrraper">
+				<TitleMeeting bgTitle={images.page1.titleMeeting} />
+				<ConversationTK
+					page="page1"
+					image1={image1}
+					image2={image2}
+					text1={textT1}
+					text2={textT2}
+					audio1="kidAudio"
+					audio2="teacherAudio"
+					clickHandler={clickHandler}
+				/>
+			</div>
+			{/* <h1>this is page {currentPage}</h1>
 			<button
 				onClick={(e) => {
 					clickHandler(e, {
@@ -101,25 +119,7 @@ const Page1 = (props) => {
 				}}
 			>
 				play audio and animation
-			</button>
-
-			{/* <div ref={redBlockRef} className={`red-block ${active}`}>red block</div> */}
-
-			<div className="page-wrraper">
-				<TitleMeeting bgTitle={images.page1.titleMeeting} />
-				<ConversationTK
-					page="page1"
-					object1={images.page1.teacher}
-					object2={images.page1.kid}
-					objectG2={images.page1.gKid}
-					objectG1={images.page1.gTeacher}
-					text1={images.page1.textKid}
-					text2={images.page1.textTeacher}
-					audio1="kidAudio"
-					audio2="teacherAudio"
-					clickHandler={clickHandler}
-				/>
-			</div>
+			</button> */}
 		</div>
 	);
 };

@@ -1,11 +1,20 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import "./styles.scss";
 
 import { useSelector } from "react-redux";
 import audios from "assets/audios/index";
+import audioPlayer from "helper/audioPlayer";
+import images from "assets/images";
 
 const ButtonControlAudio = (props) => {
-	const { onPushAction, isAutoPlay, audioName } = props;
+	const {
+		onPushAction,
+		isAutoPlay,
+		audioName,
+		customStyle,
+		handleControlAudioCustom,
+		isPlayAudio,
+	} = props;
 
 	const { currentPage, currentStep, currentRecord } = useSelector(
 		(state) => state.app
@@ -17,15 +26,13 @@ const ButtonControlAudio = (props) => {
 	const imgClickEventName = "ButtonBackgroundMusic";
 
 	useEffect(() => {
-		console.log(audios);
 		let audioUrl = audios[audioName];
-		let eAudioPlayer = new Audio(audioUrl);
-		setPlayer(eAudioPlayer);
+		setPlayer(audioUrl);
 		if (isAutoPlay) {
-			eAudioPlayer.play();
+			audioPlayer.playAudio(audioUrl);
 		}
 		return () => {
-			eAudioPlayer.pause();
+			audioPlayer.pauseAudio(audioUrl);
 		};
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
@@ -33,9 +40,9 @@ const ButtonControlAudio = (props) => {
 	const playAudio = useCallback(
 		(flag) => {
 			if (flag) {
-				player?.play();
+				audioPlayer.playAudio(player);
 			} else {
-				player?.pause();
+				audioPlayer.pauseAudio(player);
 			}
 		},
 		[player]
@@ -51,10 +58,18 @@ const ButtonControlAudio = (props) => {
 			) {
 				if (recordEventData.eventData.playing) {
 					playAudio(true);
-					setIsShowPlayButton(true);
+					if (typeof handleControlAudioCustom === "function") {
+						handleControlAudioCustom(true);
+					} else {
+						setIsShowPlayButton(true);
+					}
 				} else {
 					playAudio(false);
-					setIsShowPlayButton(false);
+					if (typeof handleControlAudioCustom === "function") {
+						handleControlAudioCustom(false);
+					} else {
+						setIsShowPlayButton(false);
+					}
 				}
 			}
 		}
@@ -65,9 +80,17 @@ const ButtonControlAudio = (props) => {
 		onPushAction(e, op.actionType, op);
 	};
 
+	const isShowPlayButtonValue = useMemo(() => {
+		if (typeof isPlayAudio === "boolean") {
+			return isPlayAudio;
+		} else {
+			return isShowPlayButton;
+		}
+	}, [isPlayAudio, isShowPlayButton]);
+
 	return (
-		<div className="button-background">
-			{isShowPlayButton ? (
+		<div className="button-background" style={{ ...customStyle }}>
+			{isShowPlayButtonValue ? (
 				<span
 					onClick={(e) => {
 						handleClickButton(e, {
@@ -79,7 +102,7 @@ const ButtonControlAudio = (props) => {
 						});
 					}}
 				>
-					pause backgound audio
+					<img src={images.page0.buttonPauseAudio} alt="" />
 				</span>
 			) : (
 				<span
@@ -93,7 +116,7 @@ const ButtonControlAudio = (props) => {
 						});
 					}}
 				>
-					play backgound audio
+					<img src={images.page0.buttonPlayAudio} alt="" />
 				</span>
 			)}
 		</div>

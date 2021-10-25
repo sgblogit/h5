@@ -12,11 +12,10 @@ import verygood from "./page_14/verygood.mp3";
 import cat from "./page_19/cat.mp3";
 import whatpet from "./page_19/whatpet.mp3";
 
-import which from "./page_16/whit.mp3"
-import here from "./page_16/here.mp3"
-import which20 from "./page_20/whit.mp3"
-import here20 from "./page_20/here.mp3"
-
+import which from "./page_16/whit.mp3";
+import here from "./page_16/here.mp3";
+import which20 from "./page_20/whit.mp3";
+import here20 from "./page_20/here.mp3";
 
 //
 import voiceStart from "./page_0/voice.mp3";
@@ -64,11 +63,10 @@ import correct15 from "./page_15/correct.mp3";
 import voiceTextPage21 from "./page_21/voiceTextPage21.mp3";
 
 // page23
-import whatNumber from "./page_23/number.mp3"
-import what23 from "./page_23/what.mp3"
-import whatNumber24 from "./page_24/number3.mp3"
-import what24 from "./page_24/what.mp3"
-
+import whatNumber from "./page_23/number.mp3";
+import what23 from "./page_23/what.mp3";
+import whatNumber24 from "./page_24/number3.mp3";
+import what24 from "./page_24/what.mp3";
 
 import one from "./page_22/one.mp3";
 import two from "./page_22/tow.mp3";
@@ -84,7 +82,10 @@ import canyou from "./page_22/canyou.mp3";
 
 import voice25 from "./page_25/voice.mp3";
 
+import audioChangePage from "./common/am_thanh_chuyen_trang.mp3";
+
 const audios = {
+	audioChangePage,
 	backgroundAudio,
 	gitAudio,
 	falseAudio,
@@ -141,7 +142,6 @@ const audios = {
 	what24,
 	whatNumber24,
 
-
 	one,
 	two,
 	three,
@@ -153,7 +153,7 @@ const audios = {
 	night,
 	ten,
 	canyou,
-	
+
 	voice25,
 };
 

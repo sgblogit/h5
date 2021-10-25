@@ -34,6 +34,7 @@ const playAudio = (audioUrl) => {
 		audios[audioId].play();
 	} else {
 		const audio = new Audio(audioUrl);
+		console.log([audio],"audio");
 		currentAudio = audio;
 		audios[audioId] = audio;
 		audio.play();

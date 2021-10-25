@@ -5,6 +5,7 @@ import "./styles.scss";
 import { PAGE_DATA } from "../../constants/app";
 import audioPlayer from "../../helper/audioPlayer";
 import store from "redux/store";
+import audios from "assets/audios/index";
 
 const isDeBug = process.env.NODE_ENV === "development";
 const DebugPanel = (props) => {
@@ -31,9 +32,14 @@ const DebugPanel = (props) => {
 				currentStep: 0,
 				currentRecord: [],
 				prevRecord: [],
+				isLoading: true,
 			})
 		);
-
+		audioPlayer.playAudio(audios.audioChangePage);
+		setTimeout(() => {
+			dispatch(setCurrentData({ isLoading: false }));
+			audioPlayer.pauseAudio(audios.audioChangePage);
+		}, 1000);
 		//window.bridge.requestChangePage(currentPage - 1, 0);
 	};
 
@@ -51,9 +57,14 @@ const DebugPanel = (props) => {
 				currentStep: 0,
 				currentRecord: [],
 				prevRecord: [],
+				isLoading: true,
 			})
 		);
-
+		audioPlayer.playAudio(audios.audioChangePage);
+		setTimeout(() => {
+			dispatch(setCurrentData({ isLoading: false }));
+			audioPlayer.pauseAudio(audios.audioChangePage);
+		}, 1000);
 		//window.bridge.requestChangePage(currentPage + 1, 0);
 	};
 

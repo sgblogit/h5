@@ -1,18 +1,13 @@
 import React from "react";
-import { Spin } from "antd";
 import "./styles.scss";
+import images from "assets/images";
 
 const Loading = (props) => {
-	const { isGlobalLoading } = props;
 	return (
 		<div className="loading">
-			{isGlobalLoading ? (
-				<div className="loading__global">
-					<Spin size="large" />
-				</div>
-			) : (
-				<div className="loading__not-global" />
-			)}
+			<div className="loading__content">
+				<img src={images.loading[0]} alt="" />
+			</div>
 		</div>
 	);
 };
