@@ -10,7 +10,6 @@ import TitleMeeting from "components/TitleMeetting/index";
 const Page22 = (props) => {
 	const { onPushAction } = props;
 
-	const [active,setActive] = useState('');
 
     const [show1, setShow1] = useState('');
     const [show2, setShow2] = useState('');
@@ -39,16 +38,20 @@ const Page22 = (props) => {
 				recordEventData.eventPageStep === currentStep &&
 				recordEventData.eventName === clickEventName) {
 				console.log(`runRecordEvent`, recordEventData)
-				if (recordEventData.eventData.active) {
-					setActive('active')
-					//setTimeOutAddClass('red-block','active',2000)
-				}else {
-					setActive('')
-				}
+			
 				if (recordEventData.eventData.playAudio) {
 					//playAudio
 					let audioUrl = audios[recordEventData.eventData.playAudio]
 					playAudio(audioUrl)
+
+				}
+                if (recordEventData.eventData.show1) {
+					setShow1(recordEventData.eventData.show1);
+				}
+                if (recordEventData.eventData.show2) {
+					setTimeout(() => {
+                        setShow2(recordEventData.eventData.show2);
+                    }, 1500);
 				}
 			}
 		}
@@ -88,7 +91,7 @@ const Page22 = (props) => {
                                         actionType: 'fireEvent',
                                         eventName: 'page22',
                                         eventData: {
-                                            playAudio: 'one',
+playAudio: 'one',
                                             active:true
                                         }
                                     })
@@ -148,7 +151,7 @@ const Page22 = (props) => {
                                             active:true
                                         }
                                     })
-                                }}
+}}
                             >
                                 <img src={images.page22.five} alt=""></img>
                             </div>
@@ -208,7 +211,7 @@ const Page22 = (props) => {
                             >
                                 <img src={images.page22.night} alt=""></img>
                             </div>
-                            <div className="item"
+<div className="item"
                                  onClick={(e) => {
                                     clickHandler(e, {
                                         actionType: 'fireEvent',
@@ -227,16 +230,14 @@ const Page22 = (props) => {
                             <img src={teacher} alt=""
                                onClick={(e) => {
                                 setTeacher(images.common.rightTeacherGif)
-                                setTimeout(() => {
-                                    setShow2("active")
-                                }, 1500);
-                                setShow1("active")
                                 clickHandler(e, {
                                     actionType: 'fireEvent',
                                     eventName: 'page22',
                                     eventData: {
                                         playAudio: 'canyou',
-                                        active:true
+                                        active:true,
+                                        show2 : 'active',
+                                        show1 : 'active'
                                     }
                                 })
                             }}

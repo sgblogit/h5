@@ -61,8 +61,8 @@ const Page19 = (props) => {
 	return (
 		<PracticeFind
 			page="page19"
-			image1={images.page19.teacher19}
-			image2={images.page19.girl19}
+			image1={images.common.rightTeacher}
+			image2={images.common.leftKid}
 			object1={image1}
 			object2={image2}
 			ball={images.page14.ball14}
