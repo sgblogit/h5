@@ -119,6 +119,7 @@ const Page6 = (props) => {
 					audio2="teacherAudio6"
 					reverseObj="reverse"
 					clickHandler={clickHandler}
+					isReverse
 				/>
 			</div>
 		</div>

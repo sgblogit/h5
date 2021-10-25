@@ -75,7 +75,7 @@ const Page2 = (props) => {
 					audio2="teacherAudio2"
 					reverseObj="reverse"
 					clickHandler={clickHandler}
-					reverse
+					isReverse
 				/>
 			</div>
 			{/* <h1>this is page {currentPage}</h1>
