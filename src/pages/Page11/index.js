@@ -114,7 +114,7 @@ const Page11 = (props) => {
 					text={images.page11.textPage11}
 					kidGif={images.common.rightKidGif}
 					kid={kidImg}
-					teacherGif={images.common.leftTeacher}
+					teacherGif={images.common.leftTeacherGif}
 					audioKid="likePage11"
 					cake={images.page11.cakePage11}
 					egg={images.page11.eggPage11}

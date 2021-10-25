@@ -6,7 +6,25 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    // background-color: red;
+    .imgPic{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 35%;
+        transform: translateX(-3%);
+        .picture-list{
+            margin: 0 0 0 auto;
+            width: 50%;
+            height: 100%;
+        }
+        .picture{
+            height: 100%;
+            width: 25%;
+        }
+        
+    }
     &-list {
       display: flex;
       align-items: flex-end;
@@ -76,22 +94,6 @@
       
     }
   }
-.imgPic{
-    position: absolute;
-    width: 50%;
-    height: 35%;
-    /* padding-bottom: 35%; */
-    /* float: left; */
-    top: -6%;
-    display: none;
-    /* justify-content: center; */
-    /* align-items: center; */
-    padding-right: 33%;
-    .picture{
-        height: 100%;
-    }
-    
-}
 .actives {
     display: flex;
 }

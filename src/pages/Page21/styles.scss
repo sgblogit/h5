@@ -65,7 +65,7 @@
 		& .control-flex3 {
 			width: 20%;
 			& img {
-				width: 100%;
+				width: 83%;
 				object-fit: contain;
 				cursor: pointer;
 			}
@@ -88,7 +88,7 @@
 					justify-content: center;
 					align-items: center;
 					& img {
-						width: 90%;
+						width: 60%;
 					}
 				}
 			}
@@ -97,24 +97,40 @@
 }
 @media screen and (min-width: 800px) {
 	.content {
+		& .control-flex3 {
+			width: 20%;
+			& img {
+				width:66%;
+				object-fit: contain;
+				cursor: pointer;
+			}
+		}
+		& .control-flex0 {
+			width: 20%;
+			& img {
+				width: 100%;
+			}
+		}
 		&__child {
 			&--result {
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
+				margin-left: 9%;
 				& .control-flex1 {
-					width: 80%;
+					width: 60%;
 					& img {
 						width: 100%;
 					}
 				}
 				& .control-flex2 {
-					width: 80%;
+					width: 60%;
 					& img {
 						width: 100%;
 					}
 				}
+			
 			}
 		}
 	}
@@ -150,8 +166,9 @@
 		&__child {
 			width: 750px;
 			& .control-flex0 {
-				width: 230px;
+				width: 22%;
 				margin-right: 8%;
+				margin-top: 19%;
 			}
 			&--result {
 				width: 520px;
@@ -159,6 +176,7 @@
 					width: 100%;
 				}
 				& .control-flex2 {
+					margin-bottom: 20%;
 					width: 100%;
 				}
 			}

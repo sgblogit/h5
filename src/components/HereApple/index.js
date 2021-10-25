@@ -32,27 +32,30 @@ function HereApple(props) {
 	return (
 		<div className="session16-main">
 			<TitleMeeting bgTitle={images.common.redMeeting} />
-			<div className={`imgPic  ${stateSet ? stateSet : ""}  `}>
-				<img src={pic1} alt="" className="picture" onClick={(e) => {}}></img>
-				<img src={pic2} alt="" className="picture" onClick={(e) => {}}></img>
-				<img
-					src={pic3}
-					alt=""
-					className="picture"
-					onClick={(e) => {
-						clickHandler(e, {
-							actionType: "fireEvent",
-							eventName: page,
-							eventData: {
-								playAudio: audio2,
-								active: true,
-								imageG2: objectG2,
-								textT1: "active",
-							},
-						});
-					}}
-				></img>
-				<img src={pic4} alt="" className="picture" onClick={(e) => {}}></img>
+			<div className="session16-main-F">
+			<div className={`imgPic16  ${stateSet ? stateSet : ""}  `}>
+				<div className="picture-list">
+					<img src={pic1} alt="" className="picture" onClick={(e) => {}}></img>
+					<img src={pic2} alt="" className="picture" onClick={(e) => {}}></img>
+					<img
+						src={pic3}
+						alt=""
+						className="picture"
+						onClick={(e) => {
+							clickHandler(e, {
+								actionType: "fireEvent",
+								eventName: page,
+								eventData: {
+									playAudio: audio2,
+									active: true,
+									imageG2: objectG2,
+									textT1: "active",
+								},
+							});
+						}}
+					></img>
+					<img src={pic4} alt="" className="picture" onClick={(e) => {}}></img>
+				</div>
 			</div>
 			<div className={` session16-main-list ${reverseObj ? reverseObj : ""} `}>
 				<div className="kid">
@@ -97,6 +100,7 @@ function HereApple(props) {
 						</div>
 					)}
 				</div>
+			</div>
 			</div>
 		</div>
 	);

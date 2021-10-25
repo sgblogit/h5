@@ -1,12 +1,34 @@
 .session16-main {
     position: absolute;
-    height: calc(100% - 30%);
+    height: calc(100% - 25%);
     width: 100%;
     bottom: 5%;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    // background-color: red;
+    .session16-main-F{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .imgPic16{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 35%;
+        .picture-list{
+            margin: auto;
+            width: 50%;
+            height: 100%;
+        }
+        .picture{
+            height: 100%;
+            width: 25%;
+        }
+        
+    }
     &-list {
       display: flex;
       align-items: flex-end;
@@ -34,7 +56,7 @@
               top: 0%;
                 left: 42%;
               visibility: hidden;
-              transform: scale(0.5);
+              transform: scale(0.5)  translateX(-90%);
               transition: .3s all ease-in;
               &.active{
                 //   transform: scale(0.8);
@@ -54,7 +76,7 @@
           .imgKid{
               width: 100%;
               height: 100%;
-              
+              transform: translateX(-50%);
           }
           .textKid{
               width: 20%;
@@ -75,23 +97,6 @@
       
     }
   }
-.imgPic{
-    position: absolute;
-    width: 94%;
-    height: 35%;
-    right: 28%;
-    /* padding-bottom: 35%; */
-    /* float: left; */
-    top: 0%;
-    display: none;
-    /* justify-content: center; */
-    /* align-items: center; */
-    padding-right: 33%;
-    .picture{
-        height: 100%;
-    }
-    
-}
 .actives {
     display: flex;
 }
