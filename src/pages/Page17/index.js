@@ -54,7 +54,6 @@ const Page17 = (props) => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentRecord]);
 
-	console.log("render page17");
 	return (
 		<PracticeFind
 			page="page17"
