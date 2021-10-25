@@ -148,6 +148,24 @@ import night from "./page_22/11.png";
 import ten from "./page_22/12.png";
 import canyou from "./page_22/13.png";
 
+import bgPage26 from "./page_26/background-26.png";
+import cat26 from "./page_26/cat_26.png";
+import bear26 from "./page_26/bear_26.png";
+import ball26 from "./page_26/ball_26.png";
+import apple26 from "./page_26/apple_26.png";
+import A26 from "./page_26/A_26.png";
+import two26 from "./page_26/two_26.png";
+import what26 from "./page_26/what_26.png";
+import minigame26 from "./page_26/minigame_26.png";
+import boxGif26 from "./page_26/gif/box_26.gif";
+import box126 from "./page_26/box1_26.png";
+import box226 from "./page_26/box2_26.png";
+import congrats1 from "./page_26/gif/congrats-111.gif";
+import congrats2 from "./page_26/gif/congrats-222.gif";
+import congrats3 from "./page_26/gif/congrats-333.gif";
+import congrats4 from "./page_26/gif/congrats-444.gif";
+import congrats5 from "./page_26/gif/congrats-555.gif";
+
 import buttonPlayAudio from "./page_0/button-play.jpg";
 import buttonPauseAudio from "./page_0/button-pause.jpg";
 import loadingImages from "./page_0/loading-image.gif";
@@ -207,6 +225,8 @@ const images = {
 		bgPage24,
 		// page25
 		bgPage25,
+		// page26
+		bgPage26,
 	],
 	common: {
 		leftKidGif,
@@ -365,6 +385,24 @@ const images = {
 		picture9,
 		picture10,
 	},
+	page26: {
+		A26,
+		apple26,
+		ball26,
+		bear26,
+		cat26,
+		minigame26,
+		two26,
+		what26,
+		box126,
+		box226,
+		boxGif26,
+		congrats1,
+		congrats2,
+		congrats3,
+		congrats4,
+		congrats5
+	  },
 };
 
 export default images;

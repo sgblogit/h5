@@ -18,8 +18,8 @@
 		}
 		.list-img {
 			position: relative;
-			height: 100%;
-			width: 50%;
+			max-height: 100%;
+			max-width: 20%;
 		}
 		.main-content {
 			display: flex;
