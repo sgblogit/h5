@@ -1,9 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import audioPlayer from "helper/audioPlayer";
 import audios from "assets/audios/index";
-
-import { setTimeOutAddClass } from "helper/setTimeOutControlClass";
 
 import "./styles.scss";
 import TitleMeeting from "components/TitleMeetting/index";
@@ -17,8 +15,8 @@ const Page1 = (props) => {
 		(state) => state.app
 	);
 
-	const [image1, setImage1] = useState(images.page1.teacher);
-	const [image2, setImage2] = useState(images.page1.kid);
+	const [image1, setImage1] = useState(images.common.leftTeacher);
+	const [image2, setImage2] = useState(images.common.leftKid);
 
 	const [textT1, setTextT1] = useState(null);
 	const [textT2, setTextT2] = useState(null);

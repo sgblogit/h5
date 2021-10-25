@@ -29,7 +29,7 @@ function ConversationTK(props) {
 								eventData: {
 									playAudio: audio1,
 									active: true,
-									imageG1: images.page1.gTeacher,
+									imageG1: images.common.leftTeacherGif,
 									textT1: images.page1.textKid,
 								},
 							});
@@ -63,7 +63,7 @@ function ConversationTK(props) {
 								eventData: {
 									playAudio: audio2,
 									active: true,
-									imageG2: images.page1.gKid,
+									imageG2: images.common.rightKidGif,
 									textT2: images.page1.textTeacher,
 								},
 							});
