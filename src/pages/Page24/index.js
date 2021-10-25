@@ -57,11 +57,11 @@ const Page24 = (props) => {
     page ='page24'
     image1={images.page24.teacher24}
     image2={images.page24.girl24}
-    object1={images.page24.teacher24}
-    object2={images.page24.girl24}
+    object1={images.common.leftTeacher}
+    object2={images.common.rightKid}
     ball={images.page24.ball24}
-    objectG1={images.page24.teacherGif24}
-    objectG2={images.page24.girlGif24}
+    objectG1={images.common.leftTeacherGif}
+    objectG2={images.common.rightKidGif}
     text2={images.page24.question24}
     text1={images.page24.answer24}
 	// textKid14 = 'textKid14'

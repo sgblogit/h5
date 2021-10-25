@@ -31,7 +31,7 @@ function PracticeFind(props) {
   const [textT2, setTextT2] = useState("");
   return (
     <div className="session17-main">
-      <TitleMeeting bgTitle={images.page17.meet17} />
+      <TitleMeeting bgTitle={images.common.redMeeting} />
       <div className={` session17-main-list ${reverseObj ? reverseObj : ""} `}>
         <div className="teacher">
           <img

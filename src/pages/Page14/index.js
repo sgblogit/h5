@@ -53,13 +53,13 @@ const Page14 = (props) => {
 	return (
 		<PracticeFind
 			page="page14"
-			image1={images.page14.teacher14}
-			image2={images.page14.girl14}
-			object1={images.page14.teacher14}
-			object2={images.page14.girl14}
+			// image1={images.page14.teacher14}
+			// image2={images.page14.girl14}
+			object1={images.common.rightTeacher}
+			object2={images.common.leftKid}
 			ball={images.page14.ball14}
-			objectG1={images.page14.teacherGif14}
-			objectG2={images.page14.girlGif14}
+			objectG1={images.common.rightTeacherGif}
+			objectG2={images.common.leftKidGif}
 			text1={images.page14.question14}
 			text2={images.page14.answer14}
 			textKid14="textKid14"

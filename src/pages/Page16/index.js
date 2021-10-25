@@ -58,17 +58,15 @@ const Page16 = (props) => {
 	return (
 		<HereApple
 		page ='page16'
-		image1={images.page16.teacher16}
-		image2={images.page16.girl16}
 		pic1={images.page16.avocado16}
 		pic2={images.page16.orange16}
 		pic3={images.page16.apple16}
 		pic4={images.page16.banana16}
-		object1={images.page16.teacher16}
-		object2={images.page16.girl16}
+		object1={images.common.rightTeacher}
+		object2={images.common.leftKid}
 		ball={images.page16.ball17}
-		objectG1={images.page16.teacherGif16}
-		objectG2={images.page16.girlGif16}
+		objectG1={images.common.rightTeacherGif}
+		objectG2={images.common.leftKidGif}
 		text1={images.page16.here16}
 		text2={images.page16.which16}
 		audio1 = 'which'

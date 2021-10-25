@@ -11,8 +11,8 @@ const Page15 = (props) => {
 	const { onPushAction } = props;
 
 	const [active, setActive] = useState("");
-	const [image1, setImage1] = useState(images.page2.kid2);
-	const [image, setImage] = useState(images.page2.teacher2);
+	const [image1, setImage1] = useState(images.common.leftKid);
+	const [image, setImage] = useState(images.common.rightTeacher);
 	const [activeBox, setActiveBox] = useState("");
 	const redBlockRef = useRef();
 
@@ -71,7 +71,7 @@ const Page15 = (props) => {
 				go to page 1
 			</button>
 			<div className="page15-wrapper">
-				<TitleMeeting bgTitle={images.page15.titleMetting15} />
+				<TitleMeeting bgTitle={images.common.redMeeting} />
 
 				<div className="session-main15">
 					<div
@@ -85,7 +85,7 @@ const Page15 = (props) => {
 								src={image1}
 								alt=""
 								onClick={(e) => {
-									setImage1(images.page1.gKid);
+									setImage1(images.common.leftKidGif);
 								}}
 							></img>
 						</div>
@@ -120,7 +120,7 @@ const Page15 = (props) => {
 								src={image}
 								alt=""
 								onClick={(e) => {
-									setImage(images.page2.gTeacher2);
+									setImage(images.common.rightTeacherGif);
 									setActiveBox("active");
 									clickHandler(e, {
 										actionType: "fireEvent",

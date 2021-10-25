@@ -35,7 +35,7 @@ function HereCat(props) {
   const [textT2, setTextT2] = useState('');
   return (
     <div className="session20-main">
-      <TitleMeeting bgTitle={images.page20.meeting20} />
+      <TitleMeeting bgTitle={images.common.redMeeting} />
       <div className={`imgPic  ${stateSet ? stateSet : ""}  `} >
             <img
               src={pic1}

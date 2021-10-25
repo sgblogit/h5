@@ -19,8 +19,8 @@ const Page12 = (props) => {
 	const [show1, setShow1] = useState("");
 	const [show2, setShow2] = useState("");
 
-	const [kid, setKid] = useState(images.page1.kid);
-	const [teacher, setTeacher] = useState(images.page1.teacher);
+	const [kid, setKid] = useState(images.common.rightKid);
+	const [teacher, setTeacher] = useState(images.common.leftTeacher);
 
 	const [intro, setIntro] = useState(images.page0.kidStart);
 	const { currentPage, currentStep, currentRecord, prevRecord } = useSelector(
@@ -86,7 +86,7 @@ const Page12 = (props) => {
 								src={teacher}
 								alt=""
 								onClick={(e) => {
-									setTeacher(images.page1.gTeacher);
+									setTeacher(images.common.leftTeacherGif);
 									setShow("show");
 									clickHandler(e, {
 										actionType: "fireEvent",
@@ -135,7 +135,7 @@ const Page12 = (props) => {
 								alt=""
 								onClick={(e) => {
 									setShow2("show");
-									setKid(images.page1.gKid);
+									setKid(images.common.rightKidGif);
 									clickHandler(e, {
 										actionType: "fireEvent",
 										eventName: "page12",

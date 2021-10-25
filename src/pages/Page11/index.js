@@ -107,12 +107,12 @@ const Page11 = (props) => {
 				<Favorites
 					clickHandler={clickHandler}
 					page="page11"
-					teacher={images.page11.teacherPage11}
+					teacher={images.common.leftTeacher}
 					audioTeacher="whatPage11"
 					text={images.page11.textPage11}
-					kidGif={images.page11.kidGifPage11}
-					kid={images.page11.kidPage11}
-					teacherGif={images.page11.teacherGifPage11}
+					kidGif={images.common.rightKidGif}
+					kid={images.common.rightKid}
+					teacherGif={images.common.leftTeacher}
 					audioKid="likePage11"
 					cake={images.page11.cakePage11}
 					egg={images.page11.eggPage11}

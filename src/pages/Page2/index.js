@@ -109,12 +109,12 @@ const Page2 = (props) => {
 				<TitleMeeting bgTitle={images.page1.titleMeeting} />
 				<ConversationTK
 					page="page2"
-					object2={images.page2.teacher2}
-					object1={images.page2.kid2}
+					object2={images.common.rightTeacher}
+					object1={images.common.leftKid}
 					text1={images.page2.textKid2}
 					text2={images.page2.textTeacher2}
-					objectG1={images.page2.gKid2}
-					objectG2={images.page2.gTeacher2}
+					objectG1={images.common.leftKidGif}
+					objectG2={images.common.rightTeacherGif}
 					audio1="kidAudio2"
 					audio2="teacherAudio2"
 					reverseObj="reverse"
