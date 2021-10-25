@@ -109,7 +109,7 @@ const Page4 = (props) => {
 					image1={image1}
 					// text2= {images.page4.textKid2}
 					text1={textT1}
-					textGT1={images.page1.textTeacher}
+					textGT1={images.page4.textKid4}
 					imageG1={images.common.leftKidGif}
 					imageG2={images.common.rightTeacher}
 					audio1="kidAudio4"
