@@ -16,7 +16,7 @@
       &.reverse{
           flex-direction: row-reverse;
       }
-      margin-left: 30%;
+      margin-left: 25%;
       // padding:20px;
       .teacher{
           width: 100%;
@@ -32,7 +32,7 @@
               height: 100%;
               position:absolute;
               top: 0%;
-                left: 46%;
+                left: 42%;
               visibility: hidden;
               transform: scale(0.5);
               transition: .3s all ease-in;
@@ -61,7 +61,7 @@
               height: 100%;
               position: absolute;
               top: -25%;
-              left: 74%;
+              left: 78%;
               visibility: hidden;
               transform: scale(0.5);
               transition: .3s all ease-in;

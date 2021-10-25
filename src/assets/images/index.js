@@ -1,7 +1,7 @@
 //phuong
 import bgPage0 from "./page_0/page0-bg.png";
 
-//phuong
+
 import bgPage1 from "./page_1/page1-bg.png";
 import bgPage2 from "./page_2/page2-bg.png";
 import bgPage3 from "./page_3/page3-bg.png";
@@ -84,7 +84,7 @@ import Yes from "./page_15/yes.png";
 import No from "./page_15/no.png";
 import Correct from "./page_15/correct.png";
 import titleMetting15 from "./page_15/titleMeetting.png";
-//khoa
+
 import bgPage17 from "./page_17/bg_18.png";
 import answer17 from "./page_17/answer_18.png";
 import question17 from "./page_17/question_18.png";

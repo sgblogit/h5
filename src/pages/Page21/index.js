@@ -100,7 +100,7 @@ const Page21 = (props) => {
 										actionType: "fireEvent",
 										eventName: eventName,
 										eventData: {
-											playAudio: "voiceTextPage21",
+											// playAudio: "voiceTextPage21",
 											imageGifChild: images.page21.childPage21Gif,
 										},
 									});
@@ -130,6 +130,7 @@ const Page21 = (props) => {
 									eventName: eventName,
 									eventData: {
 										isShowResult: true,
+										playAudio: "voiceTextPage21",
 										imageGifTeacher: images.page21.teacherPage21Gif,
 									},
 								});
