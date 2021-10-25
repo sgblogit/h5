@@ -21,8 +21,8 @@ const Page8 = (props) => {
 		onPushAction(e, op.actionType, op);
 	};
 
-	const [image1, setImage1] = useState(images.common.rightTeacher);
-	const [image2, setImage2] = useState(images.common.leftKid);
+	const [image1, setImage1] = useState(images.common.leftKid);
+	const [image2, setImage2] = useState(images.common.rightTeacher);
 
 	const [textT1, setTextT1] = useState(null);
 	// const [textT2, setTextT2] = useState(null);

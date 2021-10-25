@@ -112,9 +112,9 @@ const Page5 = (props) => {
 					image1={image1}
 					image2={image2}
 					text2={textT2}
-					textGT2={images.page1.textTeacher}
+					textGT2={images.page5.textKid5}
 					text1={textT1}
-					textGT1={images.page1.textTeacher}
+					textGT1={images.page5.textTeacher5}
 					imageG1={images.common.leftTeacherGif}
 					imageG2={images.common.rightKidGif}
 					audio1="teacherAudio5"

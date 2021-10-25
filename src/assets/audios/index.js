@@ -81,8 +81,19 @@ import ten from "./page_22/ten.mp3";
 import canyou from "./page_22/canyou.mp3";
 
 import voice25 from "./page_25/voice.mp3";
+import a26 from "./page_26/a.mp3";
+import apple26 from "./page_26/apple.mp3";
+import ball26 from "./page_26/ball.mp3";
+import cat26 from "./page_26/cat.mp3";
+import doll26 from "./page_26/doll.mp3";
+import two26 from "./page_26/two.mp3";
+import true26 from "./page_26/true.mp3";
+
+
 
 import audioChangePage from "./common/am_thanh_chuyen_trang.mp3";
+
+
 
 const audios = {
 	audioChangePage,
@@ -155,6 +166,12 @@ const audios = {
 	canyou,
 
 	voice25,
+	a26,
+	apple26,
+	ball26,
+	cat26,
+	doll26,
+	two26,true26
 };
 
 export default audios;

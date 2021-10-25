@@ -66,16 +66,16 @@ const Page2 = (props) => {
 					image2={image2}
 					image1={image1}
 					text1={textT1}
-					textGT1={images.page1.textKid}
+					textGT1={images.page2.textKid2}
 					text2={textT2}
-					textGT2={images.page1.textTeacher}
+					textGT2={images.page2.textTeacher2}
 					imageG1={images.common.leftKidGif}
 					imageG2={images.common.rightTeacherGif}
 					audio1="kidAudio2"
 					audio2="teacherAudio2"
 					reverseObj="reverse"
 					clickHandler={clickHandler}
-					reverse
+					isReverse
 				/>
 			</div>
 			{/* <h1>this is page {currentPage}</h1>
