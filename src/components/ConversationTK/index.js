@@ -14,7 +14,9 @@ function ConversationTK(props) {
 		audio1,
 		audio2,
 		page,
-		reverseObj,
+		reverse,
+		imageG1,
+		imageG2,
 	} = props;
 	return (
 		<div className="session-main">
@@ -29,7 +31,7 @@ function ConversationTK(props) {
 								eventData: {
 									playAudio: audio1,
 									active: true,
-									imageG1: images.common.leftTeacherGif,
+									imageG1: imageG1,
 									textT1: images.page1.textKid,
 								},
 							});
@@ -38,9 +40,7 @@ function ConversationTK(props) {
 						data-id={audio1}
 					></img>
 				</div>
-				<div
-					className={`list-item main-content  ${reverseObj ? reverseObj : ""} `}
-				>
+				<div className={`list-item main-content  ${reverse ? "reverse" : ""} `}>
 					{text1 && (
 						<div className={`text textTeacher`}>
 							<img src={text1} alt=""></img>
@@ -63,7 +63,7 @@ function ConversationTK(props) {
 								eventData: {
 									playAudio: audio2,
 									active: true,
-									imageG2: images.common.rightKidGif,
+									imageG2: imageG2,
 									textT2: images.page1.textTeacher,
 								},
 							});

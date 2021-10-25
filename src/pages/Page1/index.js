@@ -68,6 +68,8 @@ const Page1 = (props) => {
 					image2={image2}
 					text1={textT1}
 					text2={textT2}
+					imageG1={images.common.leftTeacherGif}
+					imageG2={images.common.rightKidGif}
 					audio1="kidAudio"
 					audio2="teacherAudio"
 					clickHandler={clickHandler}
