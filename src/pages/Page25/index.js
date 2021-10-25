@@ -10,7 +10,6 @@ import TitleMeeting from "components/TitleMeetting/index";
 const Page25 = (props) => {
 	const { onPushAction } = props;
 
-	const [active, setActive] = useState("");
 	const [show1, setShow1] = useState("");
 	const [show2, setShow2] = useState("");
 
@@ -21,7 +20,7 @@ const Page25 = (props) => {
 		(state) => state.app
 	);
 
-	const { playAudio, pauseAudio } = audioPlayer;
+	const { playAudio } = audioPlayer;
 
 	const clickEventName = "page25";
 
@@ -38,16 +37,19 @@ const Page25 = (props) => {
 				recordEventData.eventName === clickEventName
 			) {
 				console.log(`runRecordEvent`, recordEventData);
-				if (recordEventData.eventData.active) {
-					setActive("active");
-					//setTimeOutAddClass('red-block','active',2000)
-				} else {
-					setActive("");
-				}
 				if (recordEventData.eventData.playAudio) {
 					//playAudio
 					let audioUrl = audios[recordEventData.eventData.playAudio];
 					playAudio(audioUrl);
+				}
+				if (recordEventData.eventData.show1) {
+					setTimeout(() => {
+                        setShow1(recordEventData.eventData.show1);
+                    }, 1500);
+					
+				}
+                if (recordEventData.eventData.show2) {
+					setShow2(recordEventData.eventData.show2);
 				}
 			}
 		}
@@ -100,7 +102,7 @@ const Page25 = (props) => {
 							<img src={images.page25.picture9} alt=""></img>
 						</div>
 						<div className="item">
-							<img src={images.page25.picture10} alt=""></img>
+<img src={images.page25.picture10} alt=""></img>
 						</div>
 					</div>
 					<div className="session-main-list25">
@@ -128,16 +130,14 @@ const Page25 = (props) => {
 								alt=""
 								onClick={(e) => {
 									setTeacher(images.common.rightTeacherGif);
-									setTimeout(() => {
-										setShow1("active");
-									}, 1500);
-									setShow2("active");
 									clickHandler(e, {
 										actionType: "fireEvent",
 										eventName: "page25",
 										eventData: {
 											playAudio: "voice25",
 											active: true,
+											show2 : 'active',
+                                        	show1 : 'active'
 										},
 									});
 								}}

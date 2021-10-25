@@ -1,9 +1,8 @@
 import React, { useState, useEffect,useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import audioPlayer from 'helper/audioPlayer';
 import audios from "assets/audios/index";
 import images from "assets/images/index";
-import { setTimeOutAddClass } from "helper/setTimeOutControlClass";
 
 import "./styles.scss";
 import Minigame from "components/Minigame/index";
@@ -13,7 +12,7 @@ const Page26 = (props) => {
 
 	const [active,setActive] = useState('');
 
-	const redBlockRef = useRef();
+
 
 	const {
 		currentPage,
@@ -77,11 +76,11 @@ const Page26 = (props) => {
 		audio4 = 'cat26'
 		audio5 = 'doll26'
 		audio6 = 'two26'
-		congrats1 = {images.page26.congrats1}
+		congrats1 = {images.page26.congrats2}
 		congrats2 = {images.page26.congrats2}
-		congrats3 = {images.page26.congrats3}
-		congrats4 = {images.page26.congrats4}
-		congrats5 = {images.page26.congrats5}
+		congrats3 = {images.page26.congrats2}
+		congrats4 = {images.page26.congrats2}
+		congrats5 = {images.page26.congrats2}
 		audiowin = 'true26'
 		clickHandler= {clickHandler}
 

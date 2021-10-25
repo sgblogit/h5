@@ -160,11 +160,7 @@ import minigame26 from "./page_26/minigame_26.png";
 import boxGif26 from "./page_26/gif/box_26.gif";
 import box126 from "./page_26/box1_26.png";
 import box226 from "./page_26/box2_26.png";
-import congrats1 from "./page_26/gif/congrats-111.gif";
 import congrats2 from "./page_26/gif/congrats-222.gif";
-import congrats3 from "./page_26/gif/congrats-333.gif";
-import congrats4 from "./page_26/gif/congrats-444.gif";
-import congrats5 from "./page_26/gif/congrats-555.gif";
 
 import buttonPlayAudio from "./page_0/button-play.jpg";
 import buttonPauseAudio from "./page_0/button-pause.jpg";
@@ -397,11 +393,7 @@ const images = {
 		box126,
 		box226,
 		boxGif26,
-		congrats1,
 		congrats2,
-		congrats3,
-		congrats4,
-		congrats5
 	  },
 };
 

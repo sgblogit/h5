@@ -9,17 +9,9 @@ Minigame.propTypes = {};
 function Minigame(props) {
   const {
     object1,
-    ball,
     object2,
-    text1,
-    text2,
-    pic1,
-    pic2,
-    pic3,
-    pic4,
     clickHandler,
     objectG1,
-    objectG2,
     audio1,
     audio2,
     audio3,
@@ -27,9 +19,6 @@ function Minigame(props) {
     audio5,
     audio6,
     page,
-    textKid20,
-    textTeacher20,
-    reverseObj,
     congrats1,
     congrats2,
     congrats3,
@@ -40,7 +29,6 @@ function Minigame(props) {
 
   const [image1, setImage1] = useState(object1);
   const [image2, setImage2] = useState(object2);
-  const [stateSet, setStates] = useState('');
   const [textT1, setTextT1] = useState('');
   const [textT2, setTextT2] = useState('');
   const [textT3, setTextT3] = useState('');
