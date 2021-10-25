@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import images from "assets/images/index";
 import "./styles.scss";
 
@@ -9,19 +9,14 @@ import TitleMeeting from "components/TitleMeetting/index";
 
 const Page15 = (props) => {
 	const { onPushAction } = props;
-
-	const [active, setActive] = useState("");
 	const [image1, setImage1] = useState(images.common.leftKid);
 	const [image, setImage] = useState(images.common.rightTeacher);
 	const [activeBox, setActiveBox] = useState("");
-	const redBlockRef = useRef();
-
-	const [intro, setIntro] = useState(images.page0.kidStart);
-	const { currentPage, currentStep, currentRecord, prevRecord } = useSelector(
+	const { currentPage, currentStep, currentRecord } = useSelector(
 		(state) => state.app
 	);
 
-	const { playAudio, pauseAudio } = audioPlayer;
+	const { playAudio } = audioPlayer;
 
 	const clickEventName = "page1";
 
@@ -37,22 +32,21 @@ const Page15 = (props) => {
 				recordEventData.eventPageStep === currentStep &&
 				recordEventData.eventName === clickEventName
 			) {
-				console.log(`runRecordEvent`, recordEventData);
-				if (recordEventData.eventData.active) {
-					setActive("active");
-					//setTimeOutAddClass('red-block','active',2000)
-				} else {
-					setActive("");
-				}
 				if (recordEventData.eventData.playAudio) {
-					//playAudio
 					let audioUrl = audios[recordEventData.eventData.playAudio];
 					playAudio(audioUrl);
 				}
+				if (recordEventData.eventData.leftKidGif) {
+					setImage1(recordEventData.eventData.leftKidGif);
+				}
+				if (recordEventData.eventData.activeBox) {
+					setActiveBox(recordEventData.eventData.activeBox);
+				}
 			}
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentRecord]);
-	console.log("render page0");
+
 	return (
 		<div className="page15">
 			<h1>this is page {currentPage}</h1>
@@ -85,7 +79,13 @@ const Page15 = (props) => {
 								src={image1}
 								alt=""
 								onClick={(e) => {
-									setImage1(images.common.leftKidGif);
+									clickHandler(e, {
+										actionType: "fireEvent",
+										eventName: "page15",
+										eventData: {
+											leftKidGif: images.common.leftKidGif,
+										},
+									});
 								}}
 							></img>
 						</div>
@@ -120,14 +120,14 @@ const Page15 = (props) => {
 								src={image}
 								alt=""
 								onClick={(e) => {
-									setImage(images.common.rightTeacherGif);
-									setActiveBox("active");
 									clickHandler(e, {
 										actionType: "fireEvent",
 										eventName: "page1",
 										eventData: {
 											playAudio: "correct15",
 											active: true,
+											rightTeacherGif: images.common.rightTeacherGif,
+											activeBox: "active",
 										},
 									});
 								}}
