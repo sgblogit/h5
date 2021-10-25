@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import images from "assets/images/index";
 import "./styles.scss";
 
@@ -9,12 +9,6 @@ import TitleMeeting from "components/TitleMeetting/index";
 
 const Page13 = (props) => {
 	const { onPushAction } = props;
-
-	const [active, setActive] = useState("");
-
-	const [activeBox, setActiveBox] = useState("");
-	const redBlockRef = useRef();
-
 	const [show, setShow] = useState("");
 	const [show1, setShow1] = useState("");
 	const [show2, setShow2] = useState("");
@@ -22,12 +16,11 @@ const Page13 = (props) => {
 	const [kid, setKid] = useState(images.common.leftKid);
 	const [teacher, setTeacher] = useState(images.common.rightTeacher);
 
-	const [intro, setIntro] = useState(images.page0.kidStart);
-	const { currentPage, currentStep, currentRecord, prevRecord } = useSelector(
+	const { currentPage, currentStep, currentRecord } = useSelector(
 		(state) => state.app
 	);
 
-	const { playAudio, pauseAudio } = audioPlayer;
+	const { playAudio } = audioPlayer;
 
 	const clickEventName = "page12";
 
@@ -43,22 +36,30 @@ const Page13 = (props) => {
 				recordEventData.eventPageStep === currentStep &&
 				recordEventData.eventName === clickEventName
 			) {
-				console.log(`runRecordEvent`, recordEventData);
-				if (recordEventData.eventData.active) {
-					setActive("active");
-					//setTimeOutAddClass('red-block','active',2000)
-				} else {
-					setActive("");
-				}
 				if (recordEventData.eventData.playAudio) {
-					//playAudio
 					let audioUrl = audios[recordEventData.eventData.playAudio];
 					playAudio(audioUrl);
 				}
+				if (recordEventData.eventData.teacher2) {
+					setTeacher(recordEventData.eventData.teacher2);
+				}
+				if (recordEventData.eventData.show) {
+					setShow(recordEventData.eventData.show);
+				}
+				if (recordEventData.eventData.show1) {
+					setShow1(recordEventData.eventData.show1);
+				}
+				if (recordEventData.eventData.show2) {
+					setShow2(recordEventData.eventData.show2);
+				}
+				if (recordEventData.eventData.kid2) {
+					setKid(recordEventData.eventData.kid2);
+				}
 			}
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentRecord]);
-	console.log("render page0");
+
 	return (
 		<div className="page13">
 			<h1>this is page {currentPage}</h1>
@@ -78,7 +79,6 @@ const Page13 = (props) => {
 			</button>
 			<div className="page13-wrapper">
 				<TitleMeeting bgTitle={images.page1.titleMeeting} />
-
 				<div className="session-main12">
 					<div className="session-main-list12">
 						<div className=" list-item12 list-img">
@@ -86,8 +86,6 @@ const Page13 = (props) => {
 								src={teacher}
 								alt=""
 								onClick={(e) => {
-									setTeacher(images.common.rightTeacherGif);
-									setShow("show");
 									clickHandler(e, {
 										actionType: "fireEvent",
 										eventName: "page12",
@@ -95,6 +93,8 @@ const Page13 = (props) => {
 											playAudio: "cover1",
 											active: true,
 											step: 0,
+											teacher2: images.common.rightTeacherGif,
+											show: "show",
 										},
 									});
 								}}
@@ -106,7 +106,6 @@ const Page13 = (props) => {
 									src={images.page13.cover1}
 									alt=""
 									onClick={(e) => {
-										setShow1("show");
 										clickHandler(e, {
 											actionType: "fireEvent",
 											eventName: "page12",
@@ -114,6 +113,7 @@ const Page13 = (props) => {
 												playAudio: "cover2",
 												active: true,
 												step: 1,
+												show1: "show",
 											},
 										});
 									}}
@@ -134,8 +134,6 @@ const Page13 = (props) => {
 								src={kid}
 								alt=""
 								onClick={(e) => {
-									setShow2("show");
-									setKid(images.common.leftKidGif);
 									clickHandler(e, {
 										actionType: "fireEvent",
 										eventName: "page12",
@@ -143,6 +141,8 @@ const Page13 = (props) => {
 											playAudio: "cover3",
 											active: true,
 											step: 2,
+											show2: "show",
+											kid2: images.common.leftKidGif,
 										},
 									});
 								}}

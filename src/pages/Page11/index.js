@@ -1,9 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
 import audioPlayer from "helper/audioPlayer";
 import audios from "assets/audios/index";
-
-import { setTimeOutAddClass } from "helper/setTimeOutControlClass";
 
 import "./styles.scss";
 import TitleMeeting from "components/TitleMeetting/index";
@@ -13,21 +11,22 @@ import Favorites from "./component/index";
 const Page11 = (props) => {
 	const { onPushAction } = props;
 
-	const [active, setActive] = useState("");
-
-	const redBlockRef = useRef();
-
-	const { currentPage, currentStep, currentRecord, prevRecord } = useSelector(
+	const { currentPage, currentStep, currentRecord } = useSelector(
 		(state) => state.app
 	);
 
-	const { playAudio, pauseAudio } = audioPlayer;
+	const { playAudio } = audioPlayer;
 
 	const clickEventName = "page11";
 
 	const clickHandler = (e, op) => {
 		onPushAction(e, op.actionType, op);
 	};
+
+	const [teacherImg, setImageTeacher] = useState(images.common.leftTeacher);
+	const [kidImg, setImageKid] = useState(images.common.rightKid);
+	const [textT1, setTextT1] = useState("");
+	const [active2, setActive2] = useState("");
 
 	useEffect(() => {
 		if (currentRecord.length > 0) {
@@ -37,24 +36,27 @@ const Page11 = (props) => {
 				recordEventData.eventPageStep === currentStep &&
 				recordEventData.eventName === clickEventName
 			) {
-				console.log(`runRecordEvent`, recordEventData);
-				if (recordEventData.eventData.active) {
-					setActive("active");
-					//setTimeOutAddClass('red-block','active',2000)
-				} else {
-					setActive("");
-				}
 				if (recordEventData.eventData.playAudio) {
-					//playAudio
 					let audioUrl = audios[recordEventData.eventData.playAudio];
 					playAudio(audioUrl);
+				}
+				if (recordEventData.eventData.teacherGif) {
+					setImageTeacher(recordEventData.eventData.teacherGif);
+				}
+				if (recordEventData.eventData.textT1Active) {
+					setTextT1(recordEventData.eventData.textT1Active);
+				}
+				if (recordEventData.eventData.kidGif) {
+					setImageKid(recordEventData.eventData.kidGif);
+				}
+				if (recordEventData.eventData.active2) {
+					setActive2(recordEventData.eventData.active2);
 				}
 			}
 		}
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentRecord]);
 
-	console.log("render page11");
 	return (
 		<div className="page11">
 			<h1>this is page {currentPage}</h1>
@@ -107,17 +109,19 @@ const Page11 = (props) => {
 				<Favorites
 					clickHandler={clickHandler}
 					page="page11"
-					teacher={images.common.leftTeacher}
+					teacher={teacherImg}
 					audioTeacher="whatPage11"
 					text={images.page11.textPage11}
 					kidGif={images.common.rightKidGif}
-					kid={images.common.rightKid}
+					kid={kidImg}
 					teacherGif={images.common.leftTeacher}
 					audioKid="likePage11"
 					cake={images.page11.cakePage11}
 					egg={images.page11.eggPage11}
 					pasta={images.page11.pastaPage11}
 					candy={images.page11.candyPage11}
+					textT1={textT1}
+					active2={active2}
 				/>
 			</div>
 		</div>
