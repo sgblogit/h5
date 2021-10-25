@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import audioPlayer from "helper/audioPlayer";
 import audios from "assets/audios/index";
@@ -13,21 +13,23 @@ import ConversationTK from "components/ConversationTK/index";
 const Page5 = (props) => {
 	const { onPushAction } = props;
 
-	const [active, setActive] = useState("");
-
-	const redBlockRef = useRef();
-
-	const { currentPage, currentStep, currentRecord, prevRecord } = useSelector(
+	const { currentPage, currentStep, currentRecord } = useSelector(
 		(state) => state.app
 	);
 
-	const { playAudio, pauseAudio } = audioPlayer;
+	const { playAudio } = audioPlayer;
 
 	const clickEventName = "page5";
 
 	const clickHandler = (e, op) => {
 		onPushAction(e, op.actionType, op);
 	};
+
+	const [image1, setImage1] = useState(images.common.leftTeacher);
+	const [image2, setImage2] = useState(images.common.rightKid);
+
+	const [textT1, setTextT1] = useState(null);
+	const [textT2, setTextT2] = useState(null);
 
 	useEffect(() => {
 		if (currentRecord.length > 0) {
@@ -37,17 +39,21 @@ const Page5 = (props) => {
 				recordEventData.eventPageStep === currentStep &&
 				recordEventData.eventName === clickEventName
 			) {
-				console.log(`runRecordEvent`, recordEventData);
-				if (recordEventData.eventData.active) {
-					setActive("active");
-					//setTimeOutAddClass('red-block','active',2000)
-				} else {
-					setActive("");
-				}
 				if (recordEventData.eventData.playAudio) {
-					//playAudio
 					let audioUrl = audios[recordEventData.eventData.playAudio];
 					playAudio(audioUrl);
+				}
+				if (recordEventData.eventData.imageG1) {
+					setImage1(recordEventData.eventData.imageG1);
+				}
+				if (recordEventData.eventData.imageG2) {
+					setImage2(recordEventData.eventData.imageG2);
+				}
+				if (recordEventData.eventData.textT1) {
+					setTextT1(recordEventData.eventData.textT1);
+				}
+				if (recordEventData.eventData.textT2) {
+					setTextT2(recordEventData.eventData.textT2);
 				}
 			}
 		}
@@ -109,12 +115,14 @@ const Page5 = (props) => {
 				<TitleMeeting bgTitle={images.page1.titleMeeting} />
 				<ConversationTK
 					page="page5"
-					object1={images.common.leftTeacher}
-					object2={images.common.rightKid}
-					text2={images.page5.textKid5}
-					text1={images.page5.textTeacher5}
-					objectG1={images.common.leftTeacherGif}
-					objectG2={images.common.rightKidGif}
+					image1={image1}
+					image2={image2}
+					text2={textT2}
+					textGT2={images.page1.textTeacher}
+					text1={textT1}
+					textGT1={images.page1.textTeacher}
+					imageG1={images.common.leftTeacherGif}
+					imageG2={images.common.rightKidGif}
 					audio1="teacherAudio5"
 					audio2="kidAudio5"
 					clickHandler={clickHandler}

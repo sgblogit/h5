@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useSelector } from "react-redux";
 import audioPlayer from "helper/audioPlayer";
 import audios from "assets/audios/index";
@@ -20,6 +20,16 @@ const Page1 = (props) => {
 
 	const [textT1, setTextT1] = useState(null);
 	const [textT2, setTextT2] = useState(null);
+
+	// const [isShowText, setIsShowText] = useState(null);
+	// const handleControlShowText = useCallback((id, boolean) => {
+	// 	setIsShowText((pre) => {
+	// 		return {
+	// 			...pre,
+	// 			[id]: boolean,
+	// 		};
+	// 	});
+	// }, []);
 
 	const { playAudio } = audioPlayer;
 
@@ -67,7 +77,9 @@ const Page1 = (props) => {
 					image1={image1}
 					image2={image2}
 					text1={textT1}
+					textGT1={images.page1.textKid}
 					text2={textT2}
+					textGT2={images.page1.textTeacher}
 					imageG1={images.common.leftTeacherGif}
 					imageG2={images.common.rightKidGif}
 					audio1="kidAudio"

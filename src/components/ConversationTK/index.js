@@ -17,6 +17,8 @@ function ConversationTK(props) {
 		reverse,
 		imageG1,
 		imageG2,
+		textGT1,
+		textGT2,
 	} = props;
 	return (
 		<div className="session-main">
@@ -32,7 +34,7 @@ function ConversationTK(props) {
 									playAudio: audio1,
 									active: true,
 									imageG1: imageG1,
-									textT1: images.page1.textKid,
+									textT1: textGT1,
 								},
 							});
 						}}
@@ -64,7 +66,7 @@ function ConversationTK(props) {
 									playAudio: audio2,
 									active: true,
 									imageG2: imageG2,
-									textT2: images.page1.textTeacher,
+									textT2: textGT2,
 								},
 							});
 						}}
