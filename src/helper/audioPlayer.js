@@ -5,6 +5,7 @@ let currentAudio = null;
  * @param {*} audioId [audioId | audioUrl]
  */
 const pauseAudio = (audioId) => {
+	currentAudio?.pause();
 	if (audios[audioId]) {
 		audios[audioId].pause();
 	} else {
@@ -34,7 +35,6 @@ const playAudio = (audioUrl) => {
 		audios[audioId].play();
 	} else {
 		const audio = new Audio(audioUrl);
-		console.log([audio],"audio");
 		currentAudio = audio;
 		audios[audioId] = audio;
 		audio.play();

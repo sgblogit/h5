@@ -146,8 +146,6 @@ const App = () => {
 		return alignItems;
 	}, [currentPage]);
 
-	console.log(isLoading, "isLoadingisLoading");
-
 	return (
 		<div className="App">
 			<DebugPanel />
