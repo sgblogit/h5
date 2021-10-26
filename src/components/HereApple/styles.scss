@@ -18,6 +18,8 @@
         right: 0;
         width: 100%;
         height: 35%;
+    visibility: hidden;
+
         .picture-list{
             margin: auto;
             width: 50%;
@@ -99,4 +101,5 @@
   }
 .actives {
     display: flex;
+    visibility: visible !important;
 }

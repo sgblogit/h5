@@ -25,108 +25,93 @@ function HereCat(props) {
     page,
     textKid20,
     textTeacher20,
-    reverseObj
+    reverseObj,
+    textT1,
+    textT2,
+    stateSet,
   } = props;
 
   const [image1, setImage1] = useState(object1);
   const [image2, setImage2] = useState(object2);
-  const [stateSet, setStates] = useState('');
-  const [textT1, setTextT1] = useState('');
-  const [textT2, setTextT2] = useState('');
+
   return (
     <div className="session20-main">
       <TitleMeeting bgTitle={images.common.redMeeting} />
-      <div className={`imgPic  ${stateSet ? stateSet : ""}  `} >
-      <div className="picture-list">
-      <img
-              src={pic1}
-              alt=""
-              className="picture"
-              onClick={(e) => {
-                
-              }}
-            ></img>
-            <img
-              src={pic2}
-              alt=""
-              className="picture"
-              onClick={(e) => {
-                
-              }}
-            ></img>
-            <img
-              src={pic3}
-              alt=""
-              className="picture"
-              onClick={(e) => {
-                setImage2(objectG2)
-                setTextT1('active')
-                clickHandler(e, {
-                  actionType: "fireEvent",
-                  eventName: page,
-                  eventData: {
-                    playAudio: audio2,
-                    active: true,
-                  },
-                });
-              }}
-            ></img>
-            <img
-              src={pic4}
-              alt=""
-              className="picture"
-              onClick={(e) => {
-                
-              }}
-            ></img>
+      <div
+        className={`imgPic20   ${stateSet ? stateSet : ""} ${
+          textT1 ? textT1 : ""
+        }  `}
+      >
+        <div className="picture-list">
+          <img src={pic1} alt="" className="picture" onClick={(e) => {}}></img>
+          <img src={pic2} alt="" className="picture" onClick={(e) => {}}></img>
+          <img
+            src={pic3}
+            alt=""
+            className="picture"
+            onClick={(e) => {
+              setImage2(objectG2);
+              // setTextT1('active')
+              clickHandler(e, {
+                actionType: "fireEvent",
+                eventName: page,
+                eventData: {
+                  playAudio: audio2,
+                  active: true,
+                  textT1: "active",
+                },
+              });
+            }}
+          ></img>
+          <img src={pic4} alt="" className="picture" onClick={(e) => {}}></img>
         </div>
       </div>
       <div className={` session20-main-list ${reverseObj ? reverseObj : ""} `}>
-      
-      
         <div className="teacher">
-         
-         <img className="imgTeacher"
-           src={image1}
-           onClick={(e) => {
-             setImage1(objectG1)
-             setTextT2('active')
-             setStates('actives')
-             clickHandler(e, {
-               actionType: "fireEvent",
-               eventName: page,
-               eventData: {
-                 playAudio: audio1,
-                 active: true,
-               },
-             });
-           }}
-           alt=""
-         ></img>
-  
-       {text1 && (
-         <div className={`textTeacher ${textTeacher20? textTeacher20:"" }  ${textT1 ? textT1 : ""}  `}>
-           <img src={text1} alt=""></img>
-         </div>
-       )}
-     </div>
-     <div className="kid">
-          <div className={`textKid ${textKid20? textKid20:"" }  ${textT2 ? textT2 : ""} ${stateSet ? stateSet : ""} `}>
+          <img
+            className="imgTeacher"
+            src={image1}
+            onClick={(e) => {
+              setImage1(objectG1);
+              //  setTextT2('active')
+              //  stateSet('actives')
+              clickHandler(e, {
+                actionType: "fireEvent",
+                eventName: page,
+                eventData: {
+                  playAudio: audio1,
+                  active: true,
+                  textT2: "active",
+                  stateSet: "actives",
+                },
+              });
+            }}
+            alt=""
+          ></img>
+
+          {text1 && (
+            <div
+              className={`textTeacher  ${textTeacher20 ? textTeacher20 : ""}  ${
+                textT1 ? textT1 : ""
+              }  `}
+            >
+              <img src={text1} alt=""></img>
+            </div>
+          )}
+        </div>
+        <div className="kid">
+          <div
+            className={`textKid ${textKid20 ? textKid20 : ""}  ${
+              textT2 ? textT2 : ""
+            } ${stateSet ? stateSet : ""} `}
+          >
             {text2 && <img src={text2} alt=""></img>}
-</div>
+          </div>
           <div className={`imgKid`}>
-            <img
-              src={image2}
-              alt=""
-              onClick={(e) => {
-                
-              }}
-            ></img>
+            <img src={image2} alt="" onClick={(e) => {}}></img>
           </div>
         </div>
-     
       </div>
-      
     </div>
   );
 }

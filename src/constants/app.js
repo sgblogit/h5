@@ -32,12 +32,13 @@ const pageData = [
 	[""],
 	[""],
 	[
-		{
-			stepName: "click teacher image",
-		},
-		{
-			stepName: "click child image",
-		},
+		// {
+		// 	stepName: "click teacher image",
+		// },
+		// {
+		// 	stepName: "click child image",
+		// },
+	""
 	],
 	[""],
 	[""],
