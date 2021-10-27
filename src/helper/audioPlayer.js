@@ -10,14 +10,14 @@ const pauseAudio = (audioId) => {
 		?.then(() => {
 			currentAudio?.pause();
 		})
-		.catch((err) => console.log(err, "2323232323"));
+		.catch((err) => console.log(err, "====> Pause audio err <====="));
 	if (audios[audioId]) {
 		const promisePauseAudio = audios[audioId].pause();
 		promisePauseAudio
 			?.then(() => {
 				audios[audioId].pause();
 			})
-			.catch((err) => console.log(err, "2323232323"));
+			.catch((err) => console.log(err, "====> Pause audio err <====="));
 	} else {
 		if (audios[window.btoa(audioId)]) {
 			const promisePauseAudio = audios[window.btoa(audioId)].pause();
@@ -25,7 +25,7 @@ const pauseAudio = (audioId) => {
 				?.then(() => {
 					audios[audioId].pause();
 				})
-				.catch((err) => console.log(err, "2323232323"));
+				.catch((err) => console.log(err, "====> Pause audio err <====="));
 		}
 	}
 };
@@ -52,7 +52,7 @@ const playAudio = (audioUrl) => {
 			.then((res) => {
 				audios[audioId].play();
 			})
-			.catch((err) => console.log(err, "2323232323"));
+			.catch((err) => console.log(err, "====> Play audio err <====="));
 	} else {
 		const audio = new Audio(audioUrl);
 		currentAudio = audio;
@@ -62,7 +62,7 @@ const playAudio = (audioUrl) => {
 			.then((res) => {
 				audio.play();
 			})
-			.catch((err) => console.log(err, "2323232323"));
+			.catch((err) => console.log(err, "====> Play audio err <====="));
 	}
 	return audioId;
 };
