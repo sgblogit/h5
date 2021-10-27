@@ -15,7 +15,7 @@ import Loading from "components/Loading/index";
 import "aos/dist/aos.css";
 import "./App.scss";
 import audios from "assets/audios/index";
-
+import { runRecord } from "helper/appServices";
 const App = () => {
 	const dispatch = useDispatch();
 

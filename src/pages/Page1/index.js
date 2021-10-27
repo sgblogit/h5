@@ -7,6 +7,7 @@ import "./styles.scss";
 import TitleMeeting from "components/TitleMeetting/index";
 import images from "assets/images/index";
 import ConversationTK from "components/ConversationTK/index";
+import { runRecord } from "helper/appServices";
 
 const Page1 = (props) => {
 	const { onPushAction } = props;
@@ -21,18 +22,6 @@ const Page1 = (props) => {
 	const [textT1, setTextT1] = useState(null);
 	const [textT2, setTextT2] = useState(null);
 
-	// const [isShowText, setIsShowText] = useState(null);
-	// const handleControlShowText = useCallback((id, boolean) => {
-	// 	setIsShowText((pre) => {
-	// 		return {
-	// 			...pre,
-	// 			[id]: boolean,
-	// 		};
-	// 	});
-	// }, []);
-
-	const { playAudio } = audioPlayer;
-
 	const clickEventName = "page1";
 
 	const clickHandler = (e, op) => {
@@ -40,31 +29,16 @@ const Page1 = (props) => {
 	};
 
 	useEffect(() => {
-		if (currentRecord.length > 0) {
-			let recordEventData = currentRecord[currentRecord.length - 1];
-			if (
-				recordEventData.eventPage === currentPage &&
-				recordEventData.eventPageStep === currentStep &&
-				recordEventData.eventName === clickEventName
-			) {
-				if (recordEventData.eventData.playAudio) {
-					let audioUrl = audios[recordEventData.eventData.playAudio];
-					playAudio(audioUrl);
-				}
-				if (recordEventData.eventData.imageG1) {
-					setImage1(recordEventData.eventData.imageG1);
-				}
-				if (recordEventData.eventData.imageG2) {
-					setImage2(recordEventData.eventData.imageG2);
-				}
-				if (recordEventData.eventData.textT1) {
-					setTextT1(recordEventData.eventData.textT1);
-				}
-				if (recordEventData.eventData.textT2) {
-					setTextT2(recordEventData.eventData.textT2);
-				}
-			}
-		}
+		const values = runRecord({
+			eventName: clickEventName,
+			callbacks: {
+				imageG1: setImage1,
+				imageG2: setImage2,
+				textT1: setTextT1,
+				textT2: setTextT2,
+			},
+		});
+		console.log(values, "values");
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentRecord]);
 

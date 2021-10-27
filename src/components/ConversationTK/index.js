@@ -19,7 +19,6 @@ function ConversationTK(props) {
 		imageG2,
 		textGT1,
 		textGT2,
-
 	} = props;
 	return (
 		<div className="session-main">
@@ -43,7 +42,9 @@ function ConversationTK(props) {
 						data-id={audio1}
 					></img>
 				</div>
-				<div className={`list-item main-content  ${isReverse ? "reverse" : ""} `}>
+				<div
+					className={`list-item main-content  ${isReverse ? "reverse" : ""} `}
+				>
 					{text1 && (
 						<div className={`text textTeacher`}>
 							<img src={text1} alt=""></img>

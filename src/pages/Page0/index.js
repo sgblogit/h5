@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import audios from "assets/audios/index";
 import audioPlayer from "helper/audioPlayer";
 import ButtonControlAudio from "components/ButtonControlAudio/index";
+import { runRecord } from "helper/appServices";
 
 const Home = (props) => {
 	const { onPushAction } = props;
