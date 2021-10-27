@@ -5,12 +5,27 @@ let currentAudio = null;
  * @param {*} audioId [audioId | audioUrl]
  */
 const pauseAudio = (audioId) => {
-	currentAudio?.pause();
+	const promisePauseAudio = currentAudio?.pause();
+	promisePauseAudio
+		?.then(() => {
+			currentAudio?.pause();
+		})
+		.catch((err) => console.log(err, "2323232323"));
 	if (audios[audioId]) {
-		audios[audioId].pause();
+		const promisePauseAudio = audios[audioId].pause();
+		promisePauseAudio
+			?.then(() => {
+				audios[audioId].pause();
+			})
+			.catch((err) => console.log(err, "2323232323"));
 	} else {
 		if (audios[window.btoa(audioId)]) {
-			audios[window.btoa(audioId)].pause();
+			const promisePauseAudio = audios[window.btoa(audioId)].pause();
+			promisePauseAudio
+				?.then(() => {
+					audios[audioId].pause();
+				})
+				.catch((err) => console.log(err, "2323232323"));
 		}
 	}
 };
@@ -32,12 +47,22 @@ const pauseAllAudio = () => {
 const playAudio = (audioUrl) => {
 	let audioId = window.btoa(audioUrl);
 	if (audios[audioId]) {
-		audios[audioId].play();
+		const promisePlayAudio = audios[audioId].play();
+		promisePlayAudio
+			.then((res) => {
+				audios[audioId].play();
+			})
+			.catch((err) => console.log(err, "2323232323"));
 	} else {
 		const audio = new Audio(audioUrl);
 		currentAudio = audio;
 		audios[audioId] = audio;
-		audio.play();
+		const promisePlayAudio = audio.play();
+		promisePlayAudio
+			.then((res) => {
+				audio.play();
+			})
+			.catch((err) => console.log(err, "2323232323"));
 	}
 	return audioId;
 };
