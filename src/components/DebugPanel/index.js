@@ -58,6 +58,9 @@ const DebugPanel = (props) => {
 				currentRecord: [],
 				prevRecord: [],
 				isLoading: true,
+				isShowWarning: false,
+				enableClick: true,
+				orderClick: 0,
 			})
 		);
 		audioPlayer.playAudio(audios.audioChangePage);
