@@ -7,8 +7,6 @@ import it17 from "./page_17/it.mp3";
 import thatRight from "./page_17/that_right.mp3";
 import itadoll from "./page_18/itadoll.mp3";
 import what from "./page_18/what.mp3";
-import apple from "./page_14/apple.mp3";
-import verygood from "./page_14/verygood.mp3";
 import cat from "./page_19/cat.mp3";
 import whatpet from "./page_19/whatpet.mp3";
 
@@ -89,13 +87,18 @@ import doll26 from "./page_26/doll.mp3";
 import two26 from "./page_26/two.mp3";
 import true26 from "./page_26/true.mp3";
 
-
-
 import audioChangePage from "./common/am_thanh_chuyen_trang.mp3";
 
-
+import bgPage14 from "./page_14/bg-page14.mp3";
+import selectFalse from "./page_14/select-false.mp3";
+import selectTrue from "./page_14/select-true.mp3";
 
 const audios = {
+	page14: {
+		bgPage14,
+		selectTrue,
+		selectFalse,
+	},
 	audioChangePage,
 	backgroundAudio,
 	gitAudio,
@@ -107,8 +110,6 @@ const audios = {
 	thatRight,
 	itadoll,
 	what,
-	apple,
-	verygood,
 	cat,
 	whatpet,
 
@@ -171,7 +172,8 @@ const audios = {
 	ball26,
 	cat26,
 	doll26,
-	two26,true26
+	two26,
+	true26,
 };
 
 export default audios;

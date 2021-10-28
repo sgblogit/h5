@@ -13,7 +13,6 @@ import bgPage10 from "./page_10/page10-bg.png";
 import bgPage11 from "./page_11/bg-11.png";
 import bgPage12 from "./page_12/page12-bg.png";
 import bgPage13 from "./page_13/page13-bg.png";
-import bgPage15 from "./page_15/page15-bg.png";
 import bgPage22 from "./page_22/page22-bg.jpg";
 import bgPage25 from "./page_25/page25-bg.png";
 // Common
@@ -73,31 +72,7 @@ import cover1 from "./page_13/cover1.png";
 import cover2 from "./page_13/cover2.png";
 import cover3 from "./page_13/cover3.png";
 
-import Yes from "./page_15/yes.png";
-import No from "./page_15/no.png";
-import Correct from "./page_15/correct.png";
-
-import bgPage17 from "./page_17/bg_18.png";
-import answer17 from "./page_17/answer_18.png";
-import question17 from "./page_17/question_18.png";
-import ball17 from "./page_17/ball_18.png";
 import bgPage18 from "./page_18/bg_18.png";
-import answer18 from "./page_18/answer_18.png";
-import question18 from "./page_18/question_18.png";
-import ball18 from "./page_18/ball_18.png";
-
-import bgPage14 from "./page_14/bg_14.png";
-import answer14 from "./page_14/answer_14.png";
-import question14 from "./page_14/question_14.png";
-import ball14 from "./page_14/ball_14.png";
-
-import bgPage16 from "./page_16/background-16.png";
-import banana16 from "./page_16/banana_16.png";
-import avocado16 from "./page_16/avocado_16.png";
-import apple16 from "./page_16/apple_16.png";
-import here16 from "./page_16/here_16.png";
-import orange16 from "./page_16/orange_16.png";
-import which16 from "./page_16/which_16.png";
 
 import bgPage20 from "./page_20/background-20.png";
 import cat20 from "./page_20/cat_20.png";
@@ -165,6 +140,41 @@ import congrats2 from "./page_26/gif/congrats-222.gif";
 import buttonPlayAudio from "./page_0/button-play.jpg";
 import buttonPauseAudio from "./page_0/button-pause.jpg";
 import loadingImages from "./page_0/loading-image.gif";
+
+// page 14
+import bgPage14 from "./page_14/bg_14.png";
+import bPage14 from "./page_14/b.png";
+import cPage14 from "./page_14/c.png";
+import dPage14 from "./page_14/d.png";
+import ePage14 from "./page_14/e.png";
+import questionPage14 from "./page_14/question.png";
+import titlePage14 from "./page_14/title14.png";
+
+// page 15
+import bgPage15 from "./page_14/bg_14.png";
+import titlePage15 from "./page_14/title14.png";
+import cPage15 from "./page_14/c.png";
+import dPage15 from "./page_14/d.png";
+import ePage15 from "./page_14/e.png";
+import mPage15 from "./page_15/m.png";
+import questionPage15 from "./page_15/question.png";
+
+// page 16
+import bgPage16 from "./page_14/bg_14.png";
+import bPage16 from "./page_14/b.png";
+import dPage16 from "./page_14/d.png";
+import jPage16 from "./page_16/j.png";
+import ePage16 from "./page_14/e.png";
+import questionPage16 from "./page_16/question.png";
+import titlePage16 from "./page_14/title14.png";
+
+//page 17
+import bgPage17 from "./page_14/bg_14.png";
+import ePage17 from "./page_14/e.png";
+import dPage17 from "./page_14/d.png";
+import jPage17 from "./page_16/j.png";
+import bPage17 from "./page_14/b.png";
+import questionPage17 from "./page_17/question.png";
 
 const images = {
 	loading: [loadingImages],
@@ -301,35 +311,39 @@ const images = {
 		cover2,
 		cover1,
 	},
-	page15: {
-		Yes,
-		No,
-		Correct,
-	},
 	page14: {
-		answer14,
-		question14,
-		ball14,
+		bPage14,
+		cPage14,
+		dPage14,
+		ePage14,
+		questionPage14,
+		titlePage14,
 	},
-
+	page15: {
+		bgPage15,
+		titlePage15,
+		cPage15,
+		dPage15,
+		ePage15,
+		mPage15,
+		questionPage15,
+	},
 	page16: {
-		apple16,
-		avocado16,
-		banana16,
-		here16,
-		orange16,
-		which16,
+		bPage16,
+		ePage16,
+		dPage16,
+		jPage16,
+		questionPage16,
+		titlePage16,
 	},
 	page17: {
-		answer17,
-		question17,
-		ball17,
+		ePage17,
+		dPage17,
+		jPage17,
+		bPage17,
+		questionPage17,
 	},
-	page18: {
-		answer18,
-		question18,
-		ball18,
-	},
+	page18: {},
 	page19: {
 		answer19,
 		question19,
@@ -394,7 +408,7 @@ const images = {
 		box226,
 		boxGif26,
 		congrats2,
-	  },
+	},
 };
 
 export default images;

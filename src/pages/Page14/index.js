@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import audioPlayer from "helper/audioPlayer";
-import audios from "assets/audios/index";
 import images from "assets/images/index";
-import PracticeFind from "components/PracticeFind/index";
+import ScreenMiddleTitle from "components/ScreenMiddleTitle/index";
+import MultipleChoiceGame from "components/MultipleChoiceGame/index";
+import "./styles.scss";
 
 const Page14 = (props) => {
 	const { onPushAction } = props;
 
-	const { currentPage, currentStep, currentRecord } = useSelector(
-		(state) => state.app
-	);
-
-	const { playAudio } = audioPlayer;
+	const { currentRecord } = useSelector((state) => state.app);
 
 	const clickEventName = "page14";
 
@@ -20,62 +16,25 @@ const Page14 = (props) => {
 		onPushAction(e, op.actionType, op);
 	};
 
-	const [image1, setImage1] = useState(images.common.rightTeacher);
-	const [image2, setImage2] = useState(images.common.leftKid);
-	const [textT1, setTextT1] = useState("");
-	const [textT2, setTextT2] = useState("");
+	useEffect(() => {}, [currentRecord]);
 
-	useEffect(() => {
-		if (currentRecord.length > 0) {
-			let recordEventData = currentRecord[currentRecord.length - 1];
-			if (
-				recordEventData.eventPage === currentPage &&
-				recordEventData.eventPageStep === currentStep &&
-				recordEventData.eventName === clickEventName
-			) {
-				if (recordEventData.eventData.playAudio) {
-					let audioUrl = audios[recordEventData.eventData.playAudio];
-					playAudio(audioUrl);
-				}
-				if (recordEventData.eventData.imageG1) {
-					setImage1(recordEventData.eventData.imageG1);
-				}
-				if (recordEventData.eventData.textT1) {
-					setTextT1(recordEventData.eventData.textT1);
-				}
-				if (recordEventData.eventData.imageG2) {
-					setImage2(recordEventData.eventData.imageG2);
-				}
-				if (recordEventData.eventData.textT2) {
-					setTextT2(recordEventData.eventData.textT2);
-				}
-			}
-		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [currentRecord]);
-
-	console.log("render page14");
 	return (
-		<PracticeFind
-			page="page14"
-			object1={image1}
-			object2={image2}
-			ball={images.page14.ball14}
-			objectG1={images.common.rightTeacherGif}
-			objectG2={images.common.leftKidGif}
-			text1={images.page14.question14}
-			text2={images.page14.answer14}
-			textKid14="textKid14"
-			textTeacher14="textTeacher14"
-			audio1="verygood"
-			audio2="apple"
-			reverseObj="reverse"
-			clickHandler={clickHandler}
-			currentPage={currentPage}
-			onPushAction={onPushAction}
-			textT1={textT1}
-			textT2={textT2}
-		/>
+		<div
+			className="page14-wrapper"
+			style={
+				window.innerWidth < window.innerHeight ? { alignItems: "center" } : null
+			}
+		>
+			<ScreenMiddleTitle urlImgTitle={images.page14.titlePage14} />
+			<MultipleChoiceGame
+				urlQuestion={images.page14.questionPage14}
+				answer01={images.page14.bPage14}
+				answer02={images.page14.cPage14}
+				answer03={images.page14.dPage14}
+				answer04={images.page14.ePage14}
+				clickHandler={clickHandler}
+			/>
+		</div>
 	);
 };
 
