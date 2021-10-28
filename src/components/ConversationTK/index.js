@@ -2,6 +2,7 @@ import React from "react";
 
 import images from "assets/images/index";
 import "./styles.scss";
+import { handleClickImage } from "helper/appServices";
 ConversationTK.propTypes = {};
 
 function ConversationTK(props) {
@@ -27,16 +28,33 @@ function ConversationTK(props) {
 					<img
 						src={image1}
 						onClick={(e) => {
-							clickHandler(e, {
-								actionType: "fireEvent",
-								eventName: page,
-								eventData: {
-									playAudio: audio1,
-									active: true,
-									imageG1: imageG1,
-									textT1: textGT1,
+							handleClickImage(
+								clickHandler,
+								{
+									event: e,
+									data: {
+										actionType: "fireEvent",
+										eventName: page,
+										eventData: {
+											playAudio: audio1,
+											active: true,
+											imageG1: imageG1,
+											textT1: textGT1,
+										},
+									},
 								},
-							});
+								0
+							);
+							// clickHandler(e, {
+							// 	actionType: "fireEvent",
+							// 	eventName: page,
+							// 	eventData: {
+							// 		playAudio: audio1,
+							// 		active: true,
+							// 		imageG1: imageG1,
+							// 		textT1: textGT1,
+							// 	},
+							// });
 						}}
 						alt=""
 						data-id={audio1}
@@ -61,16 +79,23 @@ function ConversationTK(props) {
 						src={image2}
 						alt=""
 						onClick={(e) => {
-							clickHandler(e, {
-								actionType: "fireEvent",
-								eventName: page,
-								eventData: {
-									playAudio: audio2,
-									active: true,
-									imageG2: imageG2,
-									textT2: textGT2,
+							handleClickImage(
+								clickHandler,
+								{
+									event: e,
+									data: {
+										actionType: "fireEvent",
+										eventName: page,
+										eventData: {
+											playAudio: audio2,
+											active: true,
+											imageG2: imageG2,
+											textT2: textGT2,
+										},
+									},
 								},
-							});
+								1
+							);
 						}}
 					></img>
 				</div>

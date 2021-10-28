@@ -83,6 +83,9 @@ const DebugPanel = (props) => {
 			setCurrentData({
 				currentPage: currentPage,
 				currentStep: currentStep - 1,
+				isShowWarning: false,
+				enableClick: true,
+				orderClick: 0,
 			})
 		);
 
@@ -104,6 +107,9 @@ const DebugPanel = (props) => {
 			setCurrentData({
 				currentPage: currentPage,
 				currentStep: currentStep + 1,
+				isShowWarning: false,
+				enableClick: true,
+				orderClick: 0,
 			})
 		);
 		//window.bridge.requestChangePage(currentPage, currentStep + 1);

@@ -20,7 +20,7 @@ const App = () => {
 	const dispatch = useDispatch();
 
 	const currentPage = useSelector((state) => state.app.currentPage);
-	const { isLoading } = useSelector((state) => state.app);
+	const { isLoading, isShowWarning } = useSelector((state) => state.app);
 
 	const handleClick = (e, actionType, value, callback) => {
 		switch (actionType) {
@@ -75,6 +75,9 @@ const App = () => {
 							currentPage: page,
 							currentStep: step,
 							isLoading: true,
+							isShowWarning: false,
+							enableClick: true,
+							orderClick: 0,
 						})
 					);
 					audioPlayer.playAudio(audios.audioChangePage);
@@ -151,7 +154,11 @@ const App = () => {
 			<DebugPanel />
 			<div className="pageWrap">
 				{!isLoading ? (
-					<Pages onPushAction={handleClick} alignItems={alignItemsContainer} />
+					<Pages
+						onPushAction={handleClick}
+						alignItems={alignItemsContainer}
+						isShowWarning={isShowWarning}
+					/>
 				) : (
 					<Loading />
 				)}

@@ -1,11 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-	currentPage: 0,
+	currentPage: 1,
 	currentStep: 0,
 	currentRecord: [],
 	prevRecord: [],
 	isLoading: false,
+	orderClick: 0,
+	enableClick: true,
+	isShowWarning: false,
 };
 
 export const slice = createSlice({

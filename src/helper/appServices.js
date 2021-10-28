@@ -1,9 +1,10 @@
 import audios from "assets/audios/index";
 import audioPlayer from "helper/audioPlayer";
 import store from "redux/store";
+import { setCurrentData } from "redux/currentData";
 export const runRecord = (params) => {
-	const result = [];
 	const state = store.getState();
+	const result = [];
 	const { currentPage, currentStep, currentRecord } = state.app;
 	const { eventName, callbacks } = params;
 	const { playAudio } = audioPlayer;
@@ -30,4 +31,18 @@ export const runRecord = (params) => {
 		}
 	}
 	return result;
+};
+
+export const handleClickImage = (callback, params, order) => {
+	const state = store.getState();
+	const { orderClick, isShowWarning } = state.app;
+	if (order <= orderClick) {
+		callback(params.event, params.data);
+		if (isShowWarning) {
+			store.dispatch(setCurrentData({ isShowWarning: false }));
+		}
+		store.dispatch(setCurrentData({ orderClick: orderClick + 1 }));
+	} else {
+		store.dispatch(setCurrentData({ isShowWarning: true }));
+	}
 };
