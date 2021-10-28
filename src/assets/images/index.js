@@ -72,8 +72,6 @@ import cover1 from "./page_13/cover1.png";
 import cover2 from "./page_13/cover2.png";
 import cover3 from "./page_13/cover3.png";
 
-import bgPage18 from "./page_18/bg_18.png";
-
 import bgPage20 from "./page_20/background-20.png";
 import cat20 from "./page_20/cat_20.png";
 import dog20 from "./page_20/dog_20.png";
@@ -175,6 +173,10 @@ import dPage17 from "./page_14/d.png";
 import jPage17 from "./page_16/j.png";
 import bPage17 from "./page_14/b.png";
 import questionPage17 from "./page_17/question.png";
+
+//page 18
+import bgPage18 from "./page_18/page18-bg.png";
+import imagePage18 from "./page_18/image.png";
 
 const images = {
 	loading: [loadingImages],
@@ -343,7 +345,7 @@ const images = {
 		bPage17,
 		questionPage17,
 	},
-	page18: {},
+	page18: { imagePage18 },
 	page19: {
 		answer19,
 		question19,
