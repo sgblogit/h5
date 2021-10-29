@@ -21,8 +21,6 @@ const Page39 = (props) => {
 	};
 
 	
-	// const [textT1, setTextT1] = useState(null);
-	// const [textT2, setTextT2] = useState(null);
 
 	useEffect(() => {
 		const values = runRecord({

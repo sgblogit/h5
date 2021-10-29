@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useSelector } from "react-redux";
 
 import images from "assets/images/index";
 import { handleClickImage, runRecord } from "helper/appServices";
 import TitleMeeting from "components/TitleMeetting/index";
 import './style.scss'
+import ButtonControlPlayer from "components/ButtonControlPlayer/index";
 const Page30 = (props) => {
 	const { onPushAction } = props;
 
@@ -15,6 +16,8 @@ const Page30 = (props) => {
 	
 
 	const clickEventName = "page30";
+
+	const [isPlayAudio, setIsPlayAudio] = useState(false);
 
 	const clickHandler = (e, op) => {
 		onPushAction(e, op.actionType, op);
@@ -31,34 +34,28 @@ const Page30 = (props) => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentRecord]);
 
+	const handleControlAudioCustom = useCallback((boolean) => {
+		setIsPlayAudio(boolean);
+	}, []);
 	return (
 		<div className="page30">
-			<button className="controll"
-					onClick={(e) => {
-						handleClickImage(
-							clickHandler,
-							{
-								event: e,
-								data: {
-									actionType: "fireEvent",
-									eventName: 'page30',
-									eventData: {
-										playAudio: 'Vce30',
-										active: true,
-										
-
-									},
-								},
-							},
-							0
-						);
-						
-					}}
-				>
-					<img src={images.common.Button} alt="">
-					</img>
-				</button>
-			
+				<ButtonControlPlayer
+					page="page30"
+					clickHandler={clickHandler}
+					onPushAction={onPushAction}
+					isAutoPlay={false}
+					audioName={"Vce30"}
+					handleControlAudioCustom={handleControlAudioCustom}
+					isPlayAudio={isPlayAudio}
+					boyCar={images.page0.CarGif}
+					
+					data={
+						{
+							playAudio: 'Vce30',
+							active: true,
+						}
+					}
+			/>
 			<div className="page30-wrraper">
                 <TitleMeeting bgTitle={images.common.title}/>
 				<div className="main">
@@ -69,8 +66,7 @@ const Page30 = (props) => {
                         <img src={images.page30.Stove} alt=""></img>
 					</div>
 					<div className="page30-right item">
-						
-                            <img src={images.page30.DamTre} alt=""></img>
+                        <img src={images.page30.DamTre} alt=""></img>
 					</div>
 				</div>
 			</div>

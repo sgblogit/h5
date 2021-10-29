@@ -11,8 +11,8 @@
     width: 20%;
     height: 20%;
     top: 2%;
-    right: 2%;
-    transform: rotate(45deg);
+    right: 37%;
+    transform: rotate(15deg);
     z-index: 99999;
     animation: moveThuder 5s ease-in infinite;
 }
@@ -40,7 +40,7 @@
     height: 15%;
     top: 0;
     z-index: 99999;
-    animation: moveCloud 15s ease-in infinite;
+    // animation: moveCloud 15s ease-in infinite;
 }
 @keyframes moveCloud {
 	0% {
@@ -56,7 +56,9 @@
     position: absolute;
     width: 20%;
     height: 15%;
-    animation: moveSun 12s ease-in infinite;
+    top: 5%;
+    left:5%;
+    // animation: moveSun 12s ease-in infinite;
     z-index: 9999;
 }
 @keyframes moveSun {

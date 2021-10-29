@@ -5,6 +5,7 @@ import "./styles.scss";
 import { handleClickImage } from "helper/appServices";
 import { useSelector, useDispatch } from "react-redux";
 import { setCurrentData } from "redux/currentData";
+import audioPlayer from "../../helper/audioPlayer";
 MinigameQuestion.propTypes = {};
 
 	
@@ -29,6 +30,8 @@ function MinigameQuestion(props) {
 		audioFalse,
 		question,
 		buttonAudio,
+		buttonEnd,
+		pauseAllAudio,
 		currentPage
 	} = props;
 	const dispatch = useDispatch();
@@ -56,20 +59,43 @@ function MinigameQuestion(props) {
 						src={buttonAudio}
 						className="button"
 						onClick={(e) => {
-							handleClickImage(
-								clickHandler,
-								{
-									event: e,
-									data: {
-										actionType: "fireEvent",
-										eventName: page,
-										eventData: {
-											playAudio: audioBackground,
+							console.log(audioBackground)
+							if(buttonAudio===buttonEnd){
+								handleClickImage(
+									clickHandler,
+									{
+										event: e,
+										data: {
+											actionType: "fireEvent",
+											eventName: page,
+											eventData: {
+												playAudio: audioBackground,
+												active: true,
+												button1: images.page40.pause40
+											},
 										},
 									},
-								},
-								0
-							);
+									0
+								);
+							} else {
+								audioPlayer.pauseAudio(audioBackground);
+								handleClickImage(
+									clickHandler,
+									{
+										event: e,
+										data: {
+											actionType: "fireEvent",
+											eventName: page,
+											eventData: {
+												active: true,
+												button1: images.page40.button40,
+											},
+										},
+									},
+									0
+								);
+							}
+							
 						}}
 						alt=""
 						data-id={audioBackground}

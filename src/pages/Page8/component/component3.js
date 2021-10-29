@@ -3,11 +3,10 @@ import { useSelector } from "react-redux";
 import audioPlayer from "helper/audioPlayer";
 import audios from "assets/audios/index";
 import MyNameKids from "components/MyNameKids/index";
-import "./styles.scss";
 import images from "assets/images/index";
 import { runRecord } from "helper/appServices";
 
-const Page12 = (props) => {
+const Page11 = (props) => {
 	const { onPushAction } = props;
 	const { currentPage, currentStep, currentRecord } = useSelector(
 		(state) => state.app
@@ -15,16 +14,16 @@ const Page12 = (props) => {
 	
 	const { playAudio } = audioPlayer;
 
-	const clickEventName = "page12";
+	const clickEventName = "page11";
 
 	const clickHandler = (e, op) => {
 		onPushAction(e, op.actionType, op);
 	};
 
-	const [image1, setImage1] = useState(images.page12.kid12);
-	const [image2, setImage2] = useState(images.page12.name12);
-	const [prevImage, setImage3] = useState(images.page12.prev12);
-	const [buttonAudio, setImage4] = useState(images.page12.button12);
+	const [image1, setImage1] = useState(images.page11.kid11);
+	const [image2, setImage2] = useState(images.page11.name11);
+	const [prevImage, setImage3] = useState(images.page11.prev11);
+	const [buttonAudio, setImage4] = useState(images.page11.button11);
 	
 
 	// const [textT1, setTextT1] = useState(null);
@@ -43,17 +42,17 @@ const Page12 = (props) => {
 		console.log(values, "values");
 	}, [currentRecord]);
 	return (
-		<div className="page12">
+		<div className="page11">
 			<div className="page-wrraper">
 				<MyNameKids
-					page="page12"
+					page="page11"
 					image2={image2}
 					image1={image1}
 					currentPage={currentPage}
 					prevImage={prevImage}
 					buttonAudio={buttonAudio}
-					imageG1={images.page12.kidGif12}
-					audio="kidAudio12"
+					imageG1={images.page11.kidGif11}
+					audio="kidAudio11"
 					clickHandler={clickHandler}
 				/>
 			</div>
@@ -61,4 +60,4 @@ const Page12 = (props) => {
 	);
 };
 
-export default React.memo(Page12);
+export default React.memo(Page11);

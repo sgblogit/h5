@@ -16,8 +16,7 @@ function MyNameKids(props) {
     audio,
     page,
     clickHandler,
-    imageG1,
-    currentPage,
+    imageG1
   } = props;
   const dispatch = useDispatch();
   // onClick={(e) => {dispatch(
@@ -47,10 +46,31 @@ function MyNameKids(props) {
                     eventData: {
                       playAudio: audio,
                       imageG1: imageG1,
+                      
                     },
+                    
                   },
                 },
                 0
+              );
+              setTimeout(
+                function(){
+                  handleClickImage(
+                    clickHandler,
+                    {
+                      event: e,
+                      data: {
+                        actionType: "fireEvent",
+                        eventName: page,
+                        eventData: {
+                          imageG1: image1,
+                        },
+                        
+                      },
+                    },
+                    0
+                  );
+                },1000
               );
             }}
             alt=""
@@ -88,9 +108,7 @@ function MyNameKids(props) {
               setCurrentData({
                 currentPage: 8,
                 currentStep: 0,
-                currentRecord: [],
-                prevRecord: [],
-                isLoading: true,
+                isLoading: false,
               })
             ),
             0

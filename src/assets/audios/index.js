@@ -2,6 +2,7 @@ import backgroundAudio from "./common/nenPikachu.mp3";
 import gitAudio from "./common/git.mp3";
 import falseAudio from "./common/false.mp3";
 import trueAudio from "./common/true.mp3";
+import backgroundGame from "./common/game.mp3";
 ///
 
 // Page 0
@@ -78,6 +79,7 @@ const audios = {
   gitAudio,
   falseAudio,
   trueAudio,
+  backgroundGame,
 // page 0
 infoStart,
 //Page 1

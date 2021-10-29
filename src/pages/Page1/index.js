@@ -6,6 +6,7 @@ import audios from "assets/audios/index";
 import "./styles.scss";
 import images from "assets/images/index";
 import { handleClickImage, runRecord } from "helper/appServices";
+import ButtonControlPlayer from "components/ButtonControlPlayer/index";
 
 const Page1 = (props) => {
 	const { onPushAction } = props;
@@ -13,7 +14,7 @@ const Page1 = (props) => {
 	const { currentPage, currentStep, currentRecord } = useSelector(
 		(state) => state.app
 	);
-
+	const [isPlayAudio, setIsPlayAudio] = useState(false);
 	const [thunder, setThunder] = useState(null);
 	const [cloud, setCloud] = useState(null);
 	const [sun, setSun] = useState(null);
@@ -42,41 +43,42 @@ const Page1 = (props) => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentRecord]);
 
+	const handleControlAudioCustom = useCallback((boolean) => {
+		setIsPlayAudio(boolean);
+	}, []);
 	return (
 		<div className="page1">
-			<button className="controll"
-					onClick={(e) => {
-						handleClickImage(
-							clickHandler,
-							{
-								event: e,
-								data: {
-									actionType: "fireEvent",
-									eventName: 'page1',
-									eventData: {
-										playAudio: 'infoSeconce',
-										active: true,
-										activeDisplay : true,
-										cloudGif : cloudGif ,
-										thunderGif : thunderGif,
-										sunGif : sunGif
-
-									},
-								},
-							},
-							0
-						);
-						
-					}}
-				>
-					<img src={images.common.Button} alt="">
-					</img>
-				</button>
+				<ButtonControlPlayer
+					page="page1"
+					clickHandler={clickHandler}
+					onPushAction={onPushAction}
+					isAutoPlay={false}
+					audioName={"infoSeconce"}
+					handleControlAudioCustom={handleControlAudioCustom}
+					isPlayAudio={isPlayAudio}
+					data={
+						{
+							playAudio: 'infoSeconce',
+							active: true,
+							activeDisplay : true,
+							cloudGif : cloudGif ,
+							thunderGif : thunderGif,
+							sunGif : sunGif
+						}
+					}
+					dataPause={
+						{
+							playAudio: 'infoSeconce',
+							active: true,
+							activeDisplay : false,
+							cloudGif : "" ,
+							thunderGif : "",
+							sunGif : ""
+						}
+					}
+			/>
 			<div className={`sunphuong hidden ${activeDisplay ? "active" : ""} `}>
 				<img src={sun} alt=""></img>
-			</div>
-			<div className={`samset hidden ${activeDisplay ? "active" : ""} `}>
-				<img src={thunder} alt=""></img>
 			</div>
 			<div className={`mayoi hidden ${activeDisplay ? "active" : ""} `} >
 				<img src={cloud} alt=""></img>

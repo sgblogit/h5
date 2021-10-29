@@ -26,6 +26,9 @@ const Page4 = (props) => {
 	let kidGif = images.page4.kidGifPage4
 
 	useEffect(() => {
+		setTimeout(() => {
+			setKid(images.page4.kidPage4)
+		}, 2000);
 		const values = runRecord({
 			eventName: clickEventName,
 			callbacks: {

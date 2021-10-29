@@ -6,7 +6,7 @@ import WhatYourName from "components/WhatYourName/index";
 
 const Page28 = (props) => {
 	const { onPushAction } = props;
-	// const [active, setActive] = useState("");
+
 
 	const { currentPage, currentStep, currentRecord } = useSelector(
 		(state) => state.app
@@ -22,12 +22,19 @@ const Page28 = (props) => {
 	};
 
 	useEffect(() => {
+		setTimeout(() => {
+			setImage1(image1)
+		}, 4000);
+		setTimeout(() => {
+			setTextT2(images.page28.text29s)
+		}, 2000);
 		const values = runRecord({
 			eventName: clickEventName,
 			callbacks: {
 				imageG1: setImage1,
 				textT1: setTextT1,
 				textT2: setTextT2,
+				
 				
 			},
 		});
@@ -41,13 +48,12 @@ const Page28 = (props) => {
 		imageG1={images.page28.gKid29}
 		text={text}
 		text2={text2}
-		textGT2={images.page28.text29s}
+		textGT2=""
 		textGT1={images.page28.text29}
 		clickHandler={clickHandler}
 		audio="iLikeWhite"
 		textunder = "textunder"
 		textunder2 = "textunder2"
-		// active={active}
 		reverseObj="reverse"
 	
 

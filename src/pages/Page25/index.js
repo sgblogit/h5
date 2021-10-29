@@ -22,6 +22,9 @@ const Page25 = (props) => {
 	};
 
 	useEffect(() => {
+		setTimeout(() => {
+			setImage1(image1)
+		}, 4000);
 		const values = runRecord({
 			eventName: clickEventName,
 			callbacks: {

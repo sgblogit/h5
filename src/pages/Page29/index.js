@@ -22,7 +22,11 @@ const Page29 = (props) => {
 	};
 
 	useEffect(() => {
+		setTimeout(() => {
+			setImage1(image1)
+		}, 4000);
 		const values = runRecord({
+			
 			eventName: clickEventName,
 			callbacks: {
 				imageG1: setImage1,
@@ -38,7 +42,7 @@ const Page29 = (props) => {
 	<WhatYourName
 		page="page29"
 		image1={image1}
-		imageG1={images.page29.gTteacher30}
+		imageG1={images.page29.gTeacher30}
 		text={text}
 		textGT1={images.page29.text30}
 		clickHandler={clickHandler}

@@ -11,7 +11,7 @@ import bgPage9 from "./page_9/page9-bg.png";
 import bgPage10 from "./page_10/page10-bg.png";
 import bgPage11 from "./page_11/page11-bg.png";
 import bgPage12 from "./page_12/page12-bg.png";
-import bgPage13 from "./page_13/page13-bg.png";
+import bgPage13 from "./page_13/back-01.png";
 import bgPage15 from "./page_15/page15-bg.png";
 import bgPage19 from "./page_19/page19-bg.png";
 import bgPage20 from "./page_20/page20-bg.png";
@@ -206,6 +206,8 @@ import title40 from "./page_40/title40.png";
 import yes40 from "./page_40/yes.png";
 import no40 from "./page_40/no.png";
 import button40 from "./page_40/button.png";
+import pause40 from "./page_40/pause.png";
+
 
 // page 41
 import blue41 from "./page_41/blue41.png";
@@ -218,6 +220,7 @@ import title41 from "./page_41/title41.png";
 import yes41 from "./page_41/yes.png";
 import no41 from "./page_41/no.png";
 import button41 from "./page_41/button.png";
+import pause41 from "./page_41/pause.png";
 
 
 // page 42 
@@ -231,6 +234,7 @@ import title42 from "./page_42/title42.png";
 import yes42 from "./page_42/yes.png";
 import no42 from "./page_42/no.png";
 import button42 from "./page_42/button.png";
+import pause42 from "./page_42/pause.png";
 
 // page 43
 import monkey43 from "./page_43/monkey43.png";
@@ -243,11 +247,14 @@ import title43 from "./page_43/title43.png";
 import yes43 from "./page_43/yes.png";
 import no43 from "./page_43/no.png";
 import button43 from "./page_43/button.png";
+import pause43 from "./page_43/pause.png";
 // page44
 import fruitGif from "./page_44/fruit-gif.gif";
 import kidPage44 from "./page_44/girl.png";
 import fruitPage44 from "./page_44/ok.png";
 import kidGifPage44 from "./page_44/4.gif";
+
+// 
 
 
 
@@ -260,6 +267,7 @@ import kidGif11 from "./page_11/t11.gif";
 import kidGif12 from "./page_12/t12.gif";
 
 // Common
+import Pauses from "./Common/pause.png";
 import title from "./Common/title.png";
 import play from "./Common/play.png";
 import ChifGif from "./Common/34-min.gif";
@@ -291,11 +299,11 @@ const images = {
     bgPage8,
     // page9
     // bgPage9,
-    // // page 10
+    // page 10
     // bgPage10,
-    // //  page11
+    //   page11
     // bgPage11,
-    // // page 12
+    //  page 12
     // bgPage12,
 
     // page 13
@@ -368,6 +376,7 @@ const images = {
     bgPage39,
   ],
   common: {
+    Pauses,
     title,
     play,
     Button,
@@ -594,7 +603,8 @@ const images = {
 		title40,
 		yes40,
 		no40,
-		button40
+		button40,
+    pause40
 	},
 	page41: {
 		blue41,
@@ -606,7 +616,8 @@ const images = {
 		title41,
 		yes41,
 		no41,
-		button41
+		button41,
+    pause41
 	},
 	page42: {
 		cake42,
@@ -618,7 +629,8 @@ const images = {
 		title42,
 		yes42,
 		no42,
-		button42
+		button42,
+    pause42
 	},
 	page43: {
 		bird43,
@@ -630,7 +642,8 @@ const images = {
 		title43,
 		yes43,
 		no43,
-		button43
+		button43,
+    pause43
 	},
   page44:{
     fruitGif,
