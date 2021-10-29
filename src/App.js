@@ -135,6 +135,13 @@ const App = () => {
 	const alignItemsContainer = useMemo(() => {
 		let alignItems = null;
 		switch (currentPage) {
+			case 10:
+				if (window.innerWidth < window.innerHeight) {
+					alignItems = "flex-end";
+				} else {
+					alignItems = "center";
+				}
+				break;
 			case 21:
 				if (window.innerWidth < window.innerHeight) {
 					alignItems = "center";

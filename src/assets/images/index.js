@@ -12,7 +12,7 @@ import bgPage10 from "./page_10/page10-bg.png";
 import bgPage11 from "./page_11/page11-bg.png";
 import bgPage12 from "./page_12/page12-bg.png";
 import bgPage13 from "./page_13/page13-bg.png";
-import bgPage15 from "./page_15/page15-bg.png";
+// import bgPage15 from "./page_15/page15-bg.png";
 import bgPage19 from "./page_19/page19-bg.png";
 import bgPage20 from "./page_20/page20-bg.png";
 import bgPage30 from "./page_30/page30-bg.png";
@@ -286,6 +286,7 @@ import titlePage16 from "./page_14/title14.png";
 
 //page 17
 import bgPage17 from "./page_14/bg_14.png";
+import titlePage17 from "./page_14/title14.png";
 import ePage17 from "./page_14/e.png";
 import dPage17 from "./page_14/d.png";
 import jPage17 from "./page_16/j.png";
@@ -337,7 +338,7 @@ const images = {
 		//page 17
 		bgPage13,
 		// page 18
-		bgPage13,
+		bgPage18,
 		// page19
 		bgPage19,
 		// page20
@@ -483,11 +484,13 @@ const images = {
 		// cover2,
 		// cover1,
 	},
-	page15: {},
-	page14: {},
+	// page15: {},
+	// page14: {},
 
-	page16: {},
-	page17: {},
+	// page16: {},
+	// page17: {
+
+	// },
 	page18: {},
 	page19: {
 		teacher20,
@@ -580,11 +583,12 @@ const images = {
 		jPage17,
 		bPage17,
 		questionPage17,
+		titlePage17,
 	},
 	page18: { imagePage18 },
 	page19: {
-		answer19,
-		question19,
+		// answer19,
+		// question19,
 	},
 	page30: {
 		DamTre,

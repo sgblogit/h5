@@ -213,23 +213,7 @@ const Pages = (props) => {
 			className={`page-content page${currentPage}`}
 			style={{ backgroundImage: `url(${images.background[currentPage]})` }}
 		>
-			<Container>
-				{Page}
-				{/* {isShowWarning ? (
-					<div
-						style={{
-							backgroundColor: "red",
-							display: "flex",
-							width: "100%",
-							height: "100%",
-							alignItems: "center",
-							justifyContent: "center",
-						}}
-					>
-						<span> Invalid action</span>
-					</div>
-				) : null} */}
-			</Container>
+			<Container>{Page}</Container>
 		</div>
 	);
 };

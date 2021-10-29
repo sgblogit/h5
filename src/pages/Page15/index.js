@@ -21,7 +21,9 @@ const Page15 = (props) => {
 		<div
 			className="page15-wrapper"
 			style={
-				window.innerWidth < window.innerHeight ? { alignItems: "center" } : null
+				window.innerWidth < window.innerHeight
+					? { alignItems: "flex-end" }
+					: { alignItems: "center" }
 			}
 		>
 			<ScreenMiddleTitle urlImgTitle={images.page15.titlePage15} />
