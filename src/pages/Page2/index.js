@@ -25,9 +25,11 @@ const Page2 = (props) => {
 	console.log(window,"adadsadhsaj");
 	const [thunder, setThunder] = useState(null);
 	const [cloud, setCloud] = useState(null);
+	const [sun, setSun] = useState(null);
 	const [activeDisplay, setActiveDisplay] = useState(false);
 	let cloudGif = images.page0.cloudGif;
 	let thunderGif = images.page1.SamSet;
+	let sunGif = images.page1.Sun;
 
 	useEffect(() => {
 		const values = runRecord({
@@ -35,7 +37,8 @@ const Page2 = (props) => {
 			callbacks: {
 				cloudGif : setCloud,
 				thunderGif : setThunder,
-				activeDisplay : setActiveDisplay
+				activeDisplay : setActiveDisplay,
+				sunGif : setSun,
 			},
 		});
 		console.log(values, "values");
@@ -44,6 +47,9 @@ const Page2 = (props) => {
 
 	return (
 		<div className="page2">
+			<div className={`sunphuong hidden ${activeDisplay ? "active" : ""} `}>
+				<img src={sun} alt=""></img>
+			</div>
 			<div className={`samset hidden ${activeDisplay ? "active" : ""} `}>
 				<img src={thunder} alt=""></img>
 			</div>
@@ -64,7 +70,8 @@ const Page2 = (props) => {
 										active: true,
 										activeDisplay : true,
 										cloudGif : cloudGif ,
-										thunderGif : thunderGif
+										thunderGif : thunderGif,
+										sunGif : sunGif
 
 									},
 								},

@@ -6,7 +6,7 @@ import "./styles.scss";
 import TitleMeeting from "components/TitleMeetting/index";
 import images from "assets/images/index";
 import Question from "components/Question/index";
-import { runRecord } from "helper/appServices";
+import { handleClickImage, runRecord } from "helper/appServices";
 import ClassRoom from "components/ClassRoom/index";
 
 const Page4 = (props) => {
@@ -90,6 +90,31 @@ const Page4 = (props) => {
 				play audio and animation
 			</button> */}
 			<div className="page-wrraper">
+			<button className="controll-right"
+					onClick={(e) => {
+						handleClickImage(
+							clickHandler,
+							{
+								event: e,
+								data: {
+									actionType: "fireEvent",
+									eventName: 'page44',
+									eventData: {
+										playAudio: 'audioPage44',
+										active: true,
+						
+
+									},
+								},
+							},
+							0
+						);
+						
+					}}
+				>
+					<img src={images.common.Button} alt="">
+					</img>
+				</button>
 				<TitleMeeting bgTitle={images.common.title} />
 				<ClassRoom	
 					kidImg={images.page4.kidPage4}

@@ -1,0 +1,45 @@
+.page31{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .page31-wrraper{
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        display: flex;
+        bottom: 0%;
+        .main{
+            width: 70%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            .page31-left{
+                width: 30%;
+                height: 85%;
+                transform: translateX(70%);
+            }
+            .page31-middle{
+                width: 50%;
+                height: 65%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                .stove{
+                    width: 100%;
+                    height: 70%;
+                    // background: chartreuse;
+                }
+                .text{
+                    transform: translate(25%,-25%);
+                }
+            }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            object-fit: contain;
+        }
+    }
+}

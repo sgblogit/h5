@@ -1,0 +1,61 @@
+.page37{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .page37-wrraper{
+        width: 100%;
+        height: 100%;
+        .main{
+            position: absolute;
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        bottom: 0%;
+        }
+        .main-list{
+            width: 55%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+            .item{
+                width: 50%;
+                height: 100%;
+            }
+            .main-list-left{
+                // background: coral;
+                .list-left-top{
+                    width: 100%;
+                    height: 40%;
+                    transform: translate(-10%,-15%);
+                }
+                .list-left-bottom{
+                    width: 100%;
+                    height: 69%;
+                    transform: translateY(-15%);
+                }
+            }
+            .main-list-right{
+                // background: coral;
+                .list-right-top{
+                    width: 100%;
+                    height: 40%;
+                    transform: translate(20%,-20%);
+                }
+                .list-right-bottom{
+                    width: 100%;
+                    height: 69%;
+                    transform: translateY(-15%);
+                }
+            }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            object-fit: contain;
+        }
+    }
+}

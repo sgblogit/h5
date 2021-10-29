@@ -16,12 +16,14 @@ const Page1 = (props) => {
 
 	const [thunder, setThunder] = useState(null);
 	const [cloud, setCloud] = useState(null);
+	const [sun, setSun] = useState(null);
 	const [activeDisplay, setActiveDisplay] = useState(false);
 
 	const clickEventName = "page1";
 
 	let cloudGif = images.page0.cloudGif;
 	let thunderGif = images.page1.SamSet;
+	let sunGif = images.page1.Sun;
 	const clickHandler = (e, op) => {
 		onPushAction(e, op.actionType, op);
 	};
@@ -32,6 +34,7 @@ const Page1 = (props) => {
 			callbacks: {
 				cloudGif : setCloud,
 				thunderGif : setThunder,
+				sunGif : setSun,
 				activeDisplay : setActiveDisplay
 			},
 		});
@@ -55,7 +58,8 @@ const Page1 = (props) => {
 										active: true,
 										activeDisplay : true,
 										cloudGif : cloudGif ,
-										thunderGif : thunderGif
+										thunderGif : thunderGif,
+										sunGif : sunGif
 
 									},
 								},
@@ -68,6 +72,9 @@ const Page1 = (props) => {
 					<img src={images.common.Button} alt="">
 					</img>
 				</button>
+			<div className={`sunphuong hidden ${activeDisplay ? "active" : ""} `}>
+				<img src={sun} alt=""></img>
+			</div>
 			<div className={`samset hidden ${activeDisplay ? "active" : ""} `}>
 				<img src={thunder} alt=""></img>
 			</div>

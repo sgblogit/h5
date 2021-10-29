@@ -31,6 +31,15 @@ import Page26 from "./Page26";
 import Page27 from "./Page27";
 import Page28 from "./Page28";
 import Page29 from "./Page29";
+import Page30 from "./Page30";
+import Page31 from "./Page31";
+import Page32 from "./Page32";
+import Page33 from "./Page33";
+import Page34 from "./Page34";
+import Page35 from "./Page35";
+import Page36 from "./Page36";
+import Page37 from "./Page37";
+import Page38 from "./Page38";
 import Page39 from "./Page39";
 import Page40 from "./Page40";
 import Page41 from "./Page41";
@@ -139,6 +148,33 @@ const Pages = (props) => {
     case 29:
       Page = <Page29 onPushAction={onPushAction} />;
       break;
+      case 30:
+			Page = <Page30 onPushAction={onPushAction} />;
+			break;
+		case 31:
+			Page = <Page31 onPushAction={onPushAction} />;
+			break;
+		case 32:
+			Page = <Page32 onPushAction={onPushAction} />;
+			break;
+		case 33:
+			Page = <Page33 onPushAction={onPushAction} />;
+			break;
+		case 34:
+			Page = <Page34 onPushAction={onPushAction} />;
+			break;
+		case 35:
+			Page = <Page35 onPushAction={onPushAction} />;
+			break;
+		case 36:
+			Page = <Page36 onPushAction={onPushAction} />;
+			break;
+		case 37:
+			Page = <Page37 onPushAction={onPushAction} />;
+			break;
+		case 38:
+			Page = <Page38 onPushAction={onPushAction} />;
+			break;
     case 39:
       Page = <Page39 onPushAction={onPushAction} />;
       break;

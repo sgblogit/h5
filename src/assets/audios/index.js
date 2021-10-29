@@ -4,22 +4,43 @@ import falseAudio from "./common/false.mp3";
 import trueAudio from "./common/true.mp3";
 ///
 
-/// Page 0
+// Page 0
+
 
 import infoStart from "./page_0/infoStart.mp3";
 
-// PAGE 1
+// PAGE 1 
 import infoSeconce from "./page_1/voice.mp3";
 
 // PAGE 2
 import VceChilden from "./page_2/vce_1.mp3";
 
-//Page 3
+//Page 3 
 import HelloKid from "./page_3/hello.mp3";
 
-import audioPage3 from "./page_3/hello.mp3";
-import audioPage5 from "./page_5/audio5.mp3";
-import audioPage7 from "./page_7/audio7.mp3";
+//Page 30 
+import Vce30 from "./page_30/vce_1.mp3";
+//Page 31
+import Vce31 from "./page_31/what.mp3";
+//Page 32
+import Vce32 from "./page_32/voice.mp3";
+//Page 33
+import Vce33 from "./page_33/voice.mp3";
+//Page 34
+import Vce34 from "./page_34/pasat.mp3";
+//Page 35
+import Vce35 from "./page_35/cake.mp3";
+
+//Page 36
+import Vce36 from "./page_36/it.mp3";
+import VceSe36 from "./page_36/thatrighit.mp3";
+//Page 37
+import Vce37 from "./page_37/itadoll.mp3";
+import VceSe37 from "./page_37/what.mp3";
+
+//Page 38
+import Vce38 from "./page_38/cat.mp3";
+import VceSe38 from "./page_38/whatpet.mp3";
 
 //page 19
 import areYouJulie from "./page_19/areYouJulie.mp3";
@@ -53,18 +74,16 @@ const audios = {
   gitAudio,
   falseAudio,
   trueAudio,
-  // page 0
-  infoStart,
-  //Page 1
-  infoSeconce,
-  // Page 2
-  VceChilden,
-  //Page 3
-  HelloKid,
+// page 0
+infoStart,
+//Page 1
+infoSeconce,
+// Page 2 
+VceChilden,
+//Page 3 
+HelloKid,
 
-  audioPage3,
-  audioPage5,
-  audioPage7,
+
 
   kidAudio9,
   kidAudio10,
@@ -81,6 +100,28 @@ const audios = {
   noIDont,
   whatColorDoYouLike,
   iLikeWhite,
+  	//Page 30
+	Vce30,
+	//Page 31
+	Vce31,
+	//Page 32
+	Vce32,
+	//Page 33
+	Vce33,
+	//Page 34
+	Vce34,
+	//Page 35
+	Vce35,
+
+	//Page 36
+	Vce36,
+	VceSe36,
+	//Page 37 
+	VceSe37,
+	Vce37,
+	//Page 38
+	Vce38,
+	VceSe38,
 
   audioPage39,
   audioPage44,

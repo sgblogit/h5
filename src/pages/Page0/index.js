@@ -4,6 +4,7 @@ import "./styles.scss";
 import { useSelector } from "react-redux";
 import audios from "assets/audios/index";
 import audioPlayer from "helper/audioPlayer";
+import ButtonControlAudio from "components/ButtonControlAudio/index";
 import { runRecord } from "helper/appServices";
 
 import { handleClickImage } from "helper/appServices";
@@ -18,15 +19,25 @@ const Home = (props) => {
 		(state) => state.app
 	);
 
-	const [isPlayAudio, setIsPlayAudio] = useState(false);
+	const [thunder, setThunder] = useState(null);
+	const [cloud, setCloud] = useState(null);
+	const [sun, setSun] = useState(null);
+	const [activeDisplay, setActiveDisplay] = useState(false);
 
+	let cloudGif = images.page0.cloudGif;
+	let thunderGif = images.page1.SamSet;
+	let sunGif = images.page1.Sun;
 	const clickEventName = "page0";
 
 	useEffect(() => {
 		const values = runRecord({
 			eventName: clickEventName,
 			callbacks: {
-				car : setCar
+				car : setCar,
+				cloudGif : setCloud,
+				thunderGif : setThunder,
+				sunGif : setSun,
+				activeDisplay : setActiveDisplay
 			},
 		});
 		console.log(values, "values");
@@ -39,6 +50,15 @@ const Home = (props) => {
 	let boyCar = images.page0.CarGif;
 	return (
 		<div className="page0">
+			<div className={`sunphuong hidden ${activeDisplay ? "active" : ""} `}>
+				<img src={sun} alt=""></img>
+			</div>
+			<div className={`samset hidden ${activeDisplay ? "active" : ""} `}>
+				<img src={thunder} alt=""></img>
+			</div>
+			<div className={`mayoi hidden ${activeDisplay ? "active" : ""} `} >
+				<img src={cloud} alt=""></img>
+			</div>
 			<div className="page0-wrraper">
 				<button className="controll"
 					onClick={(e) => {
@@ -54,7 +74,11 @@ const Home = (props) => {
 										active: true,
 										boy : setBoyRight,
 										girl : setGirlLeft,
-										car : boyCar
+										car : boyCar,
+										activeDisplay : true,
+										cloudGif : cloudGif ,
+										thunderGif : thunderGif,
+										sunGif : sunGif
 									},
 								},
 							},

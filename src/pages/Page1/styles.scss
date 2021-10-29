@@ -14,6 +14,25 @@
     right: 2%;
     transform: rotate(45deg);
     z-index: 99999;
+    animation: moveThuder 5s ease-in infinite;
+}
+@keyframes moveThuder {
+	0% {
+		width: 19%;
+        height: 19%;
+	}
+    50% {
+		width: 25%;
+        height: 25%;
+	}
+    90% {
+		width: 21%;
+        height: 21%;
+	}
+	100% {
+		width: 17%;
+        height: 17%;
+	}
 }
 .mayoi{
     position: absolute;
@@ -21,6 +40,38 @@
     height: 15%;
     top: 0;
     z-index: 99999;
+    animation: moveCloud 15s ease-in infinite;
+}
+@keyframes moveCloud {
+	0% {
+		top: 5%;
+		left: -100%;
+	}
+	100% {
+		top: 0%;
+		left: 100%;
+	}
+}
+.sunphuong{
+    position: absolute;
+    width: 20%;
+    height: 15%;
+    animation: moveSun 12s ease-in infinite;
+    z-index: 9999;
+}
+@keyframes moveSun {
+	0% {
+		top: 20%;
+		left: -30%;
+	}
+    50% {
+		top: 0%;
+		left: 50%;
+	}
+	100% {
+		top: 30%;
+		left: 100%;
+	}
 }
 .page1-wrraper{
     position: absolute;
@@ -63,15 +114,4 @@
 }
 .active{
     visibility: visible;
-}
-
-@keyframes move {
-	0% {
-		top: 15%;
-		left: 1%;
-	}
-	100% {
-		top: 50%;
-		left: 50%;
-	}
 }

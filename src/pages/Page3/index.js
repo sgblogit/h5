@@ -21,12 +21,13 @@ const Page3 = (props) => {
 	const clickHandler = (e, op) => {
 		onPushAction(e, op.actionType, op);
 	};
-
+	const [iconTeacher, setIconTeacher] = useState(images.page3.IconTeacher);
+	let ChildGIF = images.page3.TeacherSayGIF;
 	useEffect(() => {
 		const values = runRecord({
 			eventName: clickEventName,
 			callbacks: {
-				
+				ChildGIF : setIconTeacher,
 				activeDisplay : setActiveDisplay
 			},
 		});
@@ -49,7 +50,7 @@ const Page3 = (props) => {
 										playAudio: 'HelloKid',
 										active: true,
 										activeDisplay : true,
-										
+										ChildGIF : ChildGIF
 									},
 								},
 							},
@@ -68,7 +69,7 @@ const Page3 = (props) => {
 						<img src={images.page3.TextHello} alt=""></img>
 					</div>
 					<div className="icon-teacher">
-						<img src={images.page3.IconTeacher} alt=""></img>
+						<img src={iconTeacher} alt=""></img>
 					</div>
 				</div>
 			</div>
