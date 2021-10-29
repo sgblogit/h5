@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import audioPlayer from "helper/audioPlayer";
 import audios from "assets/audios/index";
 import MyNameKids from "components/MyNameKids/index";
-import "./styles.scss";
 import images from "assets/images/index";
 import { runRecord } from "helper/appServices";
 

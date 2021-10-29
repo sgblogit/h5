@@ -38,11 +38,9 @@ function MettingClickRollback(props) {
 							handleClickImage(
 								dispatch(
 									setCurrentData({
-										currentPage: currentPage + 1,
-										currentStep: 0,
-										currentRecord: [],
-										prevRecord: [],
-										isLoading: true,
+										currentStep: 1,
+
+										isLoading: false,
 									})
 								),
 								0
@@ -60,16 +58,31 @@ function MettingClickRollback(props) {
 							handleClickImage(
 								dispatch(
 									setCurrentData({
-										currentPage: currentPage + 2,
-										currentStep: 0,
-										currentRecord: [],
-										prevRecord: [],
-										isLoading: true,
+										currentStep: 2,
+										isLoading: false,
 									})
 								),
 								0
 							);
 						}}
+					></img>
+				</div>
+				<div className=" list-item list-img">
+					<img
+						src={image2}
+						alt=""
+						onClick={(e) => {
+							handleClickImage(
+								dispatch(
+									setCurrentData({
+										currentStep: 4,
+										isLoading: false,
+									})
+								),
+								0
+							);
+						}}
+						
 					></img>
 				</div>
 				<div className=" list-item list-img">
@@ -80,11 +93,8 @@ function MettingClickRollback(props) {
 							handleClickImage(
 								dispatch(
 									setCurrentData({
-										currentPage: currentPage + 3,
-										currentStep: 0,
-										currentRecord: [],
-										prevRecord: [],
-										isLoading: true,
+										currentStep: 3,
+										isLoading: false,
 									})
 								),
 								0
@@ -94,50 +104,11 @@ function MettingClickRollback(props) {
 					></img>
 
 				</div>
-				<div className=" list-item list-img">
-					<img
-						src={image2}
-						alt=""
-						onClick={(e) => {
-							handleClickImage(
-								dispatch(
-									setCurrentData({
-										currentPage: currentPage + 4,
-										currentStep: 0,
-										currentRecord: [],
-										prevRecord: [],
-										isLoading: true,
-									})
-								),
-								0
-							);
-						}}
-						
-					></img>
-				</div>
+				
 				
 				
 			</div>
-			<img className="icon-next"
-						src={nextImage}
-						alt=""
-						onClick={(e) => {
-							handleClickImage(
-								dispatch(
-									setCurrentData({
-										currentPage: currentPage + 5,
-										currentStep: 0,
-										currentRecord: [],
-										prevRecord: [],
-										isLoading: true,
-									})
-								),
-								0
-							);
-							
-						}}
-						
-					></img>
+			
 		</div>
 	);
 }

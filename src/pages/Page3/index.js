@@ -24,6 +24,9 @@ const Page3 = (props) => {
 	const [iconTeacher, setIconTeacher] = useState(images.page3.IconTeacher);
 	let ChildGIF = images.page3.TeacherSayGIF;
 	useEffect(() => {
+		setTimeout(() => {
+			setIconTeacher(images.page3.IconTeacher)
+		}, 1500);
 		const values = runRecord({
 			eventName: clickEventName,
 			callbacks: {
@@ -33,7 +36,7 @@ const Page3 = (props) => {
 		});
 		console.log(values, "values");
 		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [currentRecord]);
+	}, [currentRecord,ChildGIF]);
 
 	return (
 		<div className="page3">

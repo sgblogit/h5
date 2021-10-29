@@ -56,6 +56,7 @@ const Page8 = (props) => {
 					image4={image4}
 					nextImage={images.page8.next8}
 					currentPage={currentPage}
+					currentStep={currentStep}
 					clickHandler={clickHandler}
 				/>
 			</div>

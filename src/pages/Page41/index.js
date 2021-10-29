@@ -26,6 +26,7 @@ const Page41 = (props) => {
 	const [image2, setImage2] = useState(images.page41.pink41);
 	const [image3, setImage3] = useState(images.page41.red41);
 	const [image4, setImage4] = useState(images.page41.black41);
+	const [button, setButton] = useState(images.page41.button41);
 	const [textT1, setTextT1] = useState(false);
 	const [textT2, setTextT2] = useState(false);
 	const [textT3, setTextT3] = useState(false);
@@ -40,6 +41,7 @@ const Page41 = (props) => {
 				imageG2: setImage2,
 				imageG3: setImage3,
 				imageG4: setImage4,
+				button1:setButton,
 				textT1: setTextT1,
 				textT2: setTextT2,
 				textT3: setTextT3,
@@ -69,7 +71,8 @@ const Page41 = (props) => {
 					kid={images.page41.kid41}
 					question={images.page41.question41}
 					check = {check}
-					buttonAudio={images.page41.button41}
+					buttonAudio={button}
+					buttonEnd={images.page40.button40}
 					audioTrue="trueAudio"
 					audioFalse="falseAudio"
 					audioBackground="backgroundGame"

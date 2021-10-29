@@ -10,10 +10,10 @@ import Page5 from "./Page5";
 import Page6 from "./Page6";
 import Page7 from "./Page7";
 import Page8 from "./Page8";
-import Page9 from "./Page9";
-import Page10 from "./Page10";
-import Page11 from "./Page11";
-import Page12 from "./Page12/index";
+import Page8_1 from "./Page8/component/component1";
+import Page8_2 from "./Page8/component/component2";
+import Page8_3 from "./Page8/component/component3";
+import Page8_4 from "./Page8/component/component4";
 import Page13 from "./Page13/index";
 import Page14 from "./Page14";
 import Page15 from "./Page15/index";
@@ -46,18 +46,22 @@ import Page41 from "./Page41";
 import Page42 from "./Page42";
 import Page43 from "./Page43";
 import Page44 from "./Page44";
+<<<<<<< HEAD
 import Page45 from "./Page45";
 
+=======
+>>>>>>> update-UI
 import images from "assets/images/index";
 import "./styles.scss";
 
 const Pages = (props) => {
-	const { onPushAction, isShowWarning } = props;
+  const { onPushAction, isShowWarning } = props;
 
-	const { currentPage, currentStep } = useSelector((state) => state.app);
+  const { currentPage, currentStep } = useSelector((state) => state.app);
 
-	let Page;
+  let Page;
 
+<<<<<<< HEAD
 	switch (currentPage) {
 		case 0:
 			Page = <Page0 onPushAction={onPushAction} />;
@@ -203,11 +207,168 @@ const Pages = (props) => {
 		// case 44:
 		// 	Page = <Page44 onPushAction={onPushAction} />;
 		// 	break;
+=======
+  switch (currentPage) {
+    case 0:
+      Page = <Page0 onPushAction={onPushAction} />;
+      break;
+    case 1:
+      Page = <Page1 onPushAction={onPushAction} />;
+      break;
+    case 2:
+      Page = <Page2 onPushAction={onPushAction} />;
+      break;
+    case 3:
+      Page = <Page3 onPushAction={onPushAction} />;
+      break;
+    case 4:
+      Page = <Page4 onPushAction={onPushAction} />;
+      break;
+    case 5:
+      Page = <Page5 onPushAction={onPushAction} />;
+      break;
+    case 6:
+      Page = <Page6 onPushAction={onPushAction} />;
+      break;
+    case 7:
+      Page = <Page7 onPushAction={onPushAction} />;
+      break;
+      case 8:
+        switch (currentStep) {
+          case 0:
+            Page = <Page8 onPushAction={onPushAction} />;
+            break;
+          case 1:
+            Page = <Page8_1 onPushAction={onPushAction} />;
+            break;
+          case 2:
+            Page = <Page8_2 onPushAction={onPushAction} />;
+            break;
+          case 3:
+            Page = <Page8_3 onPushAction={onPushAction} />;
+            break;
+          case 4:
+            Page = <Page8_4 onPushAction={onPushAction} />;
+            break;
+          default:
+            break;
+        }
+        break;
+    case 9:
+      Page = <Page13 onPushAction={onPushAction} />;
+      break;
+    case 10:
+      Page = <Page14 onPushAction={onPushAction} />;
+      break;
+    case 11:
+      Page = <Page15 onPushAction={onPushAction} />;
+      break;
+    case 12:
+      Page = <Page16 onPushAction={onPushAction} />;
+      break;
+    case 13:
+      Page = <Page17 onPushAction={onPushAction} />;
+      break;
+    case 14:
+      Page = <Page18 onPushAction={onPushAction} />;
+      break;
+    case 15:
+      Page = <Page19 onPushAction={onPushAction} />;
+      break;
+    case 16:
+      Page = <Page20 onPushAction={onPushAction} />;
+      break;
+    case 17:
+      Page = <Page21 onPushAction={onPushAction} />;
+      break;
+    case 18:
+      Page = <Page22 onPushAction={onPushAction} />;
+      break;
+    case 19:
+      Page = <Page23 onPushAction={onPushAction} />;
+      break;
+    case 20:
+      Page = <Page24 onPushAction={onPushAction} />;
+      break;
+    case 21:
+      Page = <Page25 onPushAction={onPushAction} />;
+      break;
+    case 22:
+      Page = <Page26 onPushAction={onPushAction} />;
+      break;
+    case 23:
+      Page = <Page27 onPushAction={onPushAction} />;
+      break;
+    case 24:
+      Page = <Page28 onPushAction={onPushAction} />;
+      break;
+    case 25:
+      Page = <Page29 onPushAction={onPushAction} />;
+      break;
+    case 26:
+      Page = <Page30 onPushAction={onPushAction} />;
+      break;
+    case 27:
+      Page = <Page31 onPushAction={onPushAction} />;
+      break;
+    case 28:
+      Page = <Page32 onPushAction={onPushAction} />;
+      break;
+    case 29:
+      Page = <Page33 onPushAction={onPushAction} />;
+      break;
+    case 30:
+      Page = <Page34 onPushAction={onPushAction} />;
+      break;
+    case 31:
+      Page = <Page35 onPushAction={onPushAction} />;
+      break;
+    case 32:
+      Page = <Page36 onPushAction={onPushAction} />;
+      break;
+    case 33:
+      Page = <Page37 onPushAction={onPushAction} />;
+      break;
+    case 34:
+      Page = <Page38 onPushAction={onPushAction} />;
+      break;
+    case 35:
+      Page = <Page39 onPushAction={onPushAction} />;
+      break;
+    case 36:
+      Page = <Page40 onPushAction={onPushAction} />;
+      break;
+    case 37:
+      Page = <Page41 onPushAction={onPushAction} />;
+      break;
+    case 38:
+      Page = <Page42 onPushAction={onPushAction} />;
+      break;
+    case 39:
+      Page = <Page43 onPushAction={onPushAction} />;
+      break;
+    case 40:
+      Page = <Page44 onPushAction={onPushAction} />;
+      break;
+    case 41:
+      Page = <Page41 onPushAction={onPushAction} />;
+      break;
+    case 42:
+      Page = <Page42 onPushAction={onPushAction} />;
+      break;
+    case 43:
+      Page = <Page43 onPushAction={onPushAction} />;
+      break;
+    case 44:
+      Page = <Page44 onPushAction={onPushAction} />;
+      break;
+>>>>>>> update-UI
 
-		default:
-			break;
-	}
+    default:
+      break;
+  }
 
+<<<<<<< HEAD
 	return (
 		<div
 			className={`page-content page${currentPage}`}
@@ -216,6 +377,32 @@ const Pages = (props) => {
 			<Container>{Page}</Container>
 		</div>
 	);
+=======
+  return (
+    <div
+      className={`page-content page${currentPage}`}
+      style={{ backgroundImage: `url(${images.background[currentPage]})` }}
+    >
+      <Container>
+        {Page}
+        {/* {isShowWarning ? (
+					<div
+						style={{
+							backgroundColor: "red",
+							display: "flex",
+							width: "100%",
+							height: "100%",
+							alignItems: "center",
+							justifyContent: "center",
+						}}
+					>
+						<span> Invalid action</span>
+					</div>
+				) : null} */}
+      </Container>
+    </div>
+  );
+>>>>>>> update-UI
 };
 
 export default Pages;

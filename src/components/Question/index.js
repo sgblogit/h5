@@ -4,15 +4,15 @@ import "./styles.scss";
 Question.propTypes = {};
 
 function Question(props) {
-  const { teacherGif, acctiveDisplay,teacherImg, teacherText, clickHandler, page } = props;
+  const { teacherAudio, acctiveDisplay,teacherImg, teacherText, clickHandler, page } = props;
   return (
     <div className="main-content">
       <div className="main-content-list">
-        <div className={`teacher-text hidden  ${acctiveDisplay ? "active" : ""}  `}>
-          <img src={teacherText} alt=""></img>
+        <div  className={`teacher-text hidden  ${acctiveDisplay ? "active" : ""}  `}>
+          <img   src={teacherText} alt=""></img>
         </div>
 
-        <div className="teacher-img">
+        <div className="teacher-img" >
           <img
             src={teacherImg}
             alt=""

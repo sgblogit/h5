@@ -14,7 +14,7 @@ const Page40 = (props) => {
 		(state) => state.app
 	);
 	
-	const { playAudio } = audioPlayer;
+	const { playAudio,pauseAllAudio,pauseAudio } = audioPlayer;
 
 	const clickEventName = "page40";
 
@@ -26,6 +26,7 @@ const Page40 = (props) => {
 	const [image2, setImage2] = useState(images.page40.cat40);
 	const [image3, setImage3] = useState(images.page40.doll40);
 	const [image4, setImage4] = useState(images.page40.monkey40);
+	const [button, setButton] = useState(images.page40.button40);
 	const [textT1, setTextT1] = useState(false);
 	const [textT2, setTextT2] = useState(false);
 	const [textT3, setTextT3] = useState(false);
@@ -40,6 +41,7 @@ const Page40 = (props) => {
 				imageG2: setImage2,
 				imageG3: setImage3,
 				imageG4: setImage4,
+				button1: setButton,
 				textT1: setTextT1,
 				textT2: setTextT2,
 				textT3: setTextT3,
@@ -69,7 +71,8 @@ const Page40 = (props) => {
 					kid={images.page40.kid40}
 					question={images.page40.question40}
 					check = {check}
-					buttonAudio={images.page40.button40}
+					buttonAudio={button}
+					buttonEnd={images.page40.button40}
 					audioTrue="trueAudio"
 					audioFalse="falseAudio"
 					audioBackground="backgroundGame"

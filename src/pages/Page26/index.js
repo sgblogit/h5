@@ -17,11 +17,16 @@ const Page26 = (props) => {
 	const [text, setTextT1] = useState(null);
 	const clickEventName = "page26";
 
+
 	const clickHandler = (e, op) => {
 		onPushAction(e, op.actionType, op);
 	};
 
 	useEffect(() => {
+		setTimeout(() => {
+			setImage1(image1)
+		}, 3000);
+		
 		const values = runRecord({
 			eventName: clickEventName,
 			callbacks: {

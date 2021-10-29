@@ -19,7 +19,7 @@ const Page39 = (props) => {
 	};
 
 	useEffect(() => {
-		const values = runRecord({
+		runRecord({
 			eventName: clickEventName,
 			callbacks: {},
 		});
