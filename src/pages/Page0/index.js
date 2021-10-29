@@ -22,6 +22,8 @@ const Home = (props) => {
 
 	let cloudGif = images.page0.cloudGif;
 	let sunGif = images.page1.Sun;
+	let boyGIF = images.page0.boyGif0;
+	let girlGIF = images.page0.girlGif0;
 	const clickEventName = "page0";
 
 	useEffect(() => {
@@ -31,7 +33,9 @@ const Home = (props) => {
 				car : setCar,
 				cloudGif : setCloud,
 				sunGif : setSun,
-				activeDisplay : setActiveDisplay
+				activeDisplay : setActiveDisplay,
+				girlGIF : setGirlLeft,
+				boyGIF : setBoyRight
 			},
 		});
 		console.log(values, "values");
@@ -74,20 +78,12 @@ const Home = (props) => {
 							car : boyCar,
 							activeDisplay : true,
 							cloudGif : cloudGif ,
-							sunGif : sunGif
+							sunGif : sunGif ,
+							boyGIF : boyGIF,
+							girlGIF : girlGIF
 						}
 					}
-					dataPause={
-						{
-							playAudio: 'infoStart',
-							boy : setBoyRight,
-							girl : setGirlLeft,
-							car : images.page0.Car,
-							activeDisplay : false,
-							cloudGif : "" ,
-							sunGif : ""
-						}
-					}
+					
 			/>
 				<div className="main">
 					<div className="car-pos">

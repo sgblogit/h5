@@ -37,6 +37,8 @@ import Girl1 from "./page_0/girl1.png";
 import Car from "./page_0/car.png";
 import CarGif from "./page_0/carGif.gif";
 import cloudGif from "./page_0/cloud.gif";
+import boyGif0 from "./page_0/contrai.gif";
+import girlGif0 from "./page_0/congai.gif";
 
 // Page 1 
 import Teacher1 from "./page_1/1.png";
@@ -389,6 +391,8 @@ const images = {
 		Car,
 		CarGif,
     loadingImages,
+    girlGif0,
+    boyGif0,
 	},
 	page1: {
 		Teacher1,
