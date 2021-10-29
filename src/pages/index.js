@@ -46,7 +46,7 @@ import Page41 from "./Page41";
 import Page42 from "./Page42";
 import Page43 from "./Page43";
 import Page44 from "./Page44";
-import Page81 from "./Page8/components/Component1";
+import Page45 from "./Page45";
 
 import images from "assets/images/index";
 import "./styles.scss";
@@ -89,7 +89,7 @@ const Pages = (props) => {
 					Page = <Page8 onPushAction={onPushAction} />;
 					break;
 				case 1:
-					Page = <Page81 onPushAction={onPushAction} />;
+					// Page = <Page81 onPushAction={onPushAction} />;
 					break;
 				default:
 					break;
@@ -192,17 +192,17 @@ const Pages = (props) => {
 			Page = <Page44 onPushAction={onPushAction} />;
 			break;
 		case 41:
-			Page = <Page41 onPushAction={onPushAction} />;
+			Page = <Page45 onPushAction={onPushAction} />;
 			break;
-		case 42:
-			Page = <Page42 onPushAction={onPushAction} />;
-			break;
-		case 43:
-			Page = <Page43 onPushAction={onPushAction} />;
-			break;
-		case 44:
-			Page = <Page44 onPushAction={onPushAction} />;
-			break;
+		// case 42:
+		// 	Page = <Page42 onPushAction={onPushAction} />;
+		// 	break;
+		// case 43:
+		// 	Page = <Page43 onPushAction={onPushAction} />;
+		// 	break;
+		// case 44:
+		// 	Page = <Page44 onPushAction={onPushAction} />;
+		// 	break;
 
 		default:
 			break;

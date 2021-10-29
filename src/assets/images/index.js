@@ -297,6 +297,14 @@ import questionPage17 from "./page_17/question.png";
 import bgPage18 from "./page_18/page18-bg.png";
 import imagePage18 from "./page_18/image.png";
 
+// page45
+import bo from "./page45/bo.png";
+import cam from "./page45/cam.png";
+import tao from "./page45/tao.png";
+import chuoi from "./page45/chuoi.png";
+import question from "./page45/question.png";
+import childPage45 from "./page45/child.png";
+
 const images = {
 	loading: [loadingImages],
 	background: [
@@ -392,7 +400,7 @@ const images = {
 		// page44
 		bgPage44,
 		// page45
-		bgPage39,
+		bgPage44,
 		// page46
 		bgPage39,
 	],
@@ -694,6 +702,14 @@ const images = {
 		kidPage44,
 		fruitPage44,
 		kidGifPage44,
+	},
+	page45: {
+		bo,
+		cam,
+		tao,
+		chuoi,
+		question,
+		childPage45,
 	},
 };
 

@@ -158,7 +158,7 @@ const App = () => {
 
 	return (
 		<div className="App">
-			<DebugPanel />
+			{/* <DebugPanel /> */}
 			<div className="pageWrap">
 				{!isLoading ? (
 					<Pages
