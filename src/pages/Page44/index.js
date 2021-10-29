@@ -82,13 +82,6 @@ const Page44 = (props) => {
 							/>
 						</div>
 						<div className="item-wrapper">
-							<div className="icon-wrapper">
-							<img
-                            className={`acctive  ${hide ? "hidden" : ""} `}
-								alt=""
-								src={images.page44.iconPage44}
-							/>
-							</div>
 							<div className="fruit-wrapper">
 							<img
 								alt=""

@@ -111,10 +111,12 @@ import loadingImages from "./page_0/loading-image.gif";
 // page 4
 import kidPage4 from "./page_4/hs.png";
 import textPage4 from "./page_4/text-04.png";
+import kidGifPage4 from "./page_4/t7.gif";
 
 // page 5
 import textPage5 from "./page_5/text-05.png";
 import teacherPage5 from "./page_5/teacher-05.png";
+import teacherGifPage5 from "./page_5/t5.gif";
 // page 6
 import textPage6 from "./page_6/7.png";
 
@@ -244,8 +246,7 @@ import button43 from "./page_43/button.png";
 // page44
 import fruitGif from "./page_44/fruit-gif.gif";
 import kidPage44 from "./page_44/girl.png";
-import iconPage44 from "./page_44/next.png";
-import fruitPage44 from "./page_44/fruit.png";
+import fruitPage44 from "./page_44/ok.png";
 import kidGifPage44 from "./page_44/4.gif";
 
 
@@ -399,11 +400,13 @@ const images = {
 	},
   page4: {
     kidPage4,
+    kidGifPage4,
     textPage4,
   },
   page5: {
     teacherPage5,
     textPage5,
+    teacherGifPage5,
   },
   page6: {
     textPage6,
@@ -632,7 +635,6 @@ const images = {
   page44:{
     fruitGif,
     kidPage44,
-    iconPage44,
     fruitPage44,
     kidGifPage44,
   }

@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import audioPlayer from "helper/audioPlayer";
-import audios from "assets/audios/index";
 import "./styles.scss";
 import TitleMeeting from "components/TitleMeetting/index";
 import images from "assets/images/index";
-import Question from "components/Question/index";
 import { handleClickImage, runRecord } from "helper/appServices";
 import ClassRoom from "components/ClassRoom/index";
 
 const Page4 = (props) => {
 	const { onPushAction } = props;
 
-	const { currentPage, currentStep, currentRecord } = useSelector(
+	const { currentRecord } = useSelector(
 		(state) => state.app
 	);
 
@@ -23,19 +21,17 @@ const Page4 = (props) => {
 	const clickHandler = (e, op) => {
 		onPushAction(e, op.actionType, op);
 	};
-
-	// const [image1, setImage1] = useState(images.common.leftTeacher);
-	// const [image2, setImage2] = useState(images.common.rightKid);
-	const [teacherImg1, setImageTeacher] = useState(images.page4.teacherGifPage4);
-	const [active, setActive] = useState("");
-	// const [textT2, setTextT2] = useState(null);
+	const [kid, setKid] = useState(images.page4.kidPage4);
+	const [acctiveDisplay, setAcctiveDisplay] = useState(false);
+	let kidGif = images.page4.kidGifPage4
+    console.log("🚀 ~ file: index.js ~ line 27 ~ Page4 ~ kidGif", kidGif)
 
 	useEffect(() => {
 		const values = runRecord({
 			eventName: clickEventName,
 			callbacks: {
-				teacherImg: setImageTeacher,
-				active: setActive,
+				kidGif: setKid,
+				acctiveDisplay: setAcctiveDisplay,
 			},
 		});
 		console.log(values, "values");
@@ -98,10 +94,12 @@ const Page4 = (props) => {
 								event: e,
 								data: {
 									actionType: "fireEvent",
-									eventName: 'page44',
+									eventName: 'page4',
 									eventData: {
-										playAudio: 'audioPage44',
+										playAudio: 'audioPage4',
 										active: true,
+										kidGif: kidGif,
+										acctiveDisplay: true
 						
 
 									},
@@ -117,12 +115,12 @@ const Page4 = (props) => {
 				</button>
 				<TitleMeeting bgTitle={images.common.title} />
 				<ClassRoom	
-					kidImg={images.page4.kidPage4}
+					kidImg={kid}
 					kidText={images.page4.textPage4}
 					audioKid="audioPage4"
 					page="page4"
 					clickHandler={clickHandler}
-					active ={active}
+					acctiveDisplay ={acctiveDisplay}
 
 				/>
 			</div>

@@ -1,16 +1,14 @@
 import React from "react";
 
-import images from "assets/images/index";
 import "./styles.scss";
-import { handleClickImage } from "helper/appServices";
 Question.propTypes = {};
 
 function Question(props) {
-  const { audioTeacher, active,teacherImg, teacherText, clickHandler, page } = props;
+  const { teacherGif, acctiveDisplay,teacherImg, teacherText, clickHandler, page } = props;
   return (
     <div className="main-content">
       <div className="main-content-list">
-        <div className={`teacher-text hidden  ${active ? active : ""}  `}>
+        <div className={`teacher-text hidden  ${acctiveDisplay ? "active" : ""}  `}>
           <img src={teacherText} alt=""></img>
         </div>
 
@@ -18,34 +16,6 @@ function Question(props) {
           <img
             src={teacherImg}
             alt=""
-            onClick={(e) => {
-              handleClickImage(
-                clickHandler,
-                {
-                  event: e,
-                  data: {
-                    actionType: "fireEvent",
-                    eventName: page,
-                    eventData: {
-                      playAudio: audioTeacher,
-                      active: true,
-                      teacherImg: teacherImg,
-                    },
-                  },
-                },
-                0
-              );
-              // clickHandler(e, {
-              // 	actionType: "fireEvent",
-              // 	eventName: page,
-              // 	eventData: {
-              // 		playAudio: audio1,
-              // 		active: true,
-              // 		imageG1: imageG1,
-              // 		textT1: textGT1,
-              // 	},
-              // });
-            }}
           />
         </div>
       </div>
