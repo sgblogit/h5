@@ -5,8 +5,8 @@ import audios from "assets/audios/index";
 import "./styles.scss";
 import TitleMeeting from "components/TitleMeetting/index";
 import images from "assets/images/index";
-import ConversationTK from "components/ConversationTK/index";
 import Question from "components/Question/index";
+import { handleClickImage, runRecord } from "helper/appServices";
 
 const Page5 = (props) => {
 	const { onPushAction } = props;
@@ -23,38 +23,21 @@ const Page5 = (props) => {
 		onPushAction(e, op.actionType, op);
 	};
 
-	const [image1, setImage1] = useState(images.common.leftTeacher);
-	const [image2, setImage2] = useState(images.common.rightKid);
-
-	const [textT1, setTextT1] = useState(null);
-	const [textT2, setTextT2] = useState(null);
-
+	const [teacher, setTeacher] = useState(images.page5.teacherPage5);
+	const [acctiveDisplay, setAcctiveDisplay] = useState(false);
+	let teacherGif = images.page5.teacherGifPage5
 	useEffect(() => {
-		if (currentRecord.length > 0) {
-			let recordEventData = currentRecord[currentRecord.length - 1];
-			if (
-				recordEventData.eventPage === currentPage &&
-				recordEventData.eventPageStep === currentStep &&
-				recordEventData.eventName === clickEventName
-			) {
-				if (recordEventData.eventData.playAudio) {
-					let audioUrl = audios[recordEventData.eventData.playAudio];
-					playAudio(audioUrl);
-				}
-				if (recordEventData.eventData.imageG1) {
-					setImage1(recordEventData.eventData.imageG1);
-				}
-				if (recordEventData.eventData.imageG2) {
-					setImage2(recordEventData.eventData.imageG2);
-				}
-				if (recordEventData.eventData.textT1) {
-					setTextT1(recordEventData.eventData.textT1);
-				}
-				if (recordEventData.eventData.textT2) {
-					setTextT2(recordEventData.eventData.textT2);
-				}
-			}
-		}
+		setTimeout(() => {
+			setTeacher(images.page5.teacherPage5)
+		}, 4600);
+		const values = runRecord({
+			eventName: clickEventName,
+			callbacks: {
+				teacherGif: setTeacher,
+				acctiveDisplay: setAcctiveDisplay,
+			},
+		});
+		console.log(values, "values");
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentRecord]);
 
@@ -107,14 +90,40 @@ const Page5 = (props) => {
 				play audio and animation
 			</button> */}
 			<div className="page-wrraper">
+			<button className="controll-right"
+					onClick={(e) => {
+						handleClickImage(
+							clickHandler,
+							{
+								event: e,
+								data: {
+									actionType: "fireEvent",
+									eventName: 'page5',
+									eventData: {
+										playAudio: 'audioPage5',
+										active: true,
+										teacherGif: teacherGif,
+										acctiveDisplay: true
+										
+									},
+								},
+							},
+							0
+						);
+						
+					}}
+				>
+				<img src={images.common.Button} alt="">
+					</img>
+			</button>
 				<TitleMeeting bgTitle={images.common.title} />
 				<Question	
-					teacherImg={images.page5.teacherPage5}
+					teacherImg={teacher}
 					teacherText={images.page5.textPage5}
-					audioTeacher="audioPage5"
 					page="page5"
 					clickHandler={clickHandler}
-
+					acctiveDisplay={acctiveDisplay}
+					
 				/>
 			</div>
 		</div>

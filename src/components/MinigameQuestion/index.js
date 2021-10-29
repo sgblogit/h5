@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { setCurrentData } from "redux/currentData";
 MinigameQuestion.propTypes = {};
 
-
+	
 function MinigameQuestion(props) {
 	const {
 		image1,
@@ -77,6 +77,7 @@ function MinigameQuestion(props) {
 				<div className=" list-item list-img">
 				
 					<img
+						alt=""
 						src={image1}
 						onClick={(e) => {
 							handleClickImage(
@@ -99,11 +100,12 @@ function MinigameQuestion(props) {
 						}}
 						
 					></img>
-					<img src={check[0] ? yes : no} className={`check  ${text1==true ? "index" : "none"} `}></img>
+					<img alt="" src={check[0] ? yes : no} className={`check  ${text1==true ? "index" : "none"} `}></img>
 				</div>
 				
 				<div className=" list-item list-img">
 				<img
+						alt=""
 						src={image2}
 						onClick={(e) => {
 							handleClickImage(
@@ -124,10 +126,11 @@ function MinigameQuestion(props) {
 							);
 						}}
 					></img>
-					<img src={check[1] ? yes : no} className={`check  ${text2==true ? "index" : "none"} `}></img>
+					<img alt="" src={check[1] ? yes : no} className={`check  ${text2==true ? "index" : "none"} `}></img>
 				</div>
 				<div className=" list-item list-img">
 				<img
+						alt=""
 						src={image3}
 						onClick={(e) => {
 							handleClickImage(
@@ -148,10 +151,11 @@ function MinigameQuestion(props) {
 							);
 						}}
 					></img>
-					<img src={check[2] ? yes : no} className={`check  ${text3==true ? "index" : "none"} `}></img>
+					<img alt="" src={check[2] ? yes : no} className={`check  ${text3==true ? "index" : "none"} `}></img>
 				</div>
 				<div className=" list-item list-img">
 				<img
+						alt=""
 						src={image4}
 						onClick={(e) => {
 							handleClickImage(
@@ -172,7 +176,7 @@ function MinigameQuestion(props) {
 							);
 						}}
 					></img>
-					<img src={check[3] ? yes : no} className={`check  ${text4==true ? "index" : "none"} `}></img>
+					<img alt="" src={check[3] ? yes : no} className={`check  ${text4==true ? "index" : "none"} `}></img>
 				</div>
 				
 				

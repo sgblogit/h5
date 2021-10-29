@@ -6,7 +6,7 @@ import "./styles.scss";
 import TitleMeeting from "components/TitleMeetting/index";
 import images from "assets/images/index";
 import Question from "components/Question/index";
-import { runRecord } from "helper/appServices";
+import { handleClickImage, runRecord } from "helper/appServices";
 import ClassRoom from "components/ClassRoom/index";
 
 const Page6 = (props) => {
@@ -23,19 +23,16 @@ const Page6 = (props) => {
 	const clickHandler = (e, op) => {
 		onPushAction(e, op.actionType, op);
 	};
-
-	// const [image1, setImage1] = useState(images.common.leftTeacher);
-	// const [image2, setImage2] = useState(images.common.rightKid);
-	const [teacherImg1, setImageTeacher] = useState(images.page6.teacherGifPage6);
-	const [active, setActive] = useState("");
-	// const [textT2, setTextT2] = useState(null);
+	const [kid, setKid] = useState(images.page4.kidPage4);
+	const [acctiveDisplay, setAcctiveDisplay] = useState(false);
+	let kidGif = images.page4.kidGifPage4
 
 	useEffect(() => {
 		const values = runRecord({
 			eventName: clickEventName,
 			callbacks: {
-				teacherImg: setImageTeacher,
-				active: setActive,
+				kidGif: setKid,
+				acctiveDisplay: setAcctiveDisplay,
 			},
 		});
 		console.log(values, "values");
@@ -90,14 +87,40 @@ const Page6 = (props) => {
 				play audio and animation
 			</button> */}
 			<div className="page-wrraper">
+			<button className="controll-right"
+					onClick={(e) => {
+						handleClickImage(
+							clickHandler,
+							{
+								event: e,
+								data: {
+									actionType: "fireEvent",
+									eventName: 'page6',
+									eventData: {
+										playAudio: 'audioPage6',
+										active: true,
+										kidGif: kidGif,
+										acctiveDisplay : true,
+										
+									},
+								},
+							},
+							0
+						);
+						
+					}}
+				>
+				<img src={images.common.Button} alt="">
+					</img>
+			</button>
 				<TitleMeeting bgTitle={images.common.title} />
 				<ClassRoom	
-					kidImg={images.page4.kidPage4}
+					kidImg={kid}
 					kidText={images.page6.textPage6}
 					audioKid="audioPage6"
 					page="page6"
 					clickHandler={clickHandler}
-					active ={active}
+					acctiveDisplay={acctiveDisplay}
 
 				/>
 			</div>

@@ -16,6 +16,10 @@ import VceChilden from "./page_2/vce_1.mp3";
 
 //Page 3
 import HelloKid from "./page_3/hello.mp3";
+import audioPage4 from "./page_4/4.mp3";
+import audioPage5 from "./page_5/page5.mp3";
+import audioPage6 from "./page_6/vce.mp3";
+import audioPage7 from "./page_7/p7.mp3";
 
 //Page 30
 import Vce30 from "./page_30/vce_1.mp3";
@@ -81,6 +85,10 @@ const audios = {
 	//Page 3
 	HelloKid,
 
+	audioPage4,
+	audioPage5,
+	audioPage6,
+	audioPage7,
 	kidAudio9,
 	kidAudio10,
 	kidAudio11,

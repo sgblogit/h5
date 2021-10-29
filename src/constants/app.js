@@ -16,7 +16,23 @@ const pageData = [
 	//page7
 	[""],
 	//page8
-	[""],
+	[
+		{
+			stepName: "page 8.1",
+		},
+		{
+			stepName: "page 8.2",
+		},
+		{
+			stepName: "page 8.3",
+		},
+		{
+			stepName: "page 8.4",
+		},
+		{
+			stepName: "page 8.4",
+		},
+	],
 	//page9
 	[""],
 	//page10
@@ -38,7 +54,7 @@ const pageData = [
 		// {
 		// 	stepName: "click child image",
 		// },
-	""
+		"",
 	],
 	[""],
 	[""],

@@ -1,7 +1,7 @@
 .page44 {
     width: 100%;
     height: 100%;
-    background-size: cover;
+    // background-size: cover;
     .main-content-44 {
       // position: absolute;
       height: calc(100% - 30%);
@@ -27,23 +27,7 @@
           align-items: center;
           justify-content: center;
           width: 30%;
-          transform: translate(80%, 0);
-          .hidden{
-            display: none;
-          }
-          .icon-wrapper {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            position: relative;
-            height: 100%;
-            width: 40%;
-            margin-right: 10%;
-            img {
-              width: 100%;
-              height: 100%;
-            }
-          }
+          transform: translate(80%, -50%);
           .fruit-wrapper{
               width: 60%;
               height: 100%;

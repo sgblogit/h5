@@ -1,16 +1,13 @@
 import React from "react";
 
-import images from "assets/images/index";
 import "./styles.scss";
-import { handleClickImage } from "helper/appServices";
 ClassRoom.propTypes = {};
 
 function ClassRoom(props) {
 	const {
-		audioKid,
 		kidImg,
 		kidText,
-		clickHandler,
+		acctiveDisplay,
 		page,
 	} = props;
 	return (
@@ -22,7 +19,7 @@ function ClassRoom(props) {
 							src={kidImg}
 						/>
 				 </div>
-				 <div className="text-list">
+				 <div className={`text-list hidden  ${acctiveDisplay ? "active" : ""}  `}>
 					<div className="text-item">
 					<img 
 						 	alt=""

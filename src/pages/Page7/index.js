@@ -6,59 +6,46 @@ import "./styles.scss";
 import TitleMeeting from "components/TitleMeetting/index";
 import images from "assets/images/index";
 import Question from "components/Question/index";
+import { handleClickImage, runRecord } from "helper/appServices";
 
 const Page7 = (props) => {
-	const { onPushAction } = props;
+  const { onPushAction } = props;
 
-	const { currentPage, currentStep, currentRecord } = useSelector(
-		(state) => state.app
-	);
+  const { currentPage, currentStep, currentRecord } = useSelector(
+    (state) => state.app
+  );
 
-	const { playAudio } = audioPlayer;
+  const { playAudio } = audioPlayer;
 
-	const clickEventName = "page7";
+  const clickEventName = "page7";
 
-	const clickHandler = (e, op) => {
-		onPushAction(e, op.actionType, op);
-	};
+  const clickHandler = (e, op) => {
+    onPushAction(e, op.actionType, op);
+  };
 
-	const [teacher, setImageTeacher] = useState(images.page5.teacherPage5);
+  const [teacher, setTeacher] = useState(images.page5.teacherPage5);
+  const [acctiveDisplay, setAcctiveDisplay] = useState(false);
+  let teacherGif = images.page5.teacherGifPage5;
 
-	const [textTeacer, setTextTeacher] = useState(null);
+  useEffect(() => {
+    setTimeout(() => {
+		setTeacher(images.page5.teacherPage5)
+	}, 3000);
+    const values = runRecord({
+      eventName: clickEventName,
+      callbacks: {
+        teacherGif: setTeacher,
+        acctiveDisplay: setAcctiveDisplay,
+      },
+    });
+    console.log(values, "values");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentRecord]);
 
-	useEffect(() => {
-		if (currentRecord.length > 0) {
-			let recordEventData = currentRecord[currentRecord.length - 1];
-			if (
-				recordEventData.eventPage === currentPage &&
-				recordEventData.eventPageStep === currentStep &&
-				recordEventData.eventName === clickEventName
-			) {
-				if (recordEventData.eventData.playAudio) {
-					let audioUrl = audios[recordEventData.eventData.playAudio];
-					playAudio(audioUrl);
-				}
-				// if (recordEventData.eventData.imageG1) {
-				// 	setImage1(recordEventData.eventData.imageG1);
-				// }
-				// if (recordEventData.eventData.imageG2) {
-				// 	setImage2(recordEventData.eventData.imageG2);
-				// }
-				// if (recordEventData.eventData.textT1) {
-				// 	setTextT1(recordEventData.eventData.textT1);
-				// }
-				// if (recordEventData.eventData.textT2) {
-				// 	setTextT2(recordEventData.eventData.textT2);
-				// }
-			}
-		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, [currentRecord]);
-
-	console.log("render page7");
-	return (
-		<div className="page7">
-			{/* <h1>this is page {currentPage}</h1>
+  console.log("render page7");
+  return (
+    <div className="page7">
+      {/* <h1>this is page {currentPage}</h1>
 			<button
 				onClick={(e) => {
 					clickHandler(e, {
@@ -103,19 +90,43 @@ const Page7 = (props) => {
 			>
 				play audio and animation
 			</button> */}
-			<div className="page-wrraper">
-				<TitleMeeting bgTitle={images.common.title} />
-				<Question	
-					teacherImg={images.page5.teacherPage5}
-					teacherText={images.page7.textPage7}
-					audioTeacher="audioPage7"
-					page="page7"
-					clickHandler={clickHandler}
-
-				/>
-			</div>
-		</div>
-	);
+      <div className="page-wrraper">
+        <button
+          className="controll-right"
+          onClick={(e) => {
+            handleClickImage(
+              clickHandler,
+              {
+                event: e,
+                data: {
+                  actionType: "fireEvent",
+                  eventName: "page7",
+                  eventData: {
+                    playAudio: "audioPage7",
+                    active: true,
+					teacherGif: teacherGif,
+                    acctiveDisplay: true,
+                  },
+                },
+              },
+              0
+            );
+          }}
+        >
+          <img src={images.common.Button} alt=""></img>
+        </button>
+        <TitleMeeting bgTitle={images.common.title} />
+        <Question
+          teacherImg={teacher}
+          teacherText={images.page7.textPage7}
+          audioTeacher="audioPage7"
+          page="page7"
+          clickHandler={clickHandler}
+          acctiveDisplay={acctiveDisplay}
+        />
+      </div>
+    </div>
+  );
 };
 
 export default React.memo(Page7);
