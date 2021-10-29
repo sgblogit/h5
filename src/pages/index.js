@@ -96,100 +96,100 @@ const Pages = (props) => {
 			}
 			break;
 		case 9:
-			Page = <Page9 onPushAction={onPushAction} />;
-			break;
-		case 10:
-			Page = <Page10 onPushAction={onPushAction} />;
-			break;
-		case 11:
-			Page = <Page11 onPushAction={onPushAction} />;
-			break;
-		case 12:
-			Page = <Page12 onPushAction={onPushAction} />;
-			break;
-		case 13:
 			Page = <Page13 onPushAction={onPushAction} />;
 			break;
-		case 14:
+		case 10:
 			Page = <Page14 onPushAction={onPushAction} />;
 			break;
-		case 15:
+		case 11:
 			Page = <Page15 onPushAction={onPushAction} />;
 			break;
-		case 16:
+		case 12:
 			Page = <Page16 onPushAction={onPushAction} />;
 			break;
-		case 17:
+		case 13:
 			Page = <Page17 onPushAction={onPushAction} />;
 			break;
-		case 18:
+		case 14:
 			Page = <Page18 onPushAction={onPushAction} />;
 			break;
-		case 19:
+		case 15:
 			Page = <Page19 onPushAction={onPushAction} />;
 			break;
-		case 20:
+		case 16:
 			Page = <Page20 onPushAction={onPushAction} />;
 			break;
-		case 21:
+		case 17:
 			Page = <Page21 onPushAction={onPushAction} />;
 			break;
-		case 22:
+		case 18:
 			Page = <Page22 onPushAction={onPushAction} />;
 			break;
-		case 23:
+		case 19:
 			Page = <Page23 onPushAction={onPushAction} />;
 			break;
-		case 24:
+		case 20:
 			Page = <Page24 onPushAction={onPushAction} />;
 			break;
-		case 25:
+		case 21:
 			Page = <Page25 onPushAction={onPushAction} />;
 			break;
-		case 26:
+		case 22:
 			Page = <Page26 onPushAction={onPushAction} />;
 			break;
-		case 27:
+		case 23:
 			Page = <Page27 onPushAction={onPushAction} />;
 			break;
-		case 28:
+		case 24:
 			Page = <Page28 onPushAction={onPushAction} />;
 			break;
-		case 29:
+		case 25:
 			Page = <Page29 onPushAction={onPushAction} />;
 			break;
-		case 30:
+		case 26:
 			Page = <Page30 onPushAction={onPushAction} />;
 			break;
-		case 31:
+		case 27:
 			Page = <Page31 onPushAction={onPushAction} />;
 			break;
-		case 32:
+		case 28:
 			Page = <Page32 onPushAction={onPushAction} />;
 			break;
-		case 33:
+		case 29:
 			Page = <Page33 onPushAction={onPushAction} />;
 			break;
-		case 34:
+		case 30:
 			Page = <Page34 onPushAction={onPushAction} />;
 			break;
-		case 35:
+		case 31:
 			Page = <Page35 onPushAction={onPushAction} />;
 			break;
-		case 36:
+		case 32:
 			Page = <Page36 onPushAction={onPushAction} />;
 			break;
-		case 37:
+		case 33:
 			Page = <Page37 onPushAction={onPushAction} />;
 			break;
-		case 38:
+		case 34:
 			Page = <Page38 onPushAction={onPushAction} />;
 			break;
-		case 39:
+		case 35:
 			Page = <Page39 onPushAction={onPushAction} />;
 			break;
-		case 40:
+		case 36:
 			Page = <Page40 onPushAction={onPushAction} />;
+			break;
+		case 37:
+			Page = <Page41 onPushAction={onPushAction} />;
+			break;
+		case 38:
+			Page = <Page42 onPushAction={onPushAction} />;
+			break;
+		case 39:
+			Page = <Page43 onPushAction={onPushAction} />;
+			break;
+		case 40:
+			Page = <Page44 onPushAction={onPushAction} />;
 			break;
 		case 41:
 			Page = <Page41 onPushAction={onPushAction} />;
