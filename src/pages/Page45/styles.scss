@@ -1,0 +1,88 @@
+.page45-wrapper {
+	width: 100%;
+	height: 100%;
+	background-color: "red";
+	display: flex;
+	padding: 0px 30px;
+	& .page45-content {
+		width: 100%;
+		&__result {
+			display: flex;
+			width: 100%;
+			justify-content: flex-end;
+			&--item {
+				width: 15%;
+				& > img {
+					width: 100%;
+					object-fit: contain;
+				}
+			}
+		}
+		&__question {
+			display: flex;
+			width: 100%;
+			justify-content: flex-start;
+			&--child {
+				width: 20%;
+				& > img {
+					width: 100%;
+					object-fit: contain;
+				}
+			}
+			&--question {
+				width: 30%;
+				& > img {
+					width: 100%;
+					object-fit: contain;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 680px) {
+	.page45-wrapper {
+		& .page45-content {
+			width: 100%;
+			&__result {
+				&--item {
+					width: 13%;
+					& > img {
+						width: 100%;
+						object-fit: contain;
+					}
+				}
+			}
+			&__question {
+				display: flex;
+				&--child {
+					width: 17%;
+				}
+				&--question {
+					width: 35%;
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 1000px) {
+	.page45-wrapper {
+		& .page45-content {
+			width: 1000px;
+			margin: 0 auto;
+			&__result {
+				&--item {
+					width: 130px;
+				}
+			}
+			&__question {
+				&--child {
+					width: 170px;
+				}
+				&--question {
+					width: 350px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,83 @@
+.multipleGame {
+	width: 100%;
+	& .question {
+		width: 50%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		& > img {
+			width: 85%;
+			object-fit: contain;
+		}
+	}
+	& .answer {
+		width: 50%;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		margin-top: 10px;
+		& > img {
+			width: 40%;
+			object-fit: contain;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+@media screen and (min-width: 560px) {
+	.multipleGame {
+		& .question {
+			margin-bottom: 10px;
+			& > img {
+				width: 85%;
+				object-fit: contain;
+			}
+		}
+		& .answer {
+			justify-content: space-around;
+			& > img {
+				width: 35%;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 680px) {
+	.multipleGame {
+		& .question {
+			width: 30%;
+			& > img {
+				width: 100%;
+				object-fit: contain;
+			}
+		}
+		& .answer {
+			justify-content: space-around;
+			width: 32%;
+			& > img {
+				width: 45%;
+				object-fit: contain;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.multipleGame {
+		& .question {
+			& > img {
+				width: 85%;
+				object-fit: contain;
+			}
+		}
+		& .answer {
+			& > img {
+				width: 40%;
+				object-fit: contain;
+				margin-bottom: 10px;
+			}
+		}
+	}
+}

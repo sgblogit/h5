@@ -12,7 +12,7 @@ import bgPage10 from "./page_10/page10-bg.png";
 import bgPage11 from "./page_11/page11-bg.png";
 import bgPage12 from "./page_12/page12-bg.png";
 import bgPage13 from "./page_13/back-01.png";
-import bgPage15 from "./page_15/page15-bg.png";
+// import bgPage15 from "./page_15/page15-bg.png";
 import bgPage19 from "./page_19/page19-bg.png";
 import bgPage20 from "./page_20/page20-bg.png";
 import bgPage30 from "./page_30/page30-bg.png";
@@ -31,7 +31,7 @@ import bgPage42 from "./page_42/page42-bg.png";
 import bgPage43 from "./page_43/page43-bg.png";
 import bgPage44 from "./page_44/bg-44.png";
 
-// Page 0 
+// Page 0
 import Boy1 from "./page_0/boy1.png";
 import Girl1 from "./page_0/girl1.png";
 import Car from "./page_0/car.png";
@@ -40,7 +40,7 @@ import cloudGif from "./page_0/cloud.gif";
 import boyGif0 from "./page_0/contrai.gif";
 import girlGif0 from "./page_0/congai.gif";
 
-// Page 1 
+// Page 1
 import Teacher1 from "./page_1/1.png";
 import Kid2 from "./page_1/2.png";
 import Kid3 from "./page_1/3.png";
@@ -49,8 +49,7 @@ import Kid5 from "./page_1/5.png";
 import SamSet from "./page_1/2-min.gif";
 import Sun from "./page_1/sun.gif";
 
-
-// Page 2 
+// Page 2
 import VceChilden from "./page_2/2.png";
 
 // Page 3
@@ -58,8 +57,7 @@ import TextHello from "./page_3/1.png";
 import IconTeacher from "./page_3/nhanvat.png";
 import TeacherSayGIF from "./page_3/t29.gif";
 
-
-//Page 30 
+//Page 30
 import DamTre from "./page_30/1.png";
 import BaChu from "./page_30/2.png";
 import Stove from "./page_30/stove.png";
@@ -94,7 +92,6 @@ import Text1Kid36 from "./page_36/1.png";
 import Icon2Kid36 from "./page_36/4.png";
 import Text2Kid36 from "./page_36/5.png";
 
-
 //Page 37
 import Icon1Kid37 from "./page_37/2.png";
 import Text1Kid37 from "./page_37/1.png";
@@ -107,8 +104,6 @@ import Text1Kid38 from "./page_38/1.png";
 import Icon2Kid38 from "./page_38/3.png";
 import Text2Kid38 from "./page_38/4.png";
 import loadingImages from "./page_0/loading-image.gif";
-
-
 
 // page 4
 import kidPage4 from "./page_4/hs.png";
@@ -193,7 +188,6 @@ import gTeacher28 from "./page_27/gTeacher28.gif";
 import gKid29 from "./page_28/gKid29.gif";
 import gTeacher30 from "./page_29/gTeacher30.gif";
 
-
 // page39
 import textPage39 from "./page_39/1.png";
 
@@ -210,7 +204,6 @@ import no40 from "./page_40/no.png";
 import button40 from "./page_40/button.png";
 import pause40 from "./page_40/pause.png";
 
-
 // page 41
 import blue41 from "./page_41/blue41.png";
 import black41 from "./page_41/black41.png";
@@ -224,8 +217,7 @@ import no41 from "./page_41/no.png";
 import button41 from "./page_41/button.png";
 import pause41 from "./page_41/pause.png";
 
-
-// page 42 
+// page 42
 import egg42 from "./page_42/egg42.png";
 import cake42 from "./page_42/cake42.png";
 import mod42 from "./page_42/mod42.png";
@@ -256,12 +248,6 @@ import kidPage44 from "./page_44/girl.png";
 import fruitPage44 from "./page_44/ok.png";
 import kidGifPage44 from "./page_44/4.gif";
 
-// 
-
-
-
-
-
 // gif 9 10 11 12
 import kidGif9 from "./page_9/t9.gif";
 import kidGif10 from "./page_10/t10.gif";
@@ -278,121 +264,169 @@ import buttonPlayAudio from "./page_0/button-play.jpg";
 import buttonPauseAudio from "./page_0/button-pause.jpg";
 // import loadingImages from "./page_0/loading-image.gif";
 
-const images = {
-  loading: [loadingImages],
-  background: [
-    // page 0
-    bgPage0,
-    // page 1
-    bgPage1,
-    // page 2
-    bgPage2,
-    // page 3
-    bgPage3,
-    // page 4
-    bgPage4,
-    // page 5
-    bgPage5,
-    // page 6
-    bgPage4,
-    // page 7
-    bgPage5,
-    // page 8
-    bgPage8,
-    // page9
-    // bgPage9,
-    // page 10
-    // bgPage10,
-    //   page11
-    // bgPage11,
-    //  page 12
-    // bgPage12,
+// page 14
+import bgPage14 from "./page_14/bg_page14.png";
+import bPage14 from "./page_14/b.png";
+import cPage14 from "./page_14/c.png";
+import dPage14 from "./page_14/d.png";
+import ePage14 from "./page_14/e.png";
+import questionPage14 from "./page_14/question.png";
+import titlePage14 from "./page_14/title14.png";
 
-    // page 13
-    bgPage13,
-    //page14
-    bgPage13,
-    // page15
-    bgPage15,
-    // page16
-    bgPage13,
-    //page 17
-    bgPage13,
-    // page 18
-    bgPage13,
-    // page19
-    bgPage19,
-    // page20
-    bgPage20,
-    // page21
-    bgPage20,
-    // page22
-    bgPage20,
-    // page23
-    bgPage20,
-    // page24
-    bgPage20,
-    // page25
-    bgPage20,
-    // page26
-    bgPage20,
-    // page27
-    bgPage20,
-    // page28
-    bgPage20,
-    // page29
-    bgPage20,
-    // page30
-    bgPage30,
-    // page31
-    bgPage31,
-    // page32
-    bgPage32,
-    // page33
-    bgPage33,
-    // page34
-    bgPage34,
-    // page35
-    bgPage35,
-    // page36
-    bgPage36,
-    // page37
-    bgPage37,
-    // page38
-    bgPage38,
-    // page39
-    bgPage39,
-    // page40
-    bgPage40,
-    // page41
-    bgPage41,
-    // page42
-    bgPage42,
-    // page43
-    bgPage43,
-    // page44
-    bgPage44,
-    // page45
-    bgPage39,
-    // page46
-    bgPage39,
-  ],
-  common: {
-    Pauses,
-    title,
-    play,
-    Button,
-    ChifGif,
-  },
+// page 15
+import bgPage15 from "./page_14/bg_14.png";
+import titlePage15 from "./page_14/title14.png";
+import cPage15 from "./page_14/c.png";
+import dPage15 from "./page_14/d.png";
+import ePage15 from "./page_14/e.png";
+import mPage15 from "./page_15/m.png";
+import questionPage15 from "./page_15/question.png";
+
+// page 16
+import bgPage16 from "./page_14/bg_14.png";
+import bPage16 from "./page_14/b.png";
+import dPage16 from "./page_14/d.png";
+import jPage16 from "./page_16/j.png";
+import ePage16 from "./page_14/e.png";
+import questionPage16 from "./page_16/question.png";
+import titlePage16 from "./page_14/title14.png";
+
+//page 17
+import bgPage17 from "./page_14/bg_14.png";
+import titlePage17 from "./page_14/title14.png";
+import ePage17 from "./page_14/e.png";
+import dPage17 from "./page_14/d.png";
+import jPage17 from "./page_16/j.png";
+import bPage17 from "./page_14/b.png";
+import questionPage17 from "./page_17/question.png";
+
+//page 18
+import bgPage18 from "./page_18/page18-bg.png";
+import imagePage18 from "./page_18/image.png";
+
+// page45
+import bo from "./page45/bo.png";
+import cam from "./page45/cam.png";
+import tao from "./page45/tao.png";
+import chuoi from "./page45/chuoi.png";
+import question from "./page45/question.png";
+import childPage45 from "./page45/child.png";
+
+const images = {
+	loading: [loadingImages],
+	background: [
+		// page 0
+		bgPage0,
+		// page 1
+		bgPage1,
+		// page 2
+		bgPage2,
+		// page 3
+		bgPage3,
+		// page 4
+		bgPage4,
+		// page 5
+		bgPage5,
+		// page 6
+		bgPage4,
+		// page 7
+		bgPage5,
+		// page 8
+		bgPage8,
+		// page9
+		// bgPage9,
+		// page 10
+		// bgPage10,
+		//   page11
+		// bgPage11,
+		//  page 12
+		// bgPage12,
+
+		// page 13
+		bgPage13,
+		//page14
+		bgPage13,
+		// page15
+		bgPage15,
+		// page16
+		bgPage13,
+		//page 17
+		bgPage13,
+		// page 18
+		bgPage14,
+		// page19
+		bgPage19,
+		// page20
+		bgPage20,
+		// page21
+		bgPage20,
+		// page22
+		bgPage20,
+		// page23
+		bgPage20,
+		// page24
+		bgPage20,
+		// page25
+		bgPage20,
+		// page26
+		bgPage20,
+		// page27
+		bgPage20,
+		// page28
+		bgPage20,
+		// page29
+		bgPage20,
+		// page30
+		bgPage30,
+		// page31
+		bgPage31,
+		// page32
+		bgPage32,
+		// page33
+		bgPage33,
+		// page34
+		bgPage34,
+		// page35
+		bgPage35,
+		// page36
+		bgPage36,
+		// page37
+		bgPage37,
+		// page38
+		bgPage38,
+		// page39
+		bgPage39,
+		// page40
+		bgPage40,
+		// page41
+		bgPage41,
+		// page42
+		bgPage42,
+		// page43
+		bgPage43,
+		// page44
+		bgPage44,
+		// page45
+		bgPage44,
+		// page46
+		bgPage39,
+	],
+	common: {
+		Pauses,
+		title,
+		play,
+		Button,
+		ChifGif,
+	},
 	page0: {
 		Boy1,
 		Girl1,
 		cloudGif,
 		Car,
 		CarGif,
-    loadingImages,
-    girlGif0,
-    boyGif0,
+		loadingImages,
+		girlGif0,
+		boyGif0,
 	},
 	page1: {
 		Teacher1,
@@ -401,203 +435,219 @@ const images = {
 		Kid4,
 		Kid5,
 		SamSet,
-		Sun
+		Sun,
 	},
-	page2 : {
-		VceChilden
+	page2: {
+		VceChilden,
 	},
-	page3 : {
+	page3: {
 		TextHello,
 		IconTeacher,
-		TeacherSayGIF
+		TeacherSayGIF,
 	},
-  page4: {
-    kidPage4,
-    kidGifPage4,
-    textPage4,
-  },
-  page5: {
-    teacherPage5,
-    textPage5,
-    teacherGifPage5,
-  },
-  page6: {
-    textPage6,
-  },
-  page7: {
-    textPage7,
-  },
-  page8: {
-    kid8_1,
-    kid8_2,
-    kid8_3,
-    kid8_4,
-    title8,
-    next8,
-  },
-  page9: {
-    kid9,
-    name9,
-    prev9,
-    button9,
-    kidGif9,
-  },
-  page10: {
-    kid10,
-    name10,
-    prev10,
-    button10,
-    kidGif10,
-  },
-  page11: {
-    kid11,
-    name11,
-    prev11,
-    button11,
-    kidGif11,
-  },
-  page12: {
-    kid12,
-    name12,
-    prev12,
-    button12,
-    kidGif12,
-  },
-  page13: {
-    // cover3,
-    // cover2,
-    // cover1,
-  },
-  page15: {
-
-  },
-  page14: {
-
-  },
-
-  page16: {
-
-  },
-  page17: {
-
-  },
-  page18: {
-
-  },
-  page19:{
+	page4: {
+		kidPage4,
+		kidGifPage4,
+		textPage4,
+	},
+	page5: {
+		teacherPage5,
+		textPage5,
+		teacherGifPage5,
+	},
+	page6: {
+		textPage6,
+	},
+	page7: {
+		textPage7,
+	},
+	page8: {
+		kid8_1,
+		kid8_2,
+		kid8_3,
+		kid8_4,
+		title8,
+		next8,
+	},
+	page9: {
+		kid9,
+		name9,
+		prev9,
+		button9,
+		kidGif9,
+	},
+	page10: {
+		kid10,
+		name10,
+		prev10,
+		button10,
+		kidGif10,
+	},
+	page11: {
+		kid11,
+		name11,
+		prev11,
+		button11,
+		kidGif11,
+	},
+	page12: {
+		kid12,
+		name12,
+		prev12,
+		button12,
+		kidGif12,
+	},
+	page13: {
+		// cover3,
+		// cover2,
+		// cover1,
+	},
+	page14: {
+		bPage14,
+		cPage14,
+		dPage14,
+		ePage14,
+		questionPage14,
+		titlePage14,
+	},
+	page15: {
+		bgPage15,
+		titlePage15,
+		cPage15,
+		dPage15,
+		ePage15,
+		mPage15,
+		questionPage15,
+	},
+	page16: {
+		bPage16,
+		ePage16,
+		dPage16,
+		jPage16,
+		questionPage16,
+		titlePage16,
+	},
+	page17: {
+		ePage17,
+		dPage17,
+		jPage17,
+		bPage17,
+		questionPage17,
+		titlePage17,
+	},
+	page18: { imagePage18 },
+	page19: {
 		teacher20,
 		gTeacher20,
 		text20,
 	},
-	page20:{
+	page20: {
 		kid21,
 		gKid21,
 		text21,
 	},
-	page21:{
+	page21: {
 		teacher22,
 		gTeacher22,
 		text22,
 	},
 
-
-	page22:{		
+	page22: {
 		kid23,
 		gKid23,
 		text23,
 	},
-	page23:{
+	page23: {
 		teacher24,
 		gTeacher24,
 		text24,
 	},
-	page24:{
+	page24: {
 		kid25,
 		gKid25,
 		text25,
 	},
-	page25:{
+	page25: {
 		teacher26,
 		gTeacher26,
 		text26,
 	},
-	page26:{
+	page26: {
 		kid27,
 		gKid27,
 		text27,
 	},
-	page27:{
+	page27: {
 		teacher28,
 		gTeacher28,
 		text28,
 		text28s,
 	},
 
-	page28:{
+	page28: {
 		kid29,
 		gKid29,
 		text29,
 		text29s,
 	},
 
-	page29:{
+	page29: {
 		teacher30,
 		gTeacher30,
 		text30,
-
 	},
-  page30 : {
+	page30: {
 		DamTre,
 		Stove,
 		BaChu,
 	},
-	page31 : {
+	page31: {
 		TextBaChu,
 		BaChu31,
-		Stove31
+		Stove31,
 	},
-	page32 : {
+	page32: {
 		TextKid32,
 		IconKid32,
-		childGIF32
+		childGIF32,
 	},
-	page33 : {
+	page33: {
 		TextKid33,
 		IconKid33,
-		childGIF33
+		childGIF33,
 	},
-	page34 : {
+	page34: {
 		TextKid34,
 		IconKid34,
-		childGIF34
+		childGIF34,
 	},
-	page35 : {
+	page35: {
 		TextKid35,
 		IconKid35,
-		childGIF35
+		childGIF35,
 	},
-	page36 : {
+	page36: {
 		Text1Kid36,
 		Icon1Kid36,
 		Text2Kid36,
 		Icon2Kid36,
 	},
-	page37 : {
+	page37: {
 		Text1Kid37,
 		Icon1Kid37,
 		Text2Kid37,
 		Icon2Kid37,
 	},
-	page38 : {
+	page38: {
 		Text1Kid38,
 		Icon1Kid38,
 		Text2Kid38,
 		Icon2Kid38,
 	},
-  page39: {
-    textPage39,
-  },
-  page40: {
+	page39: {
+		textPage39,
+	},
+	page40: {
 		ball40,
 		cat40,
 		doll40,
@@ -608,7 +658,7 @@ const images = {
 		yes40,
 		no40,
 		button40,
-    pause40
+		pause40,
 	},
 	page41: {
 		blue41,
@@ -621,7 +671,7 @@ const images = {
 		yes41,
 		no41,
 		button41,
-    pause41
+		pause41,
 	},
 	page42: {
 		cake42,
@@ -634,7 +684,7 @@ const images = {
 		yes42,
 		no42,
 		button42,
-    pause42
+		pause42,
 	},
 	page43: {
 		bird43,
@@ -647,14 +697,22 @@ const images = {
 		yes43,
 		no43,
 		button43,
-    pause43
+		pause43,
 	},
-  page44:{
-    fruitGif,
-    kidPage44,
-    fruitPage44,
-    kidGifPage44,
-  }
+	page44: {
+		fruitGif,
+		kidPage44,
+		fruitPage44,
+		kidGifPage44,
+	},
+	page45: {
+		bo,
+		cam,
+		tao,
+		chuoi,
+		question,
+		childPage45,
+	},
 };
 
 export default images;

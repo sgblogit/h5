@@ -1,0 +1,33 @@
+.screenMiddleTitle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	top: -10px;
+	&__imageTitle {
+		width: 70%;
+		margin: 0 auto;
+		margin-top: -20px;
+		& > img {
+			width: 100%;
+			object-fit: contain;
+		}
+	}
+}
+@media screen and (min-width: 560px) {
+	.screenMiddleTitle {
+		top: -30px;
+		&__imageTitle {
+			width: 65%;
+		}
+	}
+}
+
+@media screen and (min-width: 680px) {
+	.screenMiddleTitle {
+		top: -30px;
+		&__imageTitle {
+			width: 55%;
+		}
+	}
+}
