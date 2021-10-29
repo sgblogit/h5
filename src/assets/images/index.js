@@ -290,13 +290,13 @@ const images = {
     // page 8
     bgPage8,
     // page9
-    bgPage9,
-    // page 10
-    bgPage10,
-    //  page11
-    bgPage11,
-    // page 12
-    bgPage12,
+    // bgPage9,
+    // // page 10
+    // bgPage10,
+    // //  page11
+    // bgPage11,
+    // // page 12
+    // bgPage12,
 
     // page 13
     bgPage13,
