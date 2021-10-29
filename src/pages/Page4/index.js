@@ -24,7 +24,6 @@ const Page4 = (props) => {
 	const [kid, setKid] = useState(images.page4.kidPage4);
 	const [acctiveDisplay, setAcctiveDisplay] = useState(false);
 	let kidGif = images.page4.kidGifPage4
-    console.log("🚀 ~ file: index.js ~ line 27 ~ Page4 ~ kidGif", kidGif)
 
 	useEffect(() => {
 		const values = runRecord({

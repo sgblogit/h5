@@ -23,63 +23,26 @@ const DebugPanel = (props) => {
 		if (currentPage === 0) {
 			return false;
 		}
-		if	(currentPage === 13){
-			console.log(`onPageChange-page:`, currentPage - 1);
-				console.log(`onPageChange-step:`, 0);
-			audioPlayer.cleanAllAudio();
-			dispatch(
-				setCurrentData({
-					currentPage: 8,
-					currentStep: 0,
-					currentRecord: [],
-					prevRecord: [],
-					isLoading: true,
-				})
-			);
-			setTimeout(() => {
-				dispatch(setCurrentData({ isLoading: false }));
-				audioPlayer.pauseAudio(audios.audioChangePage);
-			}, 1000);
-		} else {
-			if(currentPage === 9||currentPage === 10||currentPage === 11||currentPage === 12){
-				console.log(`onPageChange-page:`, currentPage - 1);
-				console.log(`onPageChange-step:`, 0);
-				audioPlayer.cleanAllAudio();
-				dispatch(
-					setCurrentData({
-						currentPage: 8,
-						currentStep: 0,
-						currentRecord: [],
-						prevRecord: [],
-						isLoading: true,
-					})
-				);
-				setTimeout(() => {
-					dispatch(setCurrentData({ isLoading: false }));
-					audioPlayer.pauseAudio(audios.audioChangePage);
-				}, 1000);
-			} else {
-				console.log(`onPageChange-page:`, currentPage - 1);
-				console.log(`onPageChange-step:`, 0);
-				audioPlayer.cleanAllAudio();
-				dispatch(
-					setCurrentData({
-						currentPage: currentPage - 1,
-						currentStep: 0,
-						currentRecord: [],
-						prevRecord: [],
-						isLoading: true,
-					})
-				);
-				audioPlayer.playAudio(audios.audioChangePage);
-				setTimeout(() => {
-					dispatch(setCurrentData({ isLoading: false }));
-					audioPlayer.pauseAudio(audios.audioChangePage);
-				}, 1000);
-			}
-			
-		}
-		
+		console.log(`onPageChange-page:`, currentPage - 1);
+		console.log(`onPageChange-step:`, 0);
+		audioPlayer.cleanAllAudio();
+		dispatch(
+			setCurrentData({
+				currentPage: currentPage - 1,
+				currentStep: 0,
+				currentRecord: [],
+				prevRecord: [],
+				isLoading: true,
+				isShowWarning: false,
+				enableClick: true,
+				orderClick: 0,
+			})
+		);
+		audioPlayer.playAudio(audios.audioChangePage);
+		setTimeout(() => {
+			dispatch(setCurrentData({ isLoading: false }));
+			audioPlayer.pauseAudio(audios.audioChangePage);
+		}, 1000);
 		//window.bridge.requestChangePage(currentPage - 1, 0);
 	};
 
@@ -90,59 +53,24 @@ const DebugPanel = (props) => {
 		if (currentPage === PAGE_DATA.length - 1) {
 			return false;
 		}
-		if	(currentPage === 8){
-			audioPlayer.cleanAllAudio();
-			dispatch(
-				setCurrentData({
-					currentPage: 13,
-					currentStep: 0,
-					currentRecord: [],
-					prevRecord: [],
-					isLoading: true,
-				})
-			);
-			audioPlayer.playAudio(audios.audioChangePage);
-				setTimeout(() => {
-					dispatch(setCurrentData({ isLoading: false }));
-					audioPlayer.pauseAudio(audios.audioChangePage);
-				}, 1000);
-		} else {
-			if(currentPage === 9||currentPage === 10||currentPage === 11||currentPage === 12){
-				audioPlayer.cleanAllAudio();
-				dispatch(
-					setCurrentData({
-						currentPage: 8,
-						currentStep: 0,
-						currentRecord: [],
-						prevRecord: [],
-						isLoading: true,
-					})
-				);
-				audioPlayer.playAudio(audios.audioChangePage);
-				setTimeout(() => {
-					dispatch(setCurrentData({ isLoading: false }));
-					audioPlayer.pauseAudio(audios.audioChangePage);
-				}, 1000);
-			} else {
-				audioPlayer.cleanAllAudio();
-				dispatch(
-					setCurrentData({
-						currentPage: currentPage + 1,
-						currentStep: 0,
-						currentRecord: [],
-						prevRecord: [],
-						isLoading: true,
-					})
-				);
-				audioPlayer.playAudio(audios.audioChangePage);
-				setTimeout(() => {
-					dispatch(setCurrentData({ isLoading: false }));
-					audioPlayer.pauseAudio(audios.audioChangePage);
-				}, 1000);
-			}
-			
-		}
-		
+		audioPlayer.cleanAllAudio();
+		dispatch(
+			setCurrentData({
+				currentPage: currentPage + 1,
+				currentStep: 0,
+				currentRecord: [],
+				prevRecord: [],
+				isLoading: true,
+				isShowWarning: false,
+				enableClick: true,
+				orderClick: 0,
+			})
+		);
+		audioPlayer.playAudio(audios.audioChangePage);
+		setTimeout(() => {
+			dispatch(setCurrentData({ isLoading: false }));
+			audioPlayer.pauseAudio(audios.audioChangePage);
+		}, 1000);
 		//window.bridge.requestChangePage(currentPage + 1, 0);
 	};
 
@@ -155,7 +83,6 @@ const DebugPanel = (props) => {
 			prevPage();
 			return false;
 		}
-		
 		console.log(`onPageChange-page:`, currentPage);
 		console.log(`onPageChange-step:`, currentStep - 1);
 		dispatch(
@@ -192,7 +119,7 @@ const DebugPanel = (props) => {
 			})
 		);
 		//window.bridge.requestChangePage(currentPage, currentStep + 1);
-	};
+};
 
 	const fireEvent = () => {
 		if (!isDeBug) {
