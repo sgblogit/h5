@@ -6,6 +6,7 @@ import "./styles.scss";
 import TitleMeeting from "components/TitleMeetting/index";
 import images from "assets/images/index";
 import ConversationTK from "components/ConversationTK/index";
+import Question from "components/Question/index";
 
 const Page5 = (props) => {
 	const { onPushAction } = props;
@@ -106,20 +107,14 @@ const Page5 = (props) => {
 				play audio and animation
 			</button> */}
 			<div className="page-wrraper">
-				<TitleMeeting bgTitle={images.page1.titleMeeting} />
-				<ConversationTK
+				<TitleMeeting bgTitle={images.common.title} />
+				<Question	
+					teacherImg={images.page5.teacherPage5}
+					teacherText={images.page5.textPage5}
+					audioTeacher="audioPage5"
 					page="page5"
-					image1={image1}
-					image2={image2}
-					text2={textT2}
-					textGT2={images.page5.textKid5}
-					text1={textT1}
-					textGT1={images.page5.textTeacher5}
-					imageG1={images.common.leftTeacherGif}
-					imageG2={images.common.rightKidGif}
-					audio1="teacherAudio5"
-					audio2="kidAudio5"
 					clickHandler={clickHandler}
+
 				/>
 			</div>
 		</div>

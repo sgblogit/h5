@@ -1,0 +1,40 @@
+.page30{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .page30-wrraper{
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        display: flex;
+        bottom: 2%;
+        .main{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            .page30-left{
+                width: 20%;
+                height: 100%;
+                transform: translateX(20%);
+            }
+            .page30-middle{
+                width: 20%;
+                height: 70%;
+                transform: translateX(-10%);
+            }
+            .page30-right{
+                width: 59%;
+                height: 100%;
+                
+            }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            object-fit: contain;
+        }
+    }
+}

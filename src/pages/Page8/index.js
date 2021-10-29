@@ -5,14 +5,15 @@ import audios from "assets/audios/index";
 import "./styles.scss";
 import TitleMeeting from "components/TitleMeetting/index";
 import images from "assets/images/index";
-import ConversationTK from "components/ConversationTK/index";
+import MettingClickRollback from "components/MettingClickRollback/index";
+import { runRecord } from "helper/appServices";
 
 const Page8 = (props) => {
 	const { onPushAction } = props;
 	const { currentPage, currentStep, currentRecord } = useSelector(
 		(state) => state.app
 	);
-
+	
 	const { playAudio } = audioPlayer;
 
 	const clickEventName = "page8";
@@ -21,101 +22,40 @@ const Page8 = (props) => {
 		onPushAction(e, op.actionType, op);
 	};
 
-	const [image1, setImage1] = useState(images.common.leftKid);
-	const [image2, setImage2] = useState(images.common.rightTeacher);
+	const [image1, setImage1] = useState(images.page8.kid8_1);
+	const [image2, setImage2] = useState(images.page8.kid8_2);
+	const [image3, setImage3] = useState(images.page8.kid8_3);
+	const [image4, setImage4] = useState(images.page8.kid8_4);
 
-	const [textT1, setTextT1] = useState(null);
+	// const [textT1, setTextT1] = useState(null);
 	// const [textT2, setTextT2] = useState(null);
 
 	useEffect(() => {
-		if (currentRecord.length > 0) {
-			let recordEventData = currentRecord[currentRecord.length - 1];
-			if (
-				recordEventData.eventPage === currentPage &&
-				recordEventData.eventPageStep === currentStep &&
-				recordEventData.eventName === clickEventName
-			) {
-				if (recordEventData.eventData.playAudio) {
-					let audioUrl = audios[recordEventData.eventData.playAudio];
-					playAudio(audioUrl);
-				}
-				if (recordEventData.eventData.imageG1) {
-					setImage1(recordEventData.eventData.imageG1);
-				}
-				if (recordEventData.eventData.imageG2) {
-					setImage2(recordEventData.eventData.imageG2);
-				}
-				if (recordEventData.eventData.textT1) {
-					setTextT1(recordEventData.eventData.textT1);
-				}
-				// if (recordEventData.eventData.textT2) {
-				// 	setTextT2(recordEventData.eventData.textT2);
-				// }
-			}
-		}
+		const values = runRecord({
+			eventName: clickEventName,
+			callbacks: {
+				imageG1: setImage1,
+				imageG2: setImage2,
+				imageG3: setImage3,
+				imageG4: setImage4,
+			},
+		});
+		console.log(values, "values");
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currentRecord]);
 
 	return (
 		<div className="page8">
-			{/* <h1>this is page {currentPage}</h1>
-			<button
-				onClick={(e) => {
-					clickHandler(e, {
-						actionType: "changePage",
-						eventName: "page8",
-						eventData: {
-							page: 2,
-							step: 0,
-						},
-					});
-				}}
-			>
-				go to page 2
-			</button>
-
-			<button
-				onClick={(e) => {
-					clickHandler(e, {
-						actionType: "fireEvent",
-						eventName: "page8",
-						eventData: {
-							playAudio: "gitAudio",
-							active: false,
-						},
-					});
-				}}
-			>
-				play audio
-			</button>
-
-			<button
-				onClick={(e) => {
-					clickHandler(e, {
-						actionType: "fireEvent",
-						eventName: "page8",
-						eventData: {
-							playAudio: "gitAudio",
-							active: true,
-						},
-					});
-				}}
-			>
-				play audio and animation
-			</button> */}
 			<div className="page-wrraper">
-				<TitleMeeting bgTitle={images.page1.titleMeeting} />
-				<ConversationTK
+				<TitleMeeting bgTitle={images.page8.title8} />
+				<MettingClickRollback
 					page="page8"
 					image2={image2}
 					image1={image1}
-					text1={textT1}
-					textGT1={images.page8.textKid8}
-					// text1= {images.page8.text}
-					imageG1={images.common.leftKidGif}
-					imageG2={images.common.rightTeacherGif}
-					audio1="kidAudio8"
-					audio2=""
+					image3={image3}
+					image4={image4}
+					nextImage={images.page8.next8}
+					currentPage={currentPage}
 					clickHandler={clickHandler}
 				/>
 			</div>

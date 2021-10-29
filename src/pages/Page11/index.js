@@ -2,19 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import audioPlayer from "helper/audioPlayer";
 import audios from "assets/audios/index";
-
+import MyNameKids from "components/MyNameKids/index";
 import "./styles.scss";
-import TitleMeeting from "components/TitleMeetting/index";
 import images from "assets/images/index";
-import Favorites from "./component/index";
+import { runRecord } from "helper/appServices";
 
 const Page11 = (props) => {
 	const { onPushAction } = props;
-
 	const { currentPage, currentStep, currentRecord } = useSelector(
 		(state) => state.app
 	);
-
+	
 	const { playAudio } = audioPlayer;
 
 	const clickEventName = "page11";
@@ -23,105 +21,40 @@ const Page11 = (props) => {
 		onPushAction(e, op.actionType, op);
 	};
 
-	const [teacherImg, setImageTeacher] = useState(images.common.leftTeacher);
-	const [kidImg, setImageKid] = useState(images.common.rightKid);
-	const [textT1, setTextT1] = useState("");
-	const [active2, setActive2] = useState("");
+	const [image1, setImage1] = useState(images.page11.kid11);
+	const [image2, setImage2] = useState(images.page11.name11);
+	const [prevImage, setImage3] = useState(images.page11.prev11);
+	const [buttonAudio, setImage4] = useState(images.page11.button11);
+	
+
+	// const [textT1, setTextT1] = useState(null);
+	// const [textT2, setTextT2] = useState(null);
 
 	useEffect(() => {
-		if (currentRecord.length > 0) {
-			let recordEventData = currentRecord[currentRecord.length - 1];
-			if (
-				recordEventData.eventPage === currentPage &&
-				recordEventData.eventPageStep === currentStep &&
-				recordEventData.eventName === clickEventName
-			) {
-				if (recordEventData.eventData.playAudio) {
-					let audioUrl = audios[recordEventData.eventData.playAudio];
-					playAudio(audioUrl);
-				}
-				if (recordEventData.eventData.teacherGif) {
-					setImageTeacher(recordEventData.eventData.teacherGif);
-				}
-				if (recordEventData.eventData.textT1Active) {
-					setTextT1(recordEventData.eventData.textT1Active);
-				}
-				if (recordEventData.eventData.kidGif) {
-					setImageKid(recordEventData.eventData.kidGif);
-				}
-				if (recordEventData.eventData.active2) {
-					setActive2(recordEventData.eventData.active2);
-				}
-			}
-		}
-		// eslint-disable-next-line react-hooks/exhaustive-deps
+		const values = runRecord({
+			eventName: clickEventName,
+			callbacks: {
+				imageG1: setImage1,
+				imageG2: setImage2,
+				imageG3: setImage3,
+				imageG4: setImage4,
+			},
+		});
+		console.log(values, "values");
 	}, [currentRecord]);
-
 	return (
 		<div className="page11">
-			{/* <h1>this is page {currentPage}</h1> */}
-			{/* <button
-				onClick={(e) => {
-					clickHandler(e, {
-						actionType: "changePage",
-						eventName: "page11",
-						eventData: {
-							page: 2,
-							step: 0,
-						},
-					});
-				}}
-			>
-				go to page 2
-			</button>
-
-			<button
-				onClick={(e) => {
-					clickHandler(e, {
-						actionType: "fireEvent",
-						eventName: "page11",
-						eventData: {
-							playAudio: "gitAudio",
-							active: false,
-						},
-					});
-				}}
-			>
-				play audio
-			</button>
-
-			<button
-				onClick={(e) => {
-					clickHandler(e, {
-						actionType: "fireEvent",
-						eventName: "page11",
-						eventData: {
-							playAudio: "gitAudio",
-							active: true,
-						},
-					});
-				}}
-			>
-				play audio and animation
-			</button> */}
-			<div className="page-wrapper">
-				<TitleMeeting bgTitle={images.page1.titleMeeting} />
-				<Favorites
-					clickHandler={clickHandler}
+			<div className="page-wrraper">
+				<MyNameKids
 					page="page11"
-					teacher={teacherImg}
-					audioTeacher="whatPage11"
-					text={images.page11.textPage11}
-					kidGif={images.common.rightKidGif}
-					kid={kidImg}
-					teacherGif={images.common.leftTeacherGif}
-					audioKid="likePage11"
-					cake={images.page11.cakePage11}
-					egg={images.page11.eggPage11}
-					pasta={images.page11.pastaPage11}
-					candy={images.page11.candyPage11}
-					textT1={textT1}
-					active2={active2}
+					image2={image2}
+					image1={image1}
+					currentPage={currentPage}
+					prevImage={prevImage}
+					buttonAudio={buttonAudio}
+					imageG1={images.page11.kidGif11}
+					audio="kidAudio11"
+					clickHandler={clickHandler}
 				/>
 			</div>
 		</div>

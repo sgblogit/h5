@@ -1,7 +1,6 @@
 .page0 {
     width: 100%;
     height: 100%;
-    background-image: url('../../assets/images/page_0/page0-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -15,10 +14,56 @@
     justify-content: center;
     height: 100%;
     width: 100%;
+    .main{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    .car-pos{
+        position: absolute;
+        width: 100%;
+        height: 75%;
+        // background: red;
+        bottom: 5%;
+    }
+    .main-page0{
+        position: absolute;
+        z-index: 99;
+        width: 100%;
+        height: 50%;
+        // background: blue;
+        bottom: 5%;
+        padding: 0 10%;
+        display: flex;
+        justify-content: center;
+        .page0-left{
+
+        }
+        .page0-middle{
+            width: 55%;
+        }
+        .page0-right{
+            
+        }
+        .item{
+            width: 20%;
+            height: 100%;
+            // background: rebeccapurple;
+        }
+    }
     img{
         width: 100%;
         height: 100%;
         cursor: pointer;
         object-fit: contain;
     }
+}
+.controll{
+    position: relative;
+    left: 5%;
+    top: 5%;
+    max-width: 50px;
+    max-height: 50px;
+    z-index: 9999999;
+    
 }

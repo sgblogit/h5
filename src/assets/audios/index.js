@@ -3,177 +3,124 @@ import gitAudio from "./common/git.mp3";
 import falseAudio from "./common/false.mp3";
 import trueAudio from "./common/true.mp3";
 ///
-import it17 from "./page_17/it.mp3";
-import thatRight from "./page_17/that_right.mp3";
-import itadoll from "./page_18/itadoll.mp3";
-import what from "./page_18/what.mp3";
-import cat from "./page_19/cat.mp3";
-import whatpet from "./page_19/whatpet.mp3";
 
-import which from "./page_16/whit.mp3";
-import here from "./page_16/here.mp3";
-import which20 from "./page_20/whit.mp3";
-import here20 from "./page_20/here.mp3";
+// Page 0
 
-//
-import voiceStart from "./page_0/voice.mp3";
-import kidAudio from "./page_1/kid.mp3";
-import teacherAudio from "./page_1/teacher.mp3";
+import infoStart from "./page_0/infoStart.mp3";
 
-import kidAudio2 from "./page_2/kid.mp3";
-import teacherAudio2 from "./page_2/teacher.mp3";
+// PAGE 1
+import infoSeconce from "./page_1/voice.mp3";
 
-import teacherAudio3 from "./page_3/teacher.mp3";
+// PAGE 2
+import VceChilden from "./page_2/vce_1.mp3";
 
-import kidAudio4 from "./page_4/kid.mp3";
+//Page 3
+import HelloKid from "./page_3/hello.mp3";
 
-import kidAudio5 from "./page_5/kid.mp3";
-import teacherAudio5 from "./page_5/teacher.mp3";
+//Page 30
+import Vce30 from "./page_30/vce_1.mp3";
+//Page 31
+import Vce31 from "./page_31/what.mp3";
+//Page 32
+import Vce32 from "./page_32/voice.mp3";
+//Page 33
+import Vce33 from "./page_33/voice.mp3";
+//Page 34
+import Vce34 from "./page_34/pasat.mp3";
+//Page 35
+import Vce35 from "./page_35/cake.mp3";
 
-import kidAudio6 from "./page_6/kid.mp3";
-import teacherAudio6 from "./page_6/teacher.mp3";
+//Page 36
+import Vce36 from "./page_36/it.mp3";
+import VceSe36 from "./page_36/thatrighit.mp3";
+//Page 37
+import Vce37 from "./page_37/itadoll.mp3";
+import VceSe37 from "./page_37/what.mp3";
 
-import teacherAudio7 from "./page_7/teacher.mp3";
+//Page 38
+import Vce38 from "./page_38/cat.mp3";
+import VceSe38 from "./page_38/whatpet.mp3";
 
-import kidAudio8 from "./page_8/kid.mp3";
+//page 19
+import areYouJulie from "./page_19/areYouJulie.mp3";
+import yes from "./page_20/yes.mp3";
+import howManyPeople from "./page_21/howManyPeople.mp3";
+import thereAreFourPeople from "./page_22/thereAreFourPeople.mp3";
+import whereAreYouFrom from "./page_23/whereAreYouFrom.mp3";
+import imFromHaNoi from "./page_24/imFromHaNoi.mp3";
+import doYouHaveSisters from "./page_25/doYouHaveSisters.mp3";
+import noIDont from "./page_26/noIDont.mp3";
+import whatColorDoYouLike from "./page_27/whatColorDoYouLike.mp3";
+import iLikeWhite from "./page_28/iLikeWhite.mp3";
 
-import kidAudio10 from "./page_10/kid.mp3";
-import teacherAudio10 from "./page_10/teacher.mp3";
-import whatPage11 from "./page_11/what.mp3";
-import likePage11 from "./page_11/like.mp3";
+import kidAudio9 from "./page_9/danny.mp3";
 
-import conver1 from "./page_12/conver1.mp3";
-import conver2 from "./page_12/conver2.mp3";
-import conver3 from "./page_12/conver3.mp3";
+import kidAudio10 from "./page_10/julkie.mp3";
 
-import cover1 from "./page_13/cover1.mp3";
-import cover2 from "./page_13/cover2.mp3";
-import cover3 from "./page_13/cover3.mp3";
-import dadPage9 from "./page_9/dad.mp3";
-import mePage9 from "./page_9/me.mp3";
-import momPage9 from "./page_9/mom.mp3";
-import brotherPage9 from "./page_9/brother.mp3";
+import kidAudio11 from "./page_11/emma.mp3";
 
-import yes15 from "./page_15/yes.mp3";
-import correct15 from "./page_15/correct.mp3";
+import kidAudio12 from "./page_12/mike.mp3";
 
-// page 21
-import voiceTextPage21 from "./page_21/voiceTextPage21.mp3";
-
-// page23
-import whatNumber from "./page_23/number.mp3";
-import what23 from "./page_23/what.mp3";
-import whatNumber24 from "./page_24/number3.mp3";
-import what24 from "./page_24/what.mp3";
-
-import one from "./page_22/one.mp3";
-import two from "./page_22/tow.mp3";
-import three from "./page_22/3.mp3";
-import four from "./page_22/4.mp3";
-import five from "./page_22/5.mp3";
-import six from "./page_22/6.mp3";
-import seven from "./page_22/7.mp3";
-import eight from "./page_22/8.mp3";
-import night from "./page_22/9.mp3";
-import ten from "./page_22/ten.mp3";
-import canyou from "./page_22/canyou.mp3";
-
-import voice25 from "./page_25/voice.mp3";
-import a26 from "./page_26/a.mp3";
-import apple26 from "./page_26/apple.mp3";
-import ball26 from "./page_26/ball.mp3";
-import cat26 from "./page_26/cat.mp3";
-import doll26 from "./page_26/doll.mp3";
-import two26 from "./page_26/two.mp3";
-import true26 from "./page_26/true.mp3";
+import audioPage39 from "./page_39/game.mp3";
+import audioPage44 from "./page_44/voice.mp3";
 
 import audioChangePage from "./common/am_thanh_chuyen_trang.mp3";
 
-import bgPage14 from "./page_14/bg-page14.mp3";
-import selectFalse from "./page_14/select-false.mp3";
-import selectTrue from "./page_14/select-true.mp3";
-
 const audios = {
-	page14: {
-		bgPage14,
-		selectTrue,
-		selectFalse,
-	},
 	audioChangePage,
 	backgroundAudio,
 	gitAudio,
 	falseAudio,
 	trueAudio,
+	// page 0
+	infoStart,
+	//Page 1
+	infoSeconce,
+	// Page 2
+	VceChilden,
+	//Page 3
+	HelloKid,
 
-	///
-	it17,
-	thatRight,
-	itadoll,
-	what,
-	cat,
-	whatpet,
-
-	//
-
-	voiceStart,
-	kidAudio,
-	teacherAudio,
-	kidAudio2,
-	teacherAudio2,
-	teacherAudio3,
-	kidAudio4,
-	kidAudio5,
-	teacherAudio5,
-	kidAudio6,
-	teacherAudio6,
-	teacherAudio7,
-	kidAudio8,
+	kidAudio9,
 	kidAudio10,
-	teacherAudio10,
-	conver1,
-	conver2,
-	conver3,
-	cover1,
-	cover2,
-	cover3,
-	yes15,
-	correct15,
-	dadPage9,
-	mePage9,
-	momPage9,
-	brotherPage9,
-	whatPage11,
-	likePage11,
-	which,
-	here,
-	which20,
-	here20,
-	voiceTextPage21,
-	what23,
-	whatNumber,
-	what24,
-	whatNumber24,
+	kidAudio11,
+	kidAudio12,
+	// page
+	areYouJulie,
+	yes,
+	howManyPeople,
+	thereAreFourPeople,
+	whereAreYouFrom,
+	imFromHaNoi,
+	doYouHaveSisters,
+	noIDont,
+	whatColorDoYouLike,
+	iLikeWhite,
+	//Page 30
+	Vce30,
+	//Page 31
+	Vce31,
+	//Page 32
+	Vce32,
+	//Page 33
+	Vce33,
+	//Page 34
+	Vce34,
+	//Page 35
+	Vce35,
 
-	one,
-	two,
-	three,
-	four,
-	five,
-	six,
-	seven,
-	eight,
-	night,
-	ten,
-	canyou,
+	//Page 36
+	Vce36,
+	VceSe36,
+	//Page 37
+	VceSe37,
+	Vce37,
+	//Page 38
+	Vce38,
+	VceSe38,
 
-	voice25,
-	a26,
-	apple26,
-	ball26,
-	cat26,
-	doll26,
-	two26,
-	true26,
+	audioPage39,
+	audioPage44,
 };
 
 export default audios;

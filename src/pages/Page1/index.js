@@ -4,10 +4,8 @@ import audioPlayer from "helper/audioPlayer";
 import audios from "assets/audios/index";
 
 import "./styles.scss";
-import TitleMeeting from "components/TitleMeetting/index";
 import images from "assets/images/index";
-import ConversationTK from "components/ConversationTK/index";
-import { runRecord } from "helper/appServices";
+import { handleClickImage, runRecord } from "helper/appServices";
 
 const Page1 = (props) => {
 	const { onPushAction } = props;
@@ -16,14 +14,16 @@ const Page1 = (props) => {
 		(state) => state.app
 	);
 
-	const [image1, setImage1] = useState(images.common.leftTeacher);
-	const [image2, setImage2] = useState(images.common.leftKid);
-
-	const [textT1, setTextT1] = useState(null);
-	const [textT2, setTextT2] = useState(null);
+	const [thunder, setThunder] = useState(null);
+	const [cloud, setCloud] = useState(null);
+	const [sun, setSun] = useState(null);
+	const [activeDisplay, setActiveDisplay] = useState(false);
 
 	const clickEventName = "page1";
 
+	let cloudGif = images.page0.cloudGif;
+	let thunderGif = images.page1.SamSet;
+	let sunGif = images.page1.Sun;
 	const clickHandler = (e, op) => {
 		onPushAction(e, op.actionType, op);
 	};
@@ -32,10 +32,10 @@ const Page1 = (props) => {
 		const values = runRecord({
 			eventName: clickEventName,
 			callbacks: {
-				imageG1: setImage1,
-				imageG2: setImage2,
-				textT1: setTextT1,
-				textT2: setTextT2,
+				cloudGif : setCloud,
+				thunderGif : setThunder,
+				sunGif : setSun,
+				activeDisplay : setActiveDisplay
 			},
 		});
 		console.log(values, "values");
@@ -44,68 +44,64 @@ const Page1 = (props) => {
 
 	return (
 		<div className="page1">
-			<div className="page-wrraper">
-				<TitleMeeting bgTitle={images.page1.titleMeeting} />
-				<ConversationTK
-					page="page1"
-					image1={image1}
-					image2={image2}
-					text1={textT1}
-					textGT1={images.page1.textKid}
-					text2={textT2}
-					textGT2={images.page1.textTeacher}
-					imageG1={images.common.leftTeacherGif}
-					imageG2={images.common.rightKidGif}
-					audio1="kidAudio"
-					audio2="teacherAudio"
-					clickHandler={clickHandler}
-				/>
+			<button className="controll"
+					onClick={(e) => {
+						handleClickImage(
+							clickHandler,
+							{
+								event: e,
+								data: {
+									actionType: "fireEvent",
+									eventName: 'page1',
+									eventData: {
+										playAudio: 'infoSeconce',
+										active: true,
+										activeDisplay : true,
+										cloudGif : cloudGif ,
+										thunderGif : thunderGif,
+										sunGif : sunGif
+
+									},
+								},
+							},
+							0
+						);
+						
+					}}
+				>
+					<img src={images.common.Button} alt="">
+					</img>
+				</button>
+			<div className={`sunphuong hidden ${activeDisplay ? "active" : ""} `}>
+				<img src={sun} alt=""></img>
 			</div>
-			{/* <h1>this is page {currentPage}</h1>
-			<button
-				onClick={(e) => {
-					clickHandler(e, {
-						actionType: "changePage",
-						eventName: "page1",
-						eventData: {
-							page: 2,
-							step: 0,
-						},
-					});
-				}}
-			>
-				go to page 2
-			</button>
-
-			<button
-				onClick={(e) => {
-					clickHandler(e, {
-						actionType: "fireEvent",
-						eventName: "page1",
-						eventData: {
-							playAudio: "gitAudio",
-							active: false,
-						},
-					});
-				}}
-			>
-				play audio
-			</button>
-
-			<button
-				onClick={(e) => {
-					clickHandler(e, {
-						actionType: "fireEvent",
-						eventName: "page1",
-						eventData: {
-							playAudio: "gitAudio",
-							active: true,
-						},
-					});
-				}}
-			>
-				play audio and animation
-			</button> */}
+			<div className={`samset hidden ${activeDisplay ? "active" : ""} `}>
+				<img src={thunder} alt=""></img>
+			</div>
+			<div className={`mayoi hidden ${activeDisplay ? "active" : ""} `} >
+				<img src={cloud} alt=""></img>
+			</div>
+			<div className="page1-wrraper">
+				<div className="main">
+					<div className="teacher-left">
+						<img src={images.page1.Teacher1} alt=""></img>
+					</div>
+					<div className="list-kids">
+						<div className="item">
+							<img src={images.page1.Kid2} alt=""></img>
+						</div>
+						<div className="item">
+							<img src={images.page1.Kid3} alt=""></img>
+						</div>
+						<div className="item">
+							<img src={images.page1.Kid4} alt=""></img>
+						</div>
+						<div className="item">
+							<img src={images.page1.Kid5} alt=""></img>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
 };

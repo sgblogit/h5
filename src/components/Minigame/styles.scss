@@ -1,173 +1,23 @@
-.session20-main {
-    position: absolute;
-    height: calc(100% - 30%);
-    width: 100%;
-    bottom: 5%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    // background-color: red;
-    &-list {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      height: 100%;
-      width: 150%;
-      
-      &.reverse{
-          flex-direction: row-reverse;
-      }
-      margin-left: -10%;
-      // padding:20px;
-      .teacher{
-          width: 100%;
-          height: 100%;
-          display: flex;
-          flex-wrap: wrap-reverse;
-          .imgTeacher{
-              width: 100%;
-              height: 50%;  
-          }
-          .textTeacher{
-            width: 38%;
-            height: 100%;
-            position: absolute;
-            top: 11%;
-            left: 48%;
-            visibility: hidden;
-            transform: scale(0.5);
-            transition: 0.3s all ease-in;
-              &.active{
-                //   transform: scale(0.8);
-                  visibility: visible;
-              }
-          
-          }
-         
-      }
-      .kid{
-        
-          width: 100%;
-          height: 50%;
-          display: flex;
-          flex-wrap: wrap ;
-          
-          .imgKid{
-              width: 100%;
-              height: 100%;
-              margin-left: 30%;
-          }
-          .textKid{
-            width: 43%;
-            height: 100%;
-            position: absolute;
-            top: 0%;
-            left: 14%;
-            visibility: hidden;
-            transform: scale(0.5);
-            transition: 0.3s all ease-in;
-              &.active{
-                  transform: scale(0.8);
-                  visibility: visible;
-              }
-          }
-  
-      }
-      
-    }
-  }
-.imgPic{
-    position: absolute;
-    width: 50%;
-    right: 5%;
-    height: 35%;
-    /* padding-bottom: 35%; */
-    /* float: left; */
-    top: -6%;
-    display: none;
-    /* justify-content: center; */
-    /* align-items: center; */
-    padding-right: 33%;
-    .picture{
-        height: 100%;
-    }
-    
-}
-.actives {
-    display: flex;
-}
-.what{
-    height: 15%;
-    /* height: auto; */
+.mini-game{
     position: fixed;
-    /* top: 0; */
-    left: 25%;
+    top: 30%;
+    left: 0;
     right: 0;
-    width: 50%;
-    top: 20%;
-}
-.box1 {
-    width: 33%;
-}
-.img1 {
-    width: 15%;
-    position: absolute;
-    top: 10%;
-    height: 22%;
-    /* display: flex; */
-    /* flex-wrap: nowrap; */
-    /* flex-direction: row; */
-    /* align-content: flex-end; */
-    left: 42%;
-}
-.img2 {
-    width: 15%;
-    position: absolute;
-    top: 35%;
-    height: 22%;
-    /* display: flex; */
-    /* flex-wrap: nowrap; */
-    /* flex-direction: row; */
-    /* align-content: flex-end; */
-    left: 42%;
-}
-.img3 {
-    width: 15%;
-    position: absolute;
-    top: 62%;
-    height: 22%;
-    /* display: flex; */
-    /* flex-wrap: nowrap; */
-    /* flex-direction: row; */
-    /* align-content: flex-end; */
-    left: 42%;
-}
-.img4 {
-    width: 15%;
-    position: absolute;
-    top: 87%;
-    height: 22%;
-    /* display: flex; */
-    /* flex-wrap: nowrap; */
-    /* flex-direction: row; */
-    /* align-content: flex-end; */
-    left: 42%;
-}
-.left {
-    left: 28%;
-}
-.right {
-    left: 56%;
-}
-.hide {
-    display: none;
-}
-.activehide{
-    display: block!important;
-}
-.full {
-    position: absolute;
-    width: 120%;
-    height: 120%;
-    z-index: 100;
-}
+    height: 40%;
+    padding: 20px;
+   display: flex;
+   justify-content: center;
+       img{
+           position: absolute;
+           height: 100%;
+           animation: move 2s infinite;
+       }
+   }
+   @keyframes move {
+       0% {
+           transform: scale(.8);
+       }
+       100% {
+           transform: scale(1);
+       }
+   }

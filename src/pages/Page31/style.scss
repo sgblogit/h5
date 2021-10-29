@@ -1,0 +1,63 @@
+.page31{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    .page31-wrraper{
+        position: absolute;
+        width: 100%;
+        height: 80%;
+        display: flex;
+        bottom: 0%;
+        .main{
+            width: 70%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            .page31-left{
+                width: 30%;
+                height: 85%;
+                transform: translateX(70%);
+            }
+            .page31-middle{
+                width: 50%;
+                height: 65%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                .stove{
+                    width: 100%;
+                    height: 70%;
+                    // background: chartreuse;
+                }
+                .text{
+                    transform: translate(25%,-25%);
+                }
+            }
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            object-fit: contain;
+        }
+    }
+}
+.activeRing{
+    animation: shake 0.5s; 
+  /* When the animation is finished, start again */
+  animation-iteration-count: 2; 
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
