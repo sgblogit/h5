@@ -14,7 +14,9 @@ function MettingClickRollback(props) {
 		image2,
 		image3,
 		image4,
+		clickHandler,
 		nextImage,
+		clickEventName,
 		currentPage
 	} = props;
 	const dispatch = useDispatch();
@@ -35,14 +37,29 @@ function MettingClickRollback(props) {
 						src={image1}
 						alt=""
 						onClick={(e) => {
-							handleClickImage(
-								dispatch(
-									setCurrentData({
-										currentStep: 1,
+							// handleClickImage(
+							// 	dispatch(
+							// 		setCurrentData({
+							// 			currentStep: 1,
 
-										isLoading: false,
-									})
-								),
+							// 			isLoading: false,
+							// 		})
+							// 	),
+							// 	0
+							// );
+							handleClickImage(
+								clickHandler,
+								{
+									event: e,
+									data: {
+										actionType: "changePage",
+										eventName: clickEventName,
+										eventData: {
+											page: 8,
+											step: 1,
+										},
+									},
+								},
 								0
 							);
 						}}
@@ -55,13 +72,28 @@ function MettingClickRollback(props) {
 						src={image3}
 						alt=""
 						onClick={(e) => {
+							// handleClickImage(
+							// 	dispatch(
+							// 		setCurrentData({
+							// 			currentStep: 2,
+							// 			isLoading: false,
+							// 		})
+							// 	),
+							// 	0
+							// );
 							handleClickImage(
-								dispatch(
-									setCurrentData({
-										currentStep: 2,
-										isLoading: false,
-									})
-								),
+								clickHandler,
+								{
+									event: e,
+									data: {
+										actionType: "changePage",
+										eventName: clickEventName,
+										eventData: {
+											page: 8,
+											step: 2,
+										},
+									},
+								},
 								0
 							);
 						}}
@@ -72,13 +104,28 @@ function MettingClickRollback(props) {
 						src={image2}
 						alt=""
 						onClick={(e) => {
+							// handleClickImage(
+							// 	dispatch(
+							// 		setCurrentData({
+							// 			currentStep: 4,
+							// 			isLoading: false,
+							// 		})
+							// 	),
+							// 	0
+							// );
 							handleClickImage(
-								dispatch(
-									setCurrentData({
-										currentStep: 4,
-										isLoading: false,
-									})
-								),
+								clickHandler,
+								{
+									event: e,
+									data: {
+										actionType: "changePage",
+										eventName: clickEventName,
+										eventData: {
+											page: 8,
+											step: 4,
+										},
+									},
+								},
 								0
 							);
 						}}
@@ -90,13 +137,28 @@ function MettingClickRollback(props) {
 						src={image4}
 						alt=""
 						onClick={(e) => {
+							// handleClickImage(
+							// 	dispatch(
+							// 		setCurrentData({
+							// 			currentStep: 3,
+							// 			isLoading: false,
+							// 		})
+							// 	),
+							// 	0
+							// );
 							handleClickImage(
-								dispatch(
-									setCurrentData({
-										currentStep: 3,
-										isLoading: false,
-									})
-								),
+								clickHandler,
+								{
+									event: e,
+									data: {
+										actionType: "changePage",
+										eventName: clickEventName,
+										eventData: {
+											page: 8,
+											step: 3,
+										},
+									},
+								},
 								0
 							);
 						}}

@@ -58,6 +58,7 @@ const Page8 = (props) => {
 					currentPage={currentPage}
 					currentStep={currentStep}
 					clickHandler={clickHandler}
+					clickEventName={clickEventName}
 				/>
 			</div>
 		</div>

@@ -16,6 +16,7 @@ function MyNameKids(props) {
     audio,
     page,
     clickHandler,
+    clickEventName,
     imageG1
   } = props;
   const dispatch = useDispatch();
@@ -104,15 +105,20 @@ function MyNameKids(props) {
         src={prevImage}
         onClick={(e) => {
           handleClickImage(
-            dispatch(
-              setCurrentData({
-                currentPage: 8,
-                currentStep: 0,
-                isLoading: false,
-              })
-            ),
-            0
-          );
+								clickHandler,
+								{
+									event: e,
+									data: {
+										actionType: "changePage",
+										eventName: clickEventName,
+										eventData: {
+											page: 8,
+											step: 0,
+										},
+									},
+								},
+								0
+							);
         }}
       ></img>
     </div>

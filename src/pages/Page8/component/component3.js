@@ -53,6 +53,7 @@ const Page11 = (props) => {
 					buttonAudio={buttonAudio}
 					imageG1={images.page11.kidGif11}
 					audio="kidAudio11"
+					clickEventName = {clickEventName}
 					clickHandler={clickHandler}
 				/>
 			</div>
