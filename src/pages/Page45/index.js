@@ -4,6 +4,7 @@ import TitleMeeting from "components/TitleMeetting/index";
 import "./styles.scss";
 import { handleClickImage, runRecord } from "helper/appServices";
 import { useSelector } from "react-redux";
+import ButtonControlAudio from "components/ButtonControlAudio/index";
 const Page45 = (props) => {
 	const { onPushAction } = props;
 	const [buttonShow, setButtonShow] = useState([]);
@@ -29,8 +30,6 @@ const Page45 = (props) => {
 			},
 		});
 	}, [currentRecord, handleSetButtonShow]);
-
-	console.log(buttonShow, "buttonShowbuttonShow");
 
 	return (
 		<div
@@ -182,6 +181,13 @@ const Page45 = (props) => {
 					</div>
 				</div>
 			</div>
+			<ButtonControlAudio
+				onPushAction={onPushAction}
+				isAutoPlay={false}
+				audioName={"bgAudio15"}
+				urlButtonPlay={images.common.play}
+				urlButtonPause={images.common.Pauses}
+			/>
 		</div>
 	);
 };

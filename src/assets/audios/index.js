@@ -73,6 +73,19 @@ import audioChangePage from "./common/am_thanh_chuyen_trang.mp3";
 
 import bgAudio15 from "./page_15/bgAudio15.mp3";
 
+import number1 from "./page_47/1.mp3";
+import number2 from "./page_47/2.mp3";
+import number3 from "./page_47/3.mp3";
+import number4 from "./page_47/4.mp3";
+import number5 from "./page_47/5.mp3";
+import number6 from "./page_47/6.mp3";
+import number7 from "./page_47/7.mp3";
+import number8 from "./page_47/8.mp3";
+import number9 from "./page_47/9.mp3";
+import number10 from "./page_47/10.mp3";
+import page47AudioBg from "./page_47/bgAudio.mp3";
+import canYouCount from "./page_47/canYouCount.mp3";
+
 const audios = {
 	audioChangePage,
 	backgroundAudio,
@@ -134,6 +147,18 @@ const audios = {
 	audioPage39,
 	audioPage44,
 	bgAudio15,
+	number1,
+	number2,
+	number3,
+	number4,
+	number5,
+	number6,
+	number7,
+	number8,
+	number9,
+	number10,
+	page47AudioBg,
+	canYouCount,
 };
 
 export default audios;
