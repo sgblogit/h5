@@ -85,6 +85,7 @@ import number9 from "./page_47/9.mp3";
 import number10 from "./page_47/10.mp3";
 import page47AudioBg from "./page_47/bgAudio.mp3";
 import canYouCount from "./page_47/canYouCount.mp3";
+import page49Voice from "./page_49/voice.mp3";
 
 const audios = {
 	audioChangePage,
@@ -159,6 +160,6 @@ const audios = {
 	number10,
 	page47AudioBg,
 	canYouCount,
+	page49Voice,
 };
-
 export default audios;

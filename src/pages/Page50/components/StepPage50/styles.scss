@@ -28,10 +28,20 @@
 			&--item {
 				width: 45%;
 				margin-bottom: 10px;
+				position: relative;
 				& > img {
 					cursor: pointer;
 					width: 100%;
 					object-fit: contain;
+				}
+				& .answer__result {
+					position: absolute;
+					bottom: -5px;
+					right: -50px;
+					& img {
+						width: 50%;
+						object-fit: contain;
+					}
 				}
 			}
 		}
