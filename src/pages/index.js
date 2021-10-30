@@ -265,18 +265,6 @@ const Pages = (props) => {
 					Page = (
 						<StepPage50
 							onPushAction={onPushAction}
-							urlQuestion={images.page50.taoQuestion}
-							urlAnswerA={images.page50.applePage50}
-							urlAnswerB={images.page50.orangePage50}
-							urlAnswerC={images.page50.fruit}
-							urlAnswerD={images.page50.mango}
-						/>
-					);
-					break;
-				case 5:
-					Page = (
-						<StepPage50
-							onPushAction={onPushAction}
 							urlQuestion={images.page50.dollQuestion}
 							urlAnswerA={images.page50.egg}
 							urlAnswerB={images.page50.doll}
@@ -285,7 +273,7 @@ const Pages = (props) => {
 						/>
 					);
 					break;
-				case 6:
+				case 5:
 					Page = (
 						<StepPage50
 							onPushAction={onPushAction}

@@ -2,7 +2,9 @@ import React from "react";
 import images from "assets/images/index";
 import TitleMeeting from "components/TitleMeetting/index";
 import "./styles.scss";
+import ButtonControlAudio from "components/ButtonControlAudio/index";
 const Page48 = (props) => {
+	const { onPushAction } = props;
 	return (
 		<div
 			className="page48-wrapper"
@@ -28,6 +30,13 @@ const Page48 = (props) => {
 					</div>
 				</div>
 			</div>
+			<ButtonControlAudio
+				onPushAction={onPushAction}
+				isAutoPlay={false}
+				audioName={"bgAudio15"}
+				urlButtonPlay={images.common.play}
+				urlButtonPause={images.common.Pauses}
+			/>
 		</div>
 	);
 };
