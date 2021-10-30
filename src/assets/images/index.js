@@ -312,104 +312,128 @@ import chuoi from "./page45/chuoi.png";
 import question from "./page45/question.png";
 import childPage45 from "./page45/child.png";
 
+// page 46
+import childPage46 from "./page46/child.png";
+import numbersPage46 from "./page46/numbers.png";
+import questionPage46 from "./page46/question.png";
+
+//page 47
+import one from "./page47/1.png";
+import two from "./page47/2.png";
+import three from "./page47/3.png";
+import four from "./page47/4.png";
+import five from "./page47/5.png";
+import six from "./page47/6.png";
+import seven from "./page47/7.png";
+import eight from "./page47/8.png";
+import nine from "./page47/9.png";
+import ten from "./page47/10.png";
+import child from "./page47/child.png";
+import page47Bg from "./page47/page47-bg.png";
+
+//page 48
+import childPage48 from "./page48/child.png";
+import questionPage48 from "./page48/question.png";
+import textsPage48 from "./page48/texts.png";
+
+// page 49
+import aPage49 from "./page49/a.png";
+import bPage49 from "./page49/b.png";
+import cPage49 from "./page49/c.png";
+import dPage49 from "./page49/d.png";
+import ePage49 from "./page49/e.png";
+import fPage49 from "./page49/f.png";
+import gPage49 from "./page49/g.png";
+import hPage49 from "./page49/h.png";
+import iPage49 from "./page49/i.png";
+import questionBg from "./page49/question-bg.png";
+
+//page 50
+import page50Seven from "./page50/7.png";
+import childPage50 from "./page50/child.png";
+import comPage50 from "./page50/com.png";
+import meoPage50 from "./page50/meo.png";
+import page50Bg from "./page50/page50bg.png";
+import taoPage50 from "./page50/tao.png";
+import titleGamePage50 from "./page50/title.png";
+import startPage50 from "./page50/start.png";
+import bird from "./page50/bird.png";
+import catQuestion from "./page50/catQuestion.png";
+import monkey from "./page50/monkey.png";
+import stepbg from "./page50/stepbg.png";
+import cat from "./page50/cat.png";
+import dog from "./page50/dog.png";
+import titleStep from "./page50/titleStep.png";
+import applePage50 from "./page50/apple.png";
+import fruit from "./page50/fruit.png";
+import taoQuestion from "./page50/taoQuestion.png";
+import orangePage50 from "./page50/orange.png";
+import mango from "./page50/mango.png";
+import comQuestion from "./page50/comQuestion.png";
+import candy from "./page50/candy.png";
+import egg from "./page50/egg.png";
+import cake from "./page50/cake.png";
+import pasta from "./page50/pasta.png";
+import dollQuestion from "./page50/dollQuestion.png";
+import doll from "./page50/doll.png";
+import white from "./page50/white.png";
+import fivePage50 from "./page50/five.png";
+import sevenQuestion from "./page50/sevenQuestion.png";
+import sixPage50 from "./page50/six.png";
+import sevenPage50Result from "./page50/sevenPage50.png";
+import onePage50 from "./page50/one.png";
+import ninePage50 from "./page50/nine.png";
+
 const images = {
 	loading: [loadingImages],
 	background: [
-		// page 0
 		bgPage0,
-		// page 1
 		bgPage1,
-		// page 2
 		bgPage2,
-		// page 3
 		bgPage3,
-		// page 4
 		bgPage4,
-		// page 5
 		bgPage5,
-		// page 6
 		bgPage4,
-		// page 7
 		bgPage5,
-		// page 8
 		bgPage8,
-		// page9
-		// bgPage9,
-		// page 10
-		// bgPage10,
-		//   page11
-		// bgPage11,
-		//  page 12
-		// bgPage12,
-
-		// page 13
 		bgPage13,
-		//page14
 		bgPage13,
-		// page15
 		bgPage15,
-		// page16
 		bgPage13,
-		//page 17
 		bgPage13,
-		// page 18
 		bgPage14,
-		// page19
 		bgPage19,
-		// page20
 		bgPage20,
-		// page21
 		bgPage20,
-		// page22
 		bgPage20,
-		// page23
 		bgPage20,
-		// page24
 		bgPage20,
-		// page25
 		bgPage20,
-		// page26
 		bgPage20,
-		// page27
 		bgPage20,
-		// page28
 		bgPage20,
-		// page29
 		bgPage20,
-		// page30
 		bgPage30,
-		// page31
 		bgPage31,
-		// page32
 		bgPage32,
-		// page33
 		bgPage33,
-		// page34
 		bgPage34,
-		// page35
 		bgPage35,
-		// page36
 		bgPage36,
-		// page37
 		bgPage37,
-		// page38
 		bgPage38,
-		// page39
 		bgPage39,
-		// page40
 		bgPage40,
-		// page41
 		bgPage41,
-		// page42
 		bgPage42,
-		// page43
 		bgPage43,
-		// page44
 		bgPage44,
-		// page45
 		bgPage44,
-		// page46
-		bgPage39,
+		bgPage44,
+		page47Bg,
+		page47Bg,
+		page47Bg,
+		page50Bg,
 	],
 	common: {
 		Pauses,
@@ -712,6 +736,73 @@ const images = {
 		chuoi,
 		question,
 		childPage45,
+	},
+	page46: {
+		childPage46,
+		numbersPage46,
+		questionPage46,
+	},
+	page47: {
+		one,
+		two,
+		three,
+		four,
+		five,
+		six,
+		seven,
+		eight,
+		nine,
+		ten,
+		child,
+	},
+	page48: { childPage48, questionPage48, textsPage48 },
+	page49: {
+		aPage49,
+		bPage49,
+		cPage49,
+		dPage49,
+		ePage49,
+		fPage49,
+		gPage49,
+		hPage49,
+		iPage49,
+		questionBg,
+	},
+	page50: {
+		page50Seven,
+		childPage50,
+		comPage50,
+		meoPage50,
+		page50Bg,
+		taoPage50,
+		titleGamePage50,
+		startPage50,
+		bird,
+		catQuestion,
+		monkey,
+		stepbg,
+		titleStep,
+		cat,
+		dog,
+		applePage50,
+		fruit,
+		taoQuestion,
+		orangePage50,
+		mango,
+		comQuestion,
+		candy,
+		egg,
+		cake,
+		pasta,
+		dollQuestion,
+		doll,
+		white,
+		fivePage50,
+		sevenQuestion,
+		sixPage50,
+		sevenPage50Result,
+		ninePage50,
+		onePage50,
 	},
 };
 

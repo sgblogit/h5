@@ -1,0 +1,30 @@
+.page49-wrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	& .page49-content {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		& .control-page49-wrapper {
+			width: 70%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin-left: 70px;
+			margin-top: 20px;
+			& .page49-content--item {
+				width: 18%;
+				& > img {
+					cursor: pointer;
+					width: 70%;
+					object-fit: contain;
+				}
+			}
+		}
+	}
+}

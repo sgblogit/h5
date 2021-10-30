@@ -1,0 +1,178 @@
+.page50-wrapper {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	& .page50-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 90%;
+		height: 80%;
+		&__row1 {
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			&--item {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				& > img {
+					width: 50%;
+					object-fit: contain;
+				}
+			}
+		}
+		&__row2 {
+			width: 100%;
+			display: flex;
+			justify-content: "center";
+			padding: 0 50px;
+			margin: 10px 0px;
+			&--item {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+				& > img {
+					width: 50%;
+					object-fit: contain;
+				}
+			}
+		}
+		&__row3 {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			& img {
+				width: 20%;
+				object-fit: contain;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 500px) {
+	.page50-wrapper {
+		& .page50-content {
+			&__row1 {
+				&--item {
+					& > img {
+					}
+				}
+			}
+			&__row2 {
+				padding: 0 70px;
+				&--item {
+					& > img {
+					}
+				}
+			}
+			&__row3 {
+				& img {
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 600px) {
+	.page50-wrapper {
+		& .page50-content {
+			&__row1 {
+				&--item {
+					& > img {
+						width: 40%;
+					}
+				}
+			}
+			&__row2 {
+				padding: 0 90px;
+				&--item {
+					& > img {
+						width: 40%;
+					}
+				}
+			}
+			&__row3 {
+				& img {
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 700px) {
+	.page50-wrapper {
+		& .page50-content {
+			&__row1 {
+				&--item {
+					& > img {
+						width: 35%;
+					}
+				}
+			}
+			&__row2 {
+				padding: 0 90px;
+				&--item {
+					& > img {
+						width: 35%;
+					}
+				}
+			}
+			&__row3 {
+				& img {
+				}
+			}
+		}
+	}
+}
+@media screen and (min-width: 800px) {
+	.page50-wrapper {
+		& .page50-content {
+			width: 80%;
+			&__row1 {
+				&--item {
+					& > img {
+						width: 40%;
+					}
+				}
+			}
+			&__row2 {
+				&--item {
+					& > img {
+						width: 40%;
+					}
+				}
+			}
+			&__row3 {
+				& img {
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.page50-wrapper {
+		& .page50-content {
+			&__row1 {
+				&--item {
+					& > img {
+						width: 40%;
+					}
+				}
+			}
+			&__row2 {
+				&--item {
+					& > img {
+						width: 40%;
+					}
+				}
+			}
+			&__row3 {
+				& img {
+				}
+			}
+		}
+	}
+}

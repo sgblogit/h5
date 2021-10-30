@@ -5,7 +5,7 @@
 		margin: 0 auto;
 		display: flex;
 		justify-content: center;
-		& > img {
+		& img {
 			width: 85%;
 			object-fit: contain;
 		}
@@ -17,10 +17,24 @@
 		flex-wrap: wrap;
 		justify-content: space-around;
 		margin-top: 10px;
-		& > img {
+		&__item {
 			width: 40%;
-			object-fit: contain;
-			margin-bottom: 10px;
+			position: relative;
+			& img {
+				width: 100%;
+				object-fit: contain;
+				margin-bottom: 10px;
+			}
+		}
+		&__result {
+			position: absolute;
+			right: -5px;
+			bottom: -5px;
+			width: 20%;
+			& > img {
+				width: 100%;
+				object-fit: contain;
+			}
 		}
 	}
 }
@@ -36,7 +50,7 @@
 		}
 		& .answer {
 			justify-content: space-around;
-			& > img {
+			&__item {
 				width: 35%;
 			}
 		}
@@ -55,10 +69,8 @@
 		& .answer {
 			justify-content: space-around;
 			width: 32%;
-			& > img {
+			&__item {
 				width: 45%;
-				object-fit: contain;
-				margin-bottom: 10px;
 			}
 		}
 	}
@@ -73,10 +85,8 @@
 			}
 		}
 		& .answer {
-			& > img {
+			&__item {
 				width: 40%;
-				object-fit: contain;
-				margin-bottom: 10px;
 			}
 		}
 	}

@@ -1,8 +1,35 @@
 .button-background {
 	cursor: pointer;
 	width: max-content;
-	position: absolute;
-	top: 30px;
-	left: 30px;
+	position: fixed;
+	top: 20px;
 	z-index: 10;
+	& span {
+		& img {
+			width: 30px;
+			height: 30px;
+		}
+	}
+}
+@media screen and (min-width: 768px) {
+	.button-background {
+		& span {
+			& img {
+				width: 50px;
+				height: 50px;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 100px) {
+	.button-background {
+		top: 30px;
+		& span {
+			& img {
+				width: 60px;
+				height: 60px;
+			}
+		}
+	}
 }

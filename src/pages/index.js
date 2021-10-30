@@ -48,8 +48,13 @@ import Page43 from "./Page43";
 import Page44 from "./Page44";
 import Page45 from "./Page45";
 import Page46 from "./Page46";
+import Page47 from "./Page47";
+import Page48 from "./Page48";
+import Page49 from "./Page49";
+import Page50 from "./Page50";
 import images from "assets/images/index";
 import "./styles.scss";
+import StepPage50 from "./Page50/components/StepPage50/index";
 
 const Pages = (props) => {
 	const { onPushAction, isShowWarning } = props;
@@ -206,12 +211,96 @@ const Pages = (props) => {
 		case 42:
 			Page = <Page46 onPushAction={onPushAction} />;
 			break;
-		// case 43:
-		// 	Page = <Page43 onPushAction={onPushAction} />;
-		// 	break;
-		// case 44:
-		// 	Page = <Page44 onPushAction={onPushAction} />;
-		// 	break;
+		case 43:
+			Page = <Page47 onPushAction={onPushAction} />;
+			break;
+		case 44:
+			Page = <Page48 onPushAction={onPushAction} />;
+			break;
+		case 45:
+			Page = <Page49 onPushAction={onPushAction} />;
+			break;
+		case 46:
+			switch (currentStep) {
+				case 0:
+					Page = <Page50 onPushAction={onPushAction} />;
+					break;
+				case 1:
+					Page = (
+						<StepPage50
+							onPushAction={onPushAction}
+							urlQuestion={images.page50.catQuestion}
+							urlAnswerA={images.page50.monkey}
+							urlAnswerB={images.page50.dog}
+							urlAnswerC={images.page50.cat}
+							urlAnswerD={images.page50.bird}
+						/>
+					);
+					break;
+				case 2:
+					Page = (
+						<StepPage50
+							onPushAction={onPushAction}
+							urlQuestion={images.page50.taoQuestion}
+							urlAnswerA={images.page50.applePage50}
+							urlAnswerB={images.page50.orangePage50}
+							urlAnswerC={images.page50.fruit}
+							urlAnswerD={images.page50.mango}
+						/>
+					);
+					break;
+				case 3:
+					Page = (
+						<StepPage50
+							onPushAction={onPushAction}
+							urlQuestion={images.page50.comQuestion}
+							urlAnswerA={images.page50.cake}
+							urlAnswerB={images.page50.candy}
+							urlAnswerC={images.page50.pasta}
+							urlAnswerD={images.page50.egg}
+						/>
+					);
+					break;
+				case 4:
+					Page = (
+						<StepPage50
+							onPushAction={onPushAction}
+							urlQuestion={images.page50.taoQuestion}
+							urlAnswerA={images.page50.applePage50}
+							urlAnswerB={images.page50.orangePage50}
+							urlAnswerC={images.page50.fruit}
+							urlAnswerD={images.page50.mango}
+						/>
+					);
+					break;
+				case 5:
+					Page = (
+						<StepPage50
+							onPushAction={onPushAction}
+							urlQuestion={images.page50.dollQuestion}
+							urlAnswerA={images.page50.egg}
+							urlAnswerB={images.page50.doll}
+							urlAnswerC={images.page50.fivePage50}
+							urlAnswerD={images.page50.white}
+						/>
+					);
+					break;
+				case 6:
+					Page = (
+						<StepPage50
+							onPushAction={onPushAction}
+							urlQuestion={images.page50.sevenQuestion}
+							urlAnswerA={images.page50.ninePage50}
+							urlAnswerB={images.page50.onePage50}
+							urlAnswerC={images.page50.sixPage50}
+							urlAnswerD={images.page50.sevenPage50Result}
+						/>
+					);
+					break;
+				default:
+					break;
+			}
+			break;
 
 		default:
 			break;

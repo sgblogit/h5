@@ -4,7 +4,6 @@ import "./styles.scss";
 import { useSelector } from "react-redux";
 import audios from "assets/audios/index";
 import audioPlayer from "helper/audioPlayer";
-import images from "assets/images";
 
 const ButtonControlAudio = (props) => {
 	const {
@@ -14,6 +13,9 @@ const ButtonControlAudio = (props) => {
 		customStyle,
 		handleControlAudioCustom,
 		isPlayAudio,
+		urlButtonPlay,
+		urlButtonPause,
+		isLeft,
 	} = props;
 
 	const { currentPage, currentStep, currentRecord } = useSelector(
@@ -89,7 +91,14 @@ const ButtonControlAudio = (props) => {
 	}, [isPlayAudio, isShowPlayButton]);
 
 	return (
-		<div className="button-background" style={{ ...customStyle }}>
+		<div
+			className="button-background"
+			style={
+				!isLeft
+					? { left: "20px", ...customStyle }
+					: { right: "20px", ...customStyle }
+			}
+		>
 			{isShowPlayButtonValue ? (
 				<span
 					onClick={(e) => {
@@ -102,7 +111,7 @@ const ButtonControlAudio = (props) => {
 						});
 					}}
 				>
-					<img src={images.page0.buttonPauseAudio} alt="" />
+					<img src={urlButtonPause} alt="" />
 				</span>
 			) : (
 				<span
@@ -116,7 +125,7 @@ const ButtonControlAudio = (props) => {
 						});
 					}}
 				>
-					<img src={images.page0.buttonPlayAudio} alt="" />
+					<img src={urlButtonPlay} alt="" />
 				</span>
 			)}
 		</div>

@@ -7,23 +7,22 @@ import backgroundGame from "./common/game.mp3";
 
 // Page 0
 
-
 import infoStart from "./page_0/infoStart.mp3";
 
-// PAGE 1 
+// PAGE 1
 import infoSeconce from "./page_1/voice.mp3";
 
 // PAGE 2
 import VceChilden from "./page_2/vce_1.mp3";
 
-//Page 3 
+//Page 3
 import HelloKid from "./page_3/hello.mp3";
 import audioPage4 from "./page_4/4.mp3";
 import audioPage5 from "./page_5/page5.mp3";
 import audioPage6 from "./page_6/vce.mp3";
 import audioPage7 from "./page_7/p7.mp3";
 
-//Page 30 
+//Page 30
 import Vce30 from "./page_30/vce_1.mp3";
 //Page 31
 import Vce31 from "./page_31/what.mp3";
@@ -70,45 +69,46 @@ import kidAudio12 from "./page_12/mike.mp3";
 import audioPage39 from "./page_39/game.mp3";
 import audioPage44 from "./page_44/voice.mp3";
 
-
 import audioChangePage from "./common/am_thanh_chuyen_trang.mp3";
 
-const audios = {
-  audioChangePage,
-  backgroundAudio,
-  gitAudio,
-  falseAudio,
-  trueAudio,
-  backgroundGame,
-// page 0
-infoStart,
-//Page 1
-infoSeconce,
-// Page 2 
-VceChilden,
-//Page 3 
-HelloKid,
+import bgAudio15 from "./page_15/bgAudio15.mp3";
 
-audioPage4,
-audioPage5,
-audioPage6,
-audioPage7,
-  kidAudio9,
-  kidAudio10,
-  kidAudio11,
-  kidAudio12,
-  // page
-  areYouJulie,
-  yes,
-  howManyPeople,
-  thereAreFourPeople,
-  whereAreYouFrom,
-  imFromHaNoi,
-  doYouHaveSisters,
-  noIDont,
-  whatColorDoYouLike,
-  iLikeWhite,
-  	//Page 30
+const audios = {
+	audioChangePage,
+	backgroundAudio,
+	gitAudio,
+	falseAudio,
+	trueAudio,
+	backgroundGame,
+	// page 0
+	infoStart,
+	//Page 1
+	infoSeconce,
+	// Page 2
+	VceChilden,
+	//Page 3
+	HelloKid,
+
+	audioPage4,
+	audioPage5,
+	audioPage6,
+	audioPage7,
+	kidAudio9,
+	kidAudio10,
+	kidAudio11,
+	kidAudio12,
+	// page
+	areYouJulie,
+	yes,
+	howManyPeople,
+	thereAreFourPeople,
+	whereAreYouFrom,
+	imFromHaNoi,
+	doYouHaveSisters,
+	noIDont,
+	whatColorDoYouLike,
+	iLikeWhite,
+	//Page 30
 	Vce30,
 	//Page 31
 	Vce31,
@@ -124,15 +124,16 @@ audioPage7,
 	//Page 36
 	Vce36,
 	VceSe36,
-	//Page 37 
+	//Page 37
 	VceSe37,
 	Vce37,
 	//Page 38
 	Vce38,
 	VceSe38,
 
-  audioPage39,
-  audioPage44,
+	audioPage39,
+	audioPage44,
+	bgAudio15,
 };
 
 export default audios;

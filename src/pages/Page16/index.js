@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useSelector } from "react-redux";
 import audioPlayer from "helper/audioPlayer";
 import images from "assets/images/index";
@@ -6,20 +6,37 @@ import images from "assets/images/index";
 import "./styles.scss";
 import ScreenMiddleTitle from "components/ScreenMiddleTitle/index";
 import MultipleChoiceGame from "components/MultipleChoiceGame/index";
+import { runRecord } from "helper/appServices";
+import ButtonControlAudio from "components/ButtonControlAudio/index";
 
 const Page16 = (props) => {
 	const { onPushAction } = props;
 	const { currentRecord } = useSelector((state) => state.app);
 
-	const { playAudio } = audioPlayer;
+	const [buttonShow, setButtonShow] = useState([]);
 
-	const clickEventName = "page16";
+	const handleSetButtonShow = useCallback((value) => {
+		const boolean = value === "c" ? "right" : "wrong";
+		setButtonShow((pre) => ({ [value]: boolean }));
+	}, []);
+
+	const clickEventName = "page16-click";
 
 	const clickHandler = (e, op) => {
 		onPushAction(e, op.actionType, op);
 	};
 
-	useEffect(() => {}, [currentRecord]);
+	useEffect(() => {
+		runRecord({
+			eventName: clickEventName,
+			callbacks: {
+				a: handleSetButtonShow,
+				b: handleSetButtonShow,
+				c: handleSetButtonShow,
+				d: handleSetButtonShow,
+			},
+		});
+	}, [currentRecord, handleSetButtonShow]);
 
 	return (
 		<div
@@ -38,6 +55,17 @@ const Page16 = (props) => {
 				answer03={images.page16.jPage16}
 				answer04={images.page16.ePage16}
 				clickHandler={clickHandler}
+				clickEventName={clickEventName}
+				buttonShow={buttonShow}
+				isAnswerC
+			/>
+			<ButtonControlAudio
+				onPushAction={onPushAction}
+				isAutoPlay={false}
+				audioName={"bgAudio15"}
+				urlButtonPlay={images.common.play}
+				urlButtonPause={images.common.Pauses}
+				isLeft
 			/>
 		</div>
 	);

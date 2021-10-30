@@ -5,11 +5,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;
-	& div {
+	& > div.img {
 		width: 50%;
 		height: 40%;
 		margin: 0 auto;
-		& img {
+		& > img {
 			width: 100%;
 		}
 	}

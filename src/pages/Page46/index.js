@@ -14,28 +14,19 @@ const Page46 = (props) => {
 		>
 			<TitleMeeting bgTitle={images.common.title} />
 			<div className="page46-content">
-				{/* <div className="page46-content__result">
-					<div className="page46-content__result--item">
-						<img src={images.page46.bo} alt="" />
-					</div>
-					<div className="page46-content__result--item">
-						<img src={images.page46.cam} alt="" />
-					</div>
-					<div className="page46-content__result--item">
-						<img src={images.page46.tao} alt="" />
-					</div>
-					<div className="page46-content__result--item">
-						<img src={images.page46.chuoi} alt="" />
-					</div>
-				</div>
 				<div className="page46-content__question">
 					<div className="page46-content__question--child">
 						<img src={images.page46.childPage46} alt="" />
 					</div>
 					<div className="page46-content__question--question">
-						<img src={images.page46.question} alt="" />
+						<img src={images.page46.questionPage46} alt="" />
 					</div>
-				</div> */}
+					<div className="page46-content__result">
+						<div className="page46-content__result--item">
+							<img src={images.page46.numbersPage46} alt="" />
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
