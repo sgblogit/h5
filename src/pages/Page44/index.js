@@ -46,9 +46,7 @@ const Page44 = (props) => {
 
 	return (
 		<div className="page44">
-				<div className="main-content-44">
-					<div className="main-content-44-list">
-                    <button className="controll-right"
+		<button className="control-right-44"
 					onClick={(e) => {
 						handleClickImage(
 							clickHandler,
@@ -75,6 +73,8 @@ const Page44 = (props) => {
 					<img src={images.common.Button} alt="">
 					</img>
 				</button>
+				<div className="main-content-44">
+					<div className="main-content-44-list">
 						<div className="kid-wrapper">
 							<img
 								alt=""

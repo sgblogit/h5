@@ -45,7 +45,7 @@ function ConversationBoyG(props) {
 					<img src={images.common.Button} alt="">
 					</img>
 				</button>
-            <div className={`main ${activeRing ? "activeRing" : ""} `}>
+            <div className={`main ${activeRing ? "activeRingP" : ""} `}>
                 <div className={`pageCus-left ${ classCenter ? "center" : ""} `}>
 					<img src={textKid} alt=""></img>
 				</div>

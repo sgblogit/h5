@@ -88,7 +88,7 @@ const Page4 = (props) => {
 				play audio and animation
 			</button> */}
 			<div className="page-wrraper">
-			<button className="controll-right"
+			<button className="control-right-4"
 					onClick={(e) => {
 						handleClickImage(
 							clickHandler,

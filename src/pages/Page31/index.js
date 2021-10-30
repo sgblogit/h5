@@ -63,7 +63,7 @@ const Page31 = (props) => {
 			
 			<div className="page31-wrraper">
                 <TitleMeeting bgTitle={images.common.title}/>
-				<div className= {`main ${activeRing ? "activeRing" : ""} `}>
+				<div className= {`main ${activeRing ? "activeRingP" : ""} `}>
                     <div className="page31-left">
 						<img src={chifIcon} alt=""></img>
 					</div>

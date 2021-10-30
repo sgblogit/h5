@@ -91,7 +91,7 @@ const Page5 = (props) => {
 			</button> */}
       <div className="page-wrraper">
         <button
-          className="controll-right"
+          className="control-right-5"
           onClick={(e) => {
             handleClickImage(
               clickHandler,

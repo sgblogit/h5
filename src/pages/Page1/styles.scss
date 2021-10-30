@@ -40,6 +40,12 @@
     height: 15%;
     top: 0;
     z-index: 99999;
+    img{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        object-fit: contain;
+    }
     // animation: moveCloud 15s ease-in infinite;
 }
 @keyframes moveCloud {
@@ -60,6 +66,12 @@
     left:5%;
     // animation: moveSun 12s ease-in infinite;
     z-index: 9999;
+    img{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        object-fit: contain;
+    }
 }
 @keyframes moveSun {
 	0% {

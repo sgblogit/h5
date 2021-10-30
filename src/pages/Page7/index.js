@@ -92,7 +92,7 @@ const Page7 = (props) => {
 			</button> */}
       <div className="page-wrraper">
         <button
-          className="controll-right"
+          className="control-right-7"
           onClick={(e) => {
             handleClickImage(
               clickHandler,
