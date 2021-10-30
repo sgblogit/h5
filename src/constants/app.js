@@ -89,9 +89,6 @@ const pageData = [
 		{
 			stepName: "step5",
 		},
-		{
-			stepName: "step6",
-		},
 	],
 ];
 
