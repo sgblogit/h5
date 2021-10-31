@@ -9,17 +9,17 @@
 		& .page48-content__result {
 			width: 75%;
 			position: absolute;
-			top: -50px;
+			top: -150px;
 			right: 0;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			&--item {
 				width: 100%;
-				display: flex;
-				justify-content: center;
-				align-items: center;
 				& > img {
+					left: 44%;
+					position: absolute;
+					top:5%;
 					width: 60%;
 					object-fit: contain;
 				}
@@ -33,6 +33,7 @@
 			&--child {
 				width: 20%;
 				& > img {
+					cursor: pointer;
 					width: 100%;
 					object-fit: contain;
 				}
@@ -40,7 +41,7 @@
 			&--question {
 				width: 30%;
 				& > img {
-					width: 100%;
+					width: 145%;
 					object-fit: contain;
 				}
 			}
@@ -48,8 +49,84 @@
 	}
 }
 
-@media screen and (min-width: 600px) {
+
+@media screen and (min-width: 560px) {
 	.page48-wrapper {
+		& .page48-content {
+			& .page48-content__result {
+				width: 75%;
+				position: absolute;
+				top: -60px;
+				right: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&--item {
+					width: 100%;
+					& > img {
+						left: 44%;
+						position: absolute;
+						width: 60%;
+						object-fit: contain;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 680px) {
+	.page48-wrapper {
+		& .page48-content {
+			& .page48-content__result {
+				width: 75%;
+				position: absolute;
+				top: -70px;
+				right: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&--item {
+					width: 100%;
+					& > img {
+						left: 44%;
+						position: absolute;
+						width: 60%;
+						object-fit: contain;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.page48-wrapper {
+		& .page48-content {
+			& .page48-content__result {
+				width: 75%;
+				position: absolute;
+				top: -117px;
+				right: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&--item {
+					width: 100%;
+					& > img {
+						left: 44%;
+						position: absolute;
+						width: 60%;
+						object-fit: contain;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-device-width: 559px) {
+    .page48-wrapper {
 		& .page48-content {
 			& .page48-content__result {
 				width: 75%;
@@ -61,10 +138,9 @@
 				align-items: center;
 				&--item {
 					width: 100%;
-					display: flex;
-					justify-content: center;
-					align-items: center;
 					& > img {
+						left: 44%;
+						position: absolute;
 						width: 60%;
 						object-fit: contain;
 					}

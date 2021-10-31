@@ -46,6 +46,7 @@
 			& > img {
 				width: 85%;
 				object-fit: contain;
+				margin-top: 15%;
 			}
 		}
 		& .answer {
@@ -80,13 +81,32 @@
 	.multipleGame {
 		& .question {
 			& > img {
-				width: 85%;
+				width: 100%;
 				object-fit: contain;
 			}
 		}
 		& .answer {
 			&__item {
 				width: 40%;
+			}
+		}
+	}
+}
+
+@media only screen and (max-device-width: 559px) {
+    .multipleGame {
+		& .question {
+			margin-bottom: 10px;
+			& > img {
+				margin-top: 30%;
+				width: 85%;
+				object-fit: contain;
+			}
+		}
+		& .answer {
+			justify-content: space-around;
+			&__item {
+				width: 35%;
 			}
 		}
 	}

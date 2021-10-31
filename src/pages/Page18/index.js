@@ -24,7 +24,7 @@ const Page18 = (props) => {
 			<ButtonControlAudio
 				onPushAction={onPushAction}
 				isAutoPlay={false}
-				audioName={"bgAudio15"}
+				audioName={"audioPage18"}
 				urlButtonPlay={images.common.play}
 				urlButtonPause={images.common.Pauses}
 			/>

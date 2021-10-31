@@ -279,6 +279,7 @@ const Page47 = (props) => {
 							<img
 								src={images.page47.ten}
 								alt=""
+								className="ten"
 								onClick={(e) => {
 									handleClickImage(
 										clickHandler,

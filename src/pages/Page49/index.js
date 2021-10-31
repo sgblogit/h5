@@ -54,7 +54,7 @@ const Page49 = (props) => {
 								event: e,
 								data: {
 									actionType: "fireEvent",
-									eventName: "page48-click",
+									eventName: clickEventName,
 									eventData: {
 										playAudio: "page49Voice",
 									},
@@ -89,7 +89,7 @@ const Page49 = (props) => {
 						<img src={images.page49.hPage49} alt="" />
 					</div>
 					<div className="page49-content--item">
-						<img src={images.page49.iPage49} alt="" />
+						<img className="item-i" src={images.page49.iPage49} alt="" />
 					</div>
 				</div>
 			</div>

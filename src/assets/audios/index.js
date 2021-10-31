@@ -65,6 +65,7 @@ import kidAudio10 from "./page_10/julkie.mp3";
 import kidAudio11 from "./page_11/emma.mp3";
 
 import kidAudio12 from "./page_12/mike.mp3";
+import audioPage18 from "./page_18/vce_1.mp3";
 
 import audioPage39 from "./page_39/game.mp3";
 import audioPage44 from "./page_44/voice.mp3";
@@ -122,6 +123,7 @@ const audios = {
 	noIDont,
 	whatColorDoYouLike,
 	iLikeWhite,
+	audioPage18,
 	//Page 30
 	Vce30,
 	//Page 31
